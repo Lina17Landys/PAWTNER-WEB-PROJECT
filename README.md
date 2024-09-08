@@ -1,5 +1,5 @@
 ```markdown
-# Code of Conduct
+## Code of Conduct
 
 **Members**
 -  Lina Marcela Landys Samboni
