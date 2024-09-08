@@ -1,4 +1,3 @@
-```markdown
 ## Code of Conduct
 
 **Members**
