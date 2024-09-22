@@ -11,12 +11,12 @@
 
 To start and configure the Git repository, follow these steps:
 
-1. **Start the repository:** 2.
+1. **Start the repository:** 
    ````bash
    git init
    ```
 
-2. **Add the remote repository:** ````bash git init ``` 2.
+2. **Add the remote repository:** ````bash git init ``` 
    ````bash
    git remote add origin https://github.com/Lina17Landys/PAWTNER-WEB-PROJECT.git
    ```
