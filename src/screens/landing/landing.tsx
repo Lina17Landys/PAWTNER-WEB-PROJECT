@@ -1,6 +1,6 @@
 //import { useState } from 'react'
 import NavBar from "../../components/navBar/navBar";
-//import LanCards from '../../components/cardsType/landingCards'
+import LanCards from '../../components/cardsType/landingCards'
 
 import "./landing.css";
 
@@ -25,6 +25,8 @@ function LandingPage() {
 
         <img className="dog-img" src="./src/img/big-dog.png"></img>
       </section>
+
+      <LanCards/>
     </>
   );
 }
