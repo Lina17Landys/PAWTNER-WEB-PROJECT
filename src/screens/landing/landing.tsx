@@ -22,6 +22,8 @@ function LandingPage() {
           <p className="bold-text">Join us and make a difference today!</p>
           </div>
         </div>
+
+        <img className="dog-img" src="./src/img/big-dog.png"></img>
       </section>
     </>
   );
