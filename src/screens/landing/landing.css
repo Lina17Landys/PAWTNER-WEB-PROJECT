@@ -136,3 +136,97 @@ section {
   max-width: 1800px;
   height: auto;
 }
+
+.section-3 {
+  background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
+  width: 100vw;
+  height: 60vh;
+}
+
+.title-4 {
+  color: white;
+  font-weight: bold;
+  font-size: 64px;
+  width: 420px;
+  margin-left: 150px;
+  margin-top: 90px;
+}
+.animal-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.animal-img {
+  width: 600px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.star2-img {
+  display: flexbox;
+  position: absolute;
+  max-width: 190px;
+  left: 600px;
+  margin-top: -190px;
+}
+
+.section-4 {
+  margin-top: -400px;
+  padding: 40px;
+}
+
+.report {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.r-texts {
+  margin-left: 150px;
+}
+
+.title-6 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.r-text {
+  font-size: 22px;
+  width: 800px;
+}
+
+.cat-yell {
+  z-index: 3;
+  width: 1400px;
+  height: auto;
+ margin-left: -380px;
+}
+
+.frame-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -300px;  
+}
+
+.frame-info {
+ width: 100%;
+  max-width: 1800px;
+  height: auto;
+}
+
+.f-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+}
+
+.footer-img {
+  width: 100%;
+  max-width: 1800px;
+  height: auto;
+}
