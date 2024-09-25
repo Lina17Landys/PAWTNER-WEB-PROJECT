@@ -1,22 +1,29 @@
 header {
   font-family: "Poppins", sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Align logo and menu to the sides */
   align-items: center;
   box-sizing: border-box;
   margin-top: 20px;
+  padding: 0 20px; 
+  position: relative;
 }
 
 .logo-img {
   width: 75px;
   height: 72px;
-  margin-left: 80px;
+}
+
+.menu {
+  display: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
 }
 
 .text-line {
   display: flex;
   gap: 50px;
-  margin-left: -740px;
 }
 
 .text-line p {
@@ -26,14 +33,9 @@ header {
   cursor: pointer;
 }
 
-.text-line p:hover {
-  text-decoration: underline;
-}
-
 .btn-line {
   display: flex;
   gap: 20px;
-  margin-right: 80px;
 }
 
 .log-btn,
@@ -48,10 +50,6 @@ header {
   cursor: pointer;
   background-color: transparent;
   color: white;
-}
-
-.log-btn {
-  background-color: transparent;
 }
 
 .sign-btn {

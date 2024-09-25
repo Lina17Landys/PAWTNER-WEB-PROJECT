@@ -19,6 +19,7 @@ function LandingPage() {
               appointments and discover offers in our store.
             </p>
             <p className="bold-text">Join us and make a difference today!</p>
+
           </div>
         </div>
 
