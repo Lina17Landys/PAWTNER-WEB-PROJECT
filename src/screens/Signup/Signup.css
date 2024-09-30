@@ -1,0 +1,130 @@
+/* Estructura principal */
+.signup-container {
+    display: flex;
+    flex-direction: row; /* Para colocar el formulario y la imagen del gato en fila */
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #4A6C72 0%, #33474D 100%); /* Degradado de fondo */
+  }
+  
+  /* Formulario */
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra del formulario */
+  }
+  
+  .signup-form h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .signup-form p {
+    color: #D3D3D3;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  
+  .signup-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #E2E8F0; /* Fondo de los campos de entrada */
+    color: #2D3748; /* Color del texto dentro del input */
+  }
+  
+  .signup-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #243B55; /* Color del botón */
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-form button:hover {
+    background-color: #1D2E40; /* Hover para el botón */
+  }
+  
+  .signup-form .google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: white;
+    color: #2D3748;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra del botón de Google */
+  }
+  
+  .signup-form .google-btn img {
+    margin-right: 10px;
+  }
+  
+  .signup-form .terms {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #D3D3D3;
+  }
+  
+  .signup-form .terms input {
+    margin-right: 10px;
+  }
+  
+  .signup-form a {
+    color: #D3D3D3;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .signup-form a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Imagen del gato */
+  .signup-cat {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .signup-cat img {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  /* Imagen del logo */
+  .signup-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .signup-logo img {
+    height: 60px;
+    width: 60px;
+  }
+  
