@@ -1,0 +1,50 @@
+* {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.welcome-banner {
+  top: -100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.welcome-img {
+  margin: 0 30px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.welcome-title {
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  color: white;
+  font-size: 68px;
+  width: 380px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.pets-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  margin-top: -190px;
+}
+
+.cat-b,
+.dog-b {
+  max-width: 45%;
+  margin: 0 30px;
+}
+
+.title-serv {
+    color: #3CA380;
+    font-size: 36px;
+    margin-left: 75px;
+}
