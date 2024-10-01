@@ -1,0 +1,207 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3CA38080;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 1307px;
+  max-width: 90%;
+  height: 80%;
+  position: relative;
+  gap: 20px; 
+}
+
+.inputs-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-layout {
+  display: flex;
+  width: 100%;
+}
+
+.upload-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Post-title {
+  color: #BCB8B1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 80px;
+  border: none;
+  width: 80%;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-box {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.upload-box::before {
+  content: 'Upload an Image';
+  font-size: 16px;
+  color: #BCB8B1;
+  position: absolute;
+  display: block;
+}
+
+.upload-box.image-uploaded::before {
+  display: none;
+}
+
+.pet-description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pet-name {
+  width: calc(50% - 10px);
+  background-color: #EEE;
+  color: rgba(60, 163, 128, 0.50);
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.animal-type, .priority-level {
+  color: rgba(60, 163, 128, 0.50);
+  background-color: #EEE;
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  height: 60px;
+}
+
+.animal-type {
+  margin-right: 50px;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #EEE;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.symptom-tags {
+  display: flex;
+  background-color: #EEE;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 10px;
+  margin: 10px 5px;
+  border: none;
+  font-size: 16px;
+  color: #999;
+}
+
+.symptom-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.symptom-tag {
+  background-color: #f0f0f0;
+  color: #999;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.symptom-tag:hover {
+  background-color: #e0e0e0;
+}
+
+.symptom-tag.selected {
+  border-radius: 5px;
+  background-color: #2F855A; 
+  color: white;
+}
+
+button[type="submit"] {
+  background-color: #2F855A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 50px;
+}
+
+button[type="submit"]:hover {
+  background-color: #276749;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999;
+}

@@ -1,0 +1,161 @@
+.disease-forum {
+    padding: 20px;
+    background: linear-gradient(to right, #8BBEB2, #E6F9AF);
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  button {
+    background-color: #3CA380;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+  }
+
+.skin-and-coat-problems .disease-title {
+    background-color: #A1C349;
+    color: white;
+  }
+  
+  .digestive-issues .disease-title {
+    background-color: #EE9B00;
+    color: white;
+  }
+  
+  .allergies .disease-title {
+    background-color: #A5C4D4;
+    color: white;
+  }
+  
+  .mobility-issues .disease-title {
+    background-color: #800E13;
+    color: white;
+  }
+  
+  .infections .disease-title {
+    background-color: #156064;
+    color: white;
+  }
+
+  .respiratory-issues .disease-title {
+    background-color: #404E7C;
+    color: white;
+  }
+  
+  .behavioral-changes .disease-title {
+    background-color: #3CA380;
+    color: white;
+  }
+  
+  .general-wellness .disease-title {
+    background-color: #281F51;
+    color: white;
+  }
+
+  .disease-title {
+    font-size: small;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .disease-column {
+    background-color: #ffffff88;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .disease-column h2 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #00796b;
+  }
+  
+  .disease-card {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .disease-card h3 {
+    font-size: 18px;
+    color: #3CA380;
+  }
+  
+  .disease-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .post-image {
+    margin: 10px 0;
+  }
+  
+  .post-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+ 
+  .symptom-tag {
+    display: inline-block;
+    background-color: #c8e6c9;
+    color: #388e3c;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  
+  .priority {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+  }
+  
+  .low-priority {
+    background-color: #8bc34a;
+  }
+  
+  .medium-priority {
+    background-color: #ffb74d;
+  }
+  
+  .high-priority {
+    background-color: #e57373;
+  }
+  
+  button {
+    background-color: #00796b;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+  }
+  
