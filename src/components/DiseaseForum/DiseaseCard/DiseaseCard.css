@@ -1,0 +1,66 @@
+.disease-card {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .disease-card h3 {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3CA380;
+  }
+  
+  .disease-card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .symptoms-list {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .symptom-tag {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+  }
+  
+  .symptom-diarrhea, .symptom-vomiting, .symptom-loss-of-appetite .symptom-abdominal-pain, .symptom-constipation, .symptom-excessive-drooling {
+    background-color: #EE9B00;
+  }
+
+  .symptom-itching-skin, .symptom-hair-loss .symptom-redness .symptom-dry-skin, .symptom-bumps, .symptom-sores, .symptom-foul-odor, .symptom-flaky-skin {
+    background-color: #A1C349;
+  }
+
+  .symptom-itchy-skin, .symptom-sneezing, .symptom-watery-eyes, .symptom-swelling, .symptom-ear-infections, .symptom-coughing, .symptom-red-or-inflamed-skin, .symptom-chewing-paws {
+    background-color: #A5C4D4;
+  }
+
+  .symptom-limping, .symptom-stiffness, .sympton-difficulty-standing, .symptom-reluctance-to-move, .symptom-swelling-in-joints, .symptom-loss-of-muscle-mass, .symptom-favoring-one-leg {
+    background-color: #800E13;
+  }
+
+  .symptom-fever, .symptom-swollen-lymph-nodes, .symptom-pus-discharge, .symptom-coughing, .symptom-sneezing, .symptom-loss-of-appetite, .symptom-lethargy, .symptom-swelling-or-abscesses {
+    background-color: #156064; 
+  }
+  
+  .symptom-coughing, .symptom-wheezing, .symptom-difficulty-breathing, .symptom-nasal-discharge, .symptom-sneezing, .symptom-rapid-breathing, .symptom-labored-breathing, .symptom-blue-gums-or-tongue {
+    background-color: #404E7C;
+  }
+
+  .sympton-aggression, .sympton-fearfulness, .sympton-excessive-barking, .sympton-restlessness, .sympton-hiding, .sympton-excessive-licking-or-grooming, .sympton-destructive-behavior, .sympton-Increased-sleeping {
+    background-color: #3CA380;
+  }
+
+  /*.symptom-lethargy, .symptom-loss-of-appetite, .symptom-weight-loss, .symptom-dehydration, .symptom-vomiting, .symptom-fever, .symptom-behavior-changes, .symptom-poor-coat.condition {
+    background-color: #281F51;
+  }*/

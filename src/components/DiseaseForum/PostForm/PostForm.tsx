@@ -80,10 +80,10 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
               <textarea placeholder="Describe the symptoms" value={description} onChange={(e) => setDescription(e.target.value)} required />
 
               <select className="priority-level" value={priority} onChange={(e) => setPriority(e.target.value)}>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-                <option value="emergency">Emergency</option>
+                <option value="Low Priority">Low Priority</option>
+                <option value="Medium Priority">Medium Priority</option>
+                <option value="High Priority">High Priority</option>
+                <option value="Emergency">Emergency</option>
               </select>
 
               <button type="submit">Submit Post</button>

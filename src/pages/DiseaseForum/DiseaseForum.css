@@ -4,25 +4,11 @@
   }
   
   h1 {
-    font-size: 28px;
+    font-size: 35px;
     margin-bottom: 20px;
     color: white;
   }
   
-  button {
-    background-color: #3CA380;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  button:hover {
-    background-color: #004d40;
-  }
-
 .skin-and-coat-problems .disease-title {
     background-color: #A1C349;
     color: white;
@@ -84,27 +70,10 @@
   }
   
   .disease-column h2 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     margin-bottom: 15px;
     color: #00796b;
-  }
-  
-  .disease-card {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .disease-card h3 {
-    font-size: 18px;
-    color: #3CA380;
-  }
-  
-  .disease-card p {
-    font-size: 14px;
-    color: #555;
   }
   
   .post-image {
@@ -116,46 +85,25 @@
     border-radius: 10px;
   }
   
- 
-  .symptom-tag {
-    display: inline-block;
-    background-color: #c8e6c9;
-    color: #388e3c;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 12px;
-    margin-right: 5px;
+  .addPostButton {
+    position: fixed;
+    bottom: 20px;      
+    right: 20px;    
+    width: 60px; 
+    height: 60px; 
+    background-color: #3CA380;
+    color: white;          
+    font-size: 36px;       
+    border-radius: 5px;    
+    border: none;          
+    cursor: pointer;       
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
   }
   
-  .priority {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    color: white;
+  .addPostButton:hover {
+    background-color: #248463;
   }
-  
-  .low-priority {
-    background-color: #8bc34a;
-  }
-  
-  .medium-priority {
-    background-color: #ffb74d;
-  }
-  
-  .high-priority {
-    background-color: #e57373;
-  }
-  
-  button {
-    background-color: #00796b;
-    border: none;
-    padding: 10px 15px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #004d40;
-  }
-  
