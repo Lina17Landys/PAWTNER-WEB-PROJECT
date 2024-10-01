@@ -7,10 +7,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Ruta principal que mostrará la página de aterrizaje */}
         <Route path="/" element={<Landing />} />
         
-        {/* Otras rutas */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<div>Dashboard</div>} /> {/* Página protegida */}
