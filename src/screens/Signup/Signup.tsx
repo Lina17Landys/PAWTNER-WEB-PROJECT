@@ -3,7 +3,7 @@ import './Signup.css';
 import logo from '../../img/logo.png';
 import catImage from '../../img/Cat-Signup.png';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase/firebaseConfig'; // Asegúrate de que la ruta sea correcta
+import { auth } from '../../../firebaseConfig'; // Asegúrate de que la ruta sea correcta
 
 const Signup: React.FC = () => {
   const [email, setEmail] = useState('');
