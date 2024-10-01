@@ -48,3 +48,9 @@
     font-size: 36px;
     margin-left: 75px;
 }
+
+
+.product-recomendation {
+  margin-top: 100px;
+  background: linear-gradient(to bottom right,#D6E8E4, #9EA8B5 );
+}
