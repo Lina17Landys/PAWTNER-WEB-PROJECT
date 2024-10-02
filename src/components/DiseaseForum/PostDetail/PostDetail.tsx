@@ -1,5 +1,7 @@
 import React from 'react';
 import { Post } from '../../../types/postTypes';
+import dogIcon from '../../../assets/images/Dog-Icon.png';
+import catIcon from '../../../assets/images/Cat-Icon.png';
 import './PostDetail.css';
 
 interface PostDetailProps {
@@ -14,15 +16,16 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
         <button className="close-modal" onClick={onClose}>&times;</button>
         
         <div className="header">
-          <h2 className='post-title-detail'>{post.title}</h2>
+          <h2>{post.title}</h2>
           <span className={`priority ${post.priority.toLowerCase()}`}>
             {post.priority}
           </span>
         </div>
 
-        <div className="pet-info">
+        <div className="pet-info-detail">
           <h3 className='pet-name'>
-            {post.animalType === 'dog' ? '🐶' : '🐱'} {post.petName}
+          <img src={post.animalType === 'dog' ? dogIcon : catIcon} className="pet-icon" />
+          {post.petName}
           </h3>
         </div>
 
@@ -34,14 +37,11 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
           )}
 
           <div className="post-info">
-            {/*<div className="diagnosis">
-              <h4>Diagnosis</h4>
-              <p>{post.diagnosis || 'No diagnosis available'}</p>
-            </div>*/}
             <div className="description">
               <h4>Description</h4>
               <p>{post.description}</p>
             </div>
+
             <div className="symptoms">
               <h4>Symptoms</h4>
               <div className="symptom-tags">
@@ -51,6 +51,11 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
                   </span>
                 ))}
               </div>
+            </div>
+
+            <div className="gpt-recommendation">
+              <h4>Recommended Treatment</h4>
+              <p>{post.gptRecommendation || 'No recommendation available'}</p>
             </div>
           </div>
         </div>

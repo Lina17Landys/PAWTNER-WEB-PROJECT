@@ -49,7 +49,9 @@ const DiseaseForum: React.FC = () => {
     <div className="disease-forum">
       <h1>Pet Health Forum</h1>  
   
-      <button onClick={openModal}>Create New Post</button>
+      <button className="addPostButton" onClick={openModal}>
+        +
+      </button>
   
       {isModalOpen && (
         <PostForm onSubmit={handleNewPost} onClose={closeModal} />

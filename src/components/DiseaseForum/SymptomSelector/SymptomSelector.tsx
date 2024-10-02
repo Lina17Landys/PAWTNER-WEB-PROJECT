@@ -30,9 +30,9 @@ const SymptomSelector: React.FC<SymptomSelectorProps> = ({ symptoms, setSymptoms
 
   return (
     <div className="symptom-selector">
-      {allSymptoms.map((symptom) => (
+      {allSymptoms.map((symptom, index) => (
         <div
-          key={symptom}
+          key={`${symptom}-${index}`}
           className={`symptom-tag ${symptoms.includes(symptom) ? 'selected' : ''}`}
           onClick={() => handleSymptomClick(symptom)}
         >

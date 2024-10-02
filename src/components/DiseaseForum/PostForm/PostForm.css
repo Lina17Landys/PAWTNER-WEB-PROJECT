@@ -49,7 +49,7 @@
   justify-content: space-between;
 }
 
-.Post-title {
+.Post-title-form {
   color: #BCB8B1;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 36px;
@@ -96,13 +96,12 @@ input[type="file"] {
 .pet-description {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
 }
 
 .pet-name {
   width: calc(50% - 10px);
   background-color: #EEE;
-  color: rgba(60, 163, 128, 0.50);
+  color: #5e636e;
   padding: 10px;
   margin: 10px 5px;
   border-radius: 5px;
@@ -111,7 +110,7 @@ input[type="file"] {
 }
 
 .animal-type, .priority-level {
-  color: rgba(60, 163, 128, 0.50);
+  color: #5e636e;
   background-color: #EEE;
   width: calc(50% - 10px);
   padding: 10px;
@@ -127,17 +126,21 @@ input[type="file"] {
 }
 
 textarea {
-  width: 100%;
+  resize: none;
+  width: 90%;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   background-color: #EEE;
+  color: #5e636e;
   margin-bottom: 20px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .symptom-tags {
+  max-height: 130px;
+  overflow-y: auto;
   display: flex;
   background-color: #EEE;
   border-radius: 5px;
@@ -146,10 +149,14 @@ textarea {
   flex-wrap: wrap;
   width: 90%;
   padding: 10px;
-  margin: 10px 5px;
+  margin: 15px 5px;
   border: none;
   font-size: 16px;
   color: #999;
+}
+
+.symptom-tags div {
+  flex: 1 1 100px;
 }
 
 .symptom-selector {
@@ -162,6 +169,7 @@ textarea {
 .symptom-tag {
   background-color: #f0f0f0;
   color: #999;
+  border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 1rem;
@@ -204,4 +212,11 @@ button[type="submit"]:hover {
   font-size: 2rem;
   cursor: pointer;
   color: #999;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 60px;
+  margin-top: 20px;
 }

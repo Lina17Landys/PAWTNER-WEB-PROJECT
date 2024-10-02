@@ -3,11 +3,28 @@ import SymptomSelector from '../SymptomSelector/SymptomSelector';
 import { PostData } from '../../../types/postTypes';
 import { AnimalType } from '../../../types/diseaseTypes';
 import './PostForm.css';
+import { useChatGPT } from '../../../hooks/useChatGPT';
 
 interface PostFormProps {
   onSubmit: (newPost: PostData) => void;
   onClose: () => void;
 }
+
+const determinePriority = (symptoms: string[]): "Low" | "Medium" | "High" | "Emergency" => {
+  const emergencySymptoms = ["Difficulty Breathing", "Blue Gums or Tongue", "Severe Pain"];
+  const highPrioritySymptoms = ["Fever", "Lethargy", "Vomiting"];
+  const mediumPrioritySymptoms = ["Coughing", "Sneezing", "Itching"];
+
+  if (symptoms.some(symptom => emergencySymptoms.includes(symptom))) {
+    return "Emergency";
+  } else if (symptoms.some(symptom => highPrioritySymptoms.includes(symptom))) {
+    return "High";
+  } else if (symptoms.some(symptom => mediumPrioritySymptoms.includes(symptom))) {
+    return "Medium";
+  } else {
+    return "Low";
+  }
+};
 
 const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
   const [title, setTitle] = useState('');
@@ -15,18 +32,32 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
   const [symptoms, setSymptoms] = useState<string[]>([]);
   const [animalType, setAnimalType] = useState<AnimalType | null>(null);
   const [petName, setPetName] = useState('');
-  const [priority, setPriority] = useState('low');
   const [photo, setPhoto] = useState<File | undefined>(undefined);
   const [photoPreview, setPhotoPreview] = useState<string | undefined>(undefined);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const { fetchRecommendation, response, loading, error } = useChatGPT();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!animalType) {
-      alert('Please select an animal type.');
+      alert('Please select your pet type.');
       return;
     }
 
-    onSubmit({ title, description, symptoms, animalType, petName, priority, photo });
+    await fetchRecommendation(symptoms.join(', '));
+
+    const priority = determinePriority(symptoms);
+
+    onSubmit({
+      title,
+      description,
+      symptoms,
+      animalType,
+      petName,
+      priority,
+      photo,
+      gptRecommendation: response, 
+    });
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,7 +65,6 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
       const file = e.target.files[0];
       setPhoto(file);
 
-      /*esto es para que se vea una preview de la imagen*/
       const reader = new FileReader();
       reader.onloadend = () => {
         setPhotoPreview(reader.result as string);
@@ -52,15 +82,13 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
         <button className="close-modal" onClick={onClose}>&times;</button>
 
         <form onSubmit={handleSubmit} className="post-form">
-          <input className="Post-title" type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+          <input className="Post-title-form" type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
 
           <div className="form-layout">
-            
             <div className="upload-section">
-            <label className={`upload-box ${photoPreview ? 'image-uploaded' : ''}`}
-            style={{ backgroundImage: `url(${photoPreview})` }}>
-              <input type="file" onChange={handleFileChange} />
-            </label>
+              <label className={`upload-box ${photoPreview ? 'image-uploaded' : ''}`} style={{ backgroundImage: `url(${photoPreview})` }}>
+                <input type="file" onChange={handleFileChange} />
+              </label>
             </div>
 
             <div className="form-section">
@@ -77,16 +105,19 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
                 <SymptomSelector symptoms={symptoms} setSymptoms={setSymptoms} />
               </div>
 
-              <textarea placeholder="Describe the symptoms" value={description} onChange={(e) => setDescription(e.target.value)} required />
+              <textarea placeholder="Additional description" value={description} onChange={(e) => setDescription(e.target.value)} required />
 
-              <select className="priority-level" value={priority} onChange={(e) => setPriority(e.target.value)}>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-                <option value="emergency">Emergency</option>
-              </select>
+              <button type="submit" disabled={loading}>
+                {loading ? 'Uploading post...' : 'Submit Post'}
+              </button>
 
-              <button type="submit">Submit Post</button>
+              {error && <p>Error fetching recommendation: {error}</p>}
+              {response && (
+                <div>
+                  <h3>Recommended Treatment:</h3>
+                  <p>{response}</p>
+                </div>
+              )}
             </div>
           </div>
         </form>
