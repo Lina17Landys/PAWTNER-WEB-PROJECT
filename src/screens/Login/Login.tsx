@@ -1,10 +1,9 @@
-// src/screens/Login/Login.tsx
+
 import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../../firebaseConfig'; // Asegúrate de que la ruta sea correcta
-
+import { auth } from '../../../firebaseConfig'; 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,9 +20,9 @@ const Login: React.FC = () => {
     }
 
     try {
-      // Iniciar sesión con Firebase
+      
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/dashboard'); // Redirigir al Dashboard después de login
+      navigate('/dashboard'); 
     } catch (error) {
       setError('Invalid login credentials');
       console.error(error);

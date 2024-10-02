@@ -3,7 +3,7 @@ import './Signup.css';
 import logo from '../../img/logo.png';
 import catImage from '../../img/Cat-Signup.png';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../../firebaseConfig'; // Asegúrate de que la ruta sea correcta
+import { auth } from '../../../firebaseConfig'; 
 
 const Signup: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -16,30 +16,30 @@ const Signup: React.FC = () => {
     e.preventDefault();
     setError('');
 
-    // Validar que la contraseña tenga al menos 6 caracteres
+    
     if (password.length < 6) {
       setError('The password must be at least 6 characters long');
       return;
     }
 
-    // Validar que ambas contraseñas coincidan
+   
     if (password !== confirmPassword) {
       setError('Passwords do not match');
       return;
     }
 
-    // Validar si los términos y condiciones han sido aceptados
+  
     if (!termsAccepted) {
       setError('You must accept the terms and conditions');
       return;
     }
 
     try {
-      // Crear usuario con Firebase
+
       await createUserWithEmailAndPassword(auth, email, password);
       alert('Account created successfully!');
     } catch (error: any) {
-      // Manejo de errores con Firebase
+      
       if (error.code === 'auth/email-already-in-use') {
         setError('This email is already in use');
       } else if (error.code === 'auth/invalid-email') {
