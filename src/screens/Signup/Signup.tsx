@@ -55,53 +55,56 @@ const Signup: React.FC = () => {
 
   return (
     <div className="signup-container">
-      <div className="signup-form">
-        <div className="signup-logo">
-          <img src={logo} alt="Pawtner Logo" />
-        </div>
-        <h1>Sign Up</h1>
-        <p>Join us and help more animals</p>
-        {error && <p className="error">{error}</p>}
-        <form onSubmit={handleSignup}>
-          <input
-            type="email"
-            placeholder="E-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-          <div className="terms">
-            <input
-              type="checkbox"
-              checked={termsAccepted}
-              onChange={() => setTermsAccepted(!termsAccepted)}
-            />
-            <label>Agree to Terms and Conditions</label>
+      <div className="signup-content">
+        <div className="signup-form">
+          <div className="signup-logo">
+            <img src={logo} alt="Pawtner Logo" />
           </div>
-          <button type="submit">Create Account</button>
-        </form>
-        <button className="google-btn">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_2015_logo.svg" alt="Google Logo" />
-          Sign up with Google
-        </button>
-        <p>Already have an account? <a href="/login">Log In</a></p>
-      </div>
-      <div className="signup-cat">
-        <img src={catImage} alt="Cat" />
+          <h1>Sign Up</h1>
+          <p>Join us and help more animals</p>
+          {error && <p className="error">{error}</p>}
+          <form onSubmit={handleSignup}>
+            <input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+            <div className="terms">
+              <input
+                type="checkbox"
+                checked={termsAccepted}
+                onChange={() => setTermsAccepted(!termsAccepted)}
+              />
+              <label>Agree to Terms and Conditions</label>
+            </div>
+            <button type="submit">Create Account</button>
+          </form>
+          <button className="google-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_2015_logo.svg" alt="Google Logo" />
+            Sign up with Google
+          </button>
+          <p>Already have an account? <a href="/login">Log In</a></p>
+        </div>
+
+        <div className="signup-cat">
+          <img src={catImage} alt="Cat" />
+        </div>
       </div>
     </div>
   );
