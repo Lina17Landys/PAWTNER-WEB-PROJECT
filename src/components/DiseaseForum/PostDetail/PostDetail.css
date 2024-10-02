@@ -56,20 +56,24 @@
   .priority.low {
     background-color: #A1C349;
     color: #6B900A;
+    color: #6B900A;
   }
   
   .priority.medium {
     background-color: #FFAF03;
+    color: #D28A02;
     color: #D28A02;
   }
   
   .priority.high {
     background-color: #E21E27;
     color: #9A0209;
+    color: #9A0209;
   }
 
   .priority.emergency {
     background-color: #800E13;
+    color: #360002;
     color: #360002;
   }
   
@@ -86,6 +90,7 @@
   
   .post-image img {
     max-width: 100%;
+    max-width: 100%;
     border-radius: 5px;
   }
   
@@ -96,6 +101,7 @@
     gap: 10px;
   }
   
+  .diagnosis, .description {
   .diagnosis, .description {
     background-color: #f9f9f9;
     padding: 10px;
