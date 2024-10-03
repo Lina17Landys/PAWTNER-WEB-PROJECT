@@ -10,19 +10,19 @@ interface PostFormProps {
   onClose: () => void;
 }
 
-const determinePriority = (symptoms: string[]): "Low" | "Medium" | "High" | "Emergency" => {
+const determinePriority = (symptoms: string[]): "low" | "medium" | "high" | "emergency" => {
   const emergencySymptoms = ["Difficulty Breathing", "Blue Gums or Tongue", "Severe Pain"];
   const highPrioritySymptoms = ["Fever", "Lethargy", "Vomiting"];
   const mediumPrioritySymptoms = ["Coughing", "Sneezing", "Itching"];
 
   if (symptoms.some(symptom => emergencySymptoms.includes(symptom))) {
-    return "Emergency";
+    return "emergency";
   } else if (symptoms.some(symptom => highPrioritySymptoms.includes(symptom))) {
-    return "High";
+    return "high";
   } else if (symptoms.some(symptom => mediumPrioritySymptoms.includes(symptom))) {
-    return "Medium";
+    return "medium";
   } else {
-    return "Low";
+    return "low";
   }
 };
 

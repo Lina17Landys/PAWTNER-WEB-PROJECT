@@ -5,11 +5,10 @@ export interface Post {
   symptoms: string[];
   animalType: 'dog' | 'cat';
   petName: string;
-  priority: 'Low' | 'Medium' | 'High' | 'Emergency';
+  priority: 'low' | 'medium' | 'high' | 'emergency';
   photoUrl?: string;
   photo?: File;
-  gptRecommendation?: string;
-  comments?: string[];
+  gptRecommendation?: string | null;
 }
 
 export interface PostData {
@@ -18,8 +17,7 @@ export interface PostData {
   symptoms: string[];
   animalType: "dog" | "cat";
   petName: string;
-  priority: string;
+  priority: 'low' | 'medium' | 'high' | 'emergency';
   photo?: File;
   gptRecommendation?: string | null;
-  comments?: string[];
 }

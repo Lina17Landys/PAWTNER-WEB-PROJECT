@@ -22,7 +22,7 @@ const Login: React.FC = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/DiseaseForum'); 
+      navigate('/Dashboard'); 
     } catch (error) {
       setError('Invalid login credentials');
       console.error(error);

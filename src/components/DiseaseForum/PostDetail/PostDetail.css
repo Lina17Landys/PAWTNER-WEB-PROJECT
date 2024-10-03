@@ -1,221 +1,226 @@
 .detail-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #3CA38080;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3CA38080;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.detail-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 1307px;
+  max-width: 90%;
+  height: 80%;
+  position: relative;
+  gap: 20px; 
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.detail-header {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-header .detail-post-title {
+  color: #999;
+  font-size: 25px;
+}
+
+.priority {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10%;
+}
+
+.priority.low {
+  background-color: #A1C349;
+  color: #6B900A;
+  color: #6B900A;
+}
+
+.priority.medium {
+  background-color: #FFAF03;
+  color: #D28A02;
+  color: #D28A02;
+}
+
+.priority.high {
+  background-color: #E21E27;
+  color: #9A0209;
+  color: #9A0209;
+}
+
+.priority.emergency {
+  background-color: #800E13;
+  color: #360002;
+  color: #360002;
+}
+
+.pet-info-detail {
+  background-color: none;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.pet-name-detail {
+  gap: 10px;
+}
+
+.post-body {
+  display: flex;
+  gap: 20px;
+}
+
+.post-body img {
+  max-width: 85%;
+}
+
+.post-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post-info .divisor {
+  width: 94%;
+}
+
+.disease-info-detail{
+  display: flex;
+  gap: 30%;
+}
+
+.description-title-detail {
+  color: #BCB8B1;
+  margin-bottom: 10px;
+}
+
+.description-detail {
+  color: black;
+}
+
+.symptoms-title-detail {
+  color: #BCB8B1;
+  margin-bottom: 10px;
+}
+
+.symptom-tags-detail {
+  display: flex;
+  gap: 10px;
+}
+
+.symptom-tag-detail{
+  background-color: #6B900A;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.recommendation-title-detail {
+  color: #BCB8B1;
+  margin-bottom: 10px;
+}
+
+.recommendation-detail {
+  background-color: #A1C349;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 94%;
+}
+
+@media (max-width: 768px) {
   .detail-modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 1307px;
-    max-width: 90%;
-    height: 80%;
-    position: relative;
-    gap: 20px; 
+    width: 100%;  
+    height: auto; 
+    padding: 10px; 
   }
-  
-  .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #999;
-  }
-  
+
   .detail-header {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; 
+    align-items: flex-start;
   }
 
   .detail-post-title {
-    margin-left: 10%;
-    color: #999;
+    margin-left: 0; 
+    font-size: 20px; 
   }
-  
+
   .priority {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-right: 10%;
-  }
-  
-  .priority.low {
-    background-color: #A1C349;
-    color: #6B900A;
-    color: #6B900A;
-  }
-  
-  .priority.medium {
-    background-color: #FFAF03;
-    color: #D28A02;
-    color: #D28A02;
-  }
-  
-  .priority.high {
-    background-color: #E21E27;
-    color: #9A0209;
-    color: #9A0209;
+    margin-right: 0; 
+    font-size: 12px; 
+    padding: 5px 8px;
   }
 
-  .priority.emergency {
-    background-color: #800E13;
-    color: #360002;
-    color: #360002;
-  }
-  
-  .pet-info-detail {
-    background-color: none;
-    font-size: 18px;
-    color: black;
-    font-weight: bold;
-  }
-
-  .pet-name-detail {
-    gap: 10px;
-  }
-  
   .post-body {
-    display: flex;
-    gap: 20px;
+    flex-direction: column; 
+    gap: 10px;
   }
-  
+
   .post-body img {
-    max-width: 90%;
+    max-width: 100%; 
   }
-  
+
   .post-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    gap: 5px;
+  }
+
+  .disease-info-detail {
+    flex-direction: column; 
     gap: 10px;
   }
 
-  .disease-info-detail{
-    display: flex;
-    gap: 50%;
-  }
-
-  .description-title-detail {
-    color: #BCB8B1;
-    margin-bottom: 10px;
-  }
-
-  .description-detail {
-    color: black;
-  }
-
-  .symptoms-title-detail {
-    color: #BCB8B1;
-    margin-bottom: 10px;
-  }
-  
   .symptom-tags-detail {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .symptom-tag-detail{
-    background-color: #6B900A;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
+    flex-wrap: wrap; 
+    gap: 5px; 
   }
 
-  .recommendation-title-detail {
-    color: #BCB8B1;
-    margin-bottom: 10px;
+  .symptom-tag-detail {
+    font-size: 10px; 
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-modal-content {
+    padding: 5px;
   }
 
-  .recommendation-detail {
-    background-color: #A1C349;
-    border-radius: 5px;
-    padding: 5px 10px;
+  .detail-post-title {
+    font-size: 18px;
   }
 
-  @media (max-width: 768px) {
-    .detail-modal-content {
-      width: 100%;  
-      height: auto; 
-      padding: 10px; 
-    }
-  
-    .detail-header {
-      flex-direction: column; 
-      align-items: flex-start;
-    }
-  
-    .detail-post-title {
-      margin-left: 0; 
-      font-size: 20px; 
-    }
-  
-    .priority {
-      margin-right: 0; 
-      font-size: 12px; 
-      padding: 5px 8px;
-    }
-  
-    .post-body {
-      flex-direction: column; 
-      gap: 10px;
-    }
-  
-    .post-body img {
-      max-width: 100%; 
-    }
-  
-    .post-info {
-      gap: 5px;
-    }
-  
-    .disease-info-detail {
-      flex-direction: column; 
-      gap: 10px;
-    }
-  
-    .symptom-tags-detail {
-      flex-wrap: wrap; 
-      gap: 5px; 
-    }
-  
-    .symptom-tag-detail {
-      font-size: 10px; 
-      padding: 4px 8px;
-    }
+  .priority {
+    font-size: 10px;
+    padding: 4px 6px;
   }
-  
-  @media (max-width: 480px) {
-    .detail-modal-content {
-      padding: 5px;
-    }
-  
-    .detail-post-title {
-      font-size: 18px;
-    }
-  
-    .priority {
-      font-size: 10px;
-      padding: 4px 6px;
-    }
-  
-    .symptom-tag-detail {
-      font-size: 8px;
-      padding: 3px 6px;
-    }
+
+  .symptom-tag-detail {
+    font-size: 8px;
+    padding: 3px 6px;
   }
+}

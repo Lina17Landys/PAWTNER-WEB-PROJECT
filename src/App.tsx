@@ -1,3 +1,6 @@
+//import { useState } from 'react'
+//import LandingPage from './screens/landing/landing'
+import DashBoard from './screens/dashboard/dashboard'
 import './App.css'
 import DiseaseForum from './screens/DiseaseForum/DiseaseForum'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -13,7 +16,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<div>Dashboard</div>} /> 
+        <Route path="/Dashboard" element={<DashBoard />} />
         <Route path="/DiseaseForum" element={<DiseaseForum />} />
         
       </Routes>

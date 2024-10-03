@@ -6,6 +6,7 @@ import { useFetchPosts } from '../../hooks/useFetchPosts';
 import { diseaseSymptomMap } from '../../services/diseaseSymptomMap';
 import { Post, PostData } from '../../types/postTypes';
 import './DiseaseForum.css'
+import BarDash from "../../components/BarDashboard/nav-dash";
 
 const diseases = Object.keys(diseaseSymptomMap);
 
@@ -48,7 +49,7 @@ const DiseaseForum: React.FC = () => {
 
   return (
     <div className="disease-forum">
-
+      <BarDash />
       <h1>Pet Health Forum</h1>  
   
       <button className="addPostButton" onClick={openModal}>

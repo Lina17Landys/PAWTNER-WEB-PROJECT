@@ -87,12 +87,13 @@ const Signup: React.FC = () => {
             />
             <div className="terms">
               <input
-                type="checkbox"
-                checked={termsAccepted}
-                onChange={() => setTermsAccepted(!termsAccepted)}
+              type="checkbox"
+              id="terms-checkbox"
+              checked={termsAccepted}
+              onChange={() => setTermsAccepted(!termsAccepted)}
               />
-              <label>Agree to Terms and Conditions</label>
-            </div>
+              <label htmlFor="terms-checkbox">Agree to Terms and Conditions</label>
+              </div>
             <button type="submit">Create Account</button>
           </form>
         
