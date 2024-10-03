@@ -11,8 +11,9 @@ function BestProducts() {
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
             <h3>
-              {product.category} {product.emoji} {product.name}
+              {product.category} {product.emoji}
             </h3>
+            <h1 className="product-name">{product.name}</h1>
             <p>{product.stars}</p>
             <p>${product.price}</p>
           </div>

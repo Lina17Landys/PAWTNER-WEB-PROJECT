@@ -1,5 +1,5 @@
 import './nv.css'
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'; //dependencia npm install @fortawesome/fontawesome-free
 
 function BarDash() {
 
