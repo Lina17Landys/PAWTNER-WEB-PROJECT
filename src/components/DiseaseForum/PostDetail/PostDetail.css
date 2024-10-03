@@ -102,7 +102,6 @@
   }
   
   .diagnosis, .description {
-  .diagnosis, .description {
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 8px;
@@ -119,4 +118,3 @@
     border-radius: 5px;
     font-size: 12px;
   }
-  
