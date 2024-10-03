@@ -1,0 +1,225 @@
+.disease-forum {
+  padding: 20px;
+  background: linear-gradient(to right, #8BBEB2, #E6F9AF);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 20px;
+  color: white;
+}
+
+.skin-and-coat-problems .disease-title {
+  background-color: #A1C349;
+  color: white;
+}
+
+.digestive-issues .disease-title {
+  background-color: #EE9B00;
+  color: white;
+}
+
+.allergies .disease-title {
+  background-color: #A5C4D4;
+  color: white;
+}
+
+.mobility-issues .disease-title {
+  background-color: #800E13;
+  color: white;
+}
+
+.infections .disease-title {
+  background-color: #156064;
+  color: white;
+}
+
+.respiratory-issues .disease-title {
+  background-color: #404E7C;
+  color: white;
+}
+
+.behavioral-changes .disease-title {
+  background-color: #3CA380;
+  color: white;
+}
+
+.general-wellness .disease-title {
+  background-color: #281F51;
+  color: white;
+}
+
+.disease-title {
+  font-size: small;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow:  0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.columns {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.disease-column {
+  border-radius: 5px;
+  padding: 20px;
+  flex: 1;  
+  min-width: 300px;          
+  max-width: 300px;           
+  flex-shrink: 0;             
+}
+
+.disease-column h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.post-image {
+  margin: 10px 0;
+}
+
+.post-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.symptom-tag {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: black;
+  font-size: 12px;
+  display: inline-block;
+  border: none;
+}
+
+.symptom-diarrhea, .symptom-vomiting, .symptom-loss-of-appetite .symptom-abdominal-pain, .symptom-constipation, .symptom-excessive-drooling {
+  background-color: #EE9B00;
+}
+
+.symptom-itching-skin, .symptom-hair-loss .symptom-redness .symptom-dry-skin, .symptom-bumps, .symptom-sores, .symptom-foul-odor, .symptom-flaky-skin {
+  background-color: #A1C349;
+}
+
+.symptom-itchy-skin, .symptom-sneezing, .symptom-watery-eyes, .symptom-swelling, .symptom-ear-infections, .symptom-coughing, .symptom-red-or-inflamed-skin, .symptom-chewing-paws {
+  background-color: #A5C4D4;
+}
+
+.symptom-limping, .symptom-stiffness, .sympton-difficulty-standing, .symptom-reluctance-to-move, .symptom-swelling-in-joints, .symptom-loss-of-muscle-mass, .symptom-favoring-one-leg {
+  background-color: #800E13;
+}
+
+.symptom-fever, .symptom-swollen-lymph-nodes, .symptom-pus-discharge, .symptom-coughing, .symptom-sneezing, .symptom-loss-of-appetite, .symptom-lethargy, .symptom-swelling-or-abscesses {
+  background-color: #156064; 
+}
+
+.symptom-coughing, .symptom-wheezing, .symptom-difficulty-breathing, .symptom-nasal-discharge, .symptom-sneezing, .symptom-rapid-breathing, .symptom-labored-breathing, .symptom-blue-gums-or-tongue {
+  background-color: #404E7C;
+}
+
+.sympton-aggression, .sympton-fearfulness, .sympton-excessive-barking, .sympton-restlessness, .sympton-hiding, .sympton-excessive-licking-or-grooming, .sympton-destructive-behavior, .sympton-Increased-sleeping {
+  background-color: #3CA380;
+}
+
+.addPostButton {
+  position: fixed;
+  bottom: 20px;      
+  right: 20px;    
+  width: 60px; 
+  height: 60px; 
+  background-color: #3CA380;
+  color: white;          
+  font-size: 36px;       
+  border-radius: 5px;    
+  border: none;          
+  cursor: pointer;       
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.addPostButton:hover {
+  background-color: #248463;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+    margin: 15px;
+  }
+
+  .disease-column {
+    min-width: 45%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .disease-title {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .columns {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  .disease-column {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .disease-title {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .post-image img {
+    border-radius: 3px;
+  }
+
+  .addPostButton {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .symptom-tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+}

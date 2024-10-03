@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'; // Importing Link for navigation
+import { Link } from 'react-router-dom';
 import './bar.css';
 
 function NavBar() {
@@ -12,7 +12,7 @@ function NavBar() {
         <p>Store</p>
       </div>
       <div className="btn-line">
-        {/* Replacing buttons with Links for navigation */}
+        
         <Link to="/login" className="log-btn">Log In</Link>
         <Link to="/signup" className="sign-btn">Sign Up</Link>
       </div>

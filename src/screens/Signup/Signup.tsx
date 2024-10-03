@@ -95,10 +95,7 @@ const Signup: React.FC = () => {
             </div>
             <button type="submit">Create Account</button>
           </form>
-          <button className="google-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_2015_logo.svg" alt="Google Logo" />
-            Sign up with Google
-          </button>
+        
           <p>Already have an account? <a href="/login">Log In</a></p>
         </div>
 

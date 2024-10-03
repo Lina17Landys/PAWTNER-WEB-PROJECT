@@ -1,9 +1,10 @@
-
 import React, { useState } from 'react';
 import './Login.css';
+import logo from '../../img/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../../firebaseConfig'; 
+import { auth } from '../../../firebaseConfig';
+
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -20,9 +21,8 @@ const Login: React.FC = () => {
     }
 
     try {
-      
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/dashboard'); 
+      navigate('/DiseaseForum'); 
     } catch (error) {
       setError('Invalid login credentials');
       console.error(error);
@@ -31,32 +31,42 @@ const Login: React.FC = () => {
 
   return (
     <div className="login-container">
-      <form onSubmit={handleLogin} className="login-form">
-        <h2>Login</h2>
-        {error && <p className="error">{error}</p>}
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+      <div className="login-wrapper">
+        
+        <div className="login-image">
+          <img src="src\assets\images\LogIn-img.png" alt="background-login" />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+        
+        <form onSubmit={handleLogin} className="login-form">
+        <div className="login-logo">
+            <img src={logo} alt="Pawtner Logo" />
+          </div>
+          <h2>Log In</h2>
+          {error && <p className="error">{error}</p>}
+          <div className="form-group">
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button className="login-button-2" type="submit">Log In</button>
+          <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+        </form>
+      </div>
     </div>
   );
 };
