@@ -61,4 +61,4 @@ export const symptomMedicationMap: { [key: string]: string[] } = {
     "Dehydration": ["Fluids", "Electrolyte Solutions"],
     "Behavior Changes": ["Behavioral Therapy", "Anxiety Medication"],
     "Poor Coat Condition": ["Omega-3 Supplements", "Balanced Diet"]
-  };
+  }; 
