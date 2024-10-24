@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Post } from '../../../types/postTypes';
 import dogIcon from '../../../assets/images/Dog-Icon.png';
 import catIcon from '../../../assets/images/Cat-Icon.png';
 import './PostDetail.css';
+import { symptomMedicationMap } from '../../../services/symptomMedicationMap';
+
+const getMedicationRecommendations = (selectedSymptoms: string[]): string[] => {
+  const recommendedMedications: Set<string> = new Set();
+
+  selectedSymptoms.forEach(symptom => {
+    const medications = symptomMedicationMap[symptom];
+    if (medications) {
+      medications.forEach(med => recommendedMedications.add(med));
+    }
+  });
+
+  return Array.from(recommendedMedications);
+};
 
 interface PostDetailProps {
   post: Post;
@@ -10,6 +24,10 @@ interface PostDetailProps {
 }
 
 const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
+  const medicationRecommendations = useMemo(() => {
+    return getMedicationRecommendations(post.symptoms);
+  }, [post.symptoms]);
+
   return (
     <div className="detail-modal">
       <div className="detail-modal-content">
@@ -61,6 +79,19 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
             <div className="gpt-recommendation">
               <h4 className='recommendation-title-detail'>Recommended Treatment</h4>
               <p className='recommendation-detail'>{post.gptRecommendation || 'No recommendation available'}</p>
+            </div>
+
+            <div className="medication-recommendation">
+              <h4 className='medication-title-detail'>Medication Suggestions</h4>
+              {medicationRecommendations.length > 0 ? (
+                <ul>
+                  {medicationRecommendations.map((medication, index) => (
+                    <li key={index}>{medication}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>No medications recommended based on selected symptoms.</p>
+              )}
             </div>
           </div>
         </div>
