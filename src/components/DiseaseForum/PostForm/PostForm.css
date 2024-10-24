@@ -14,14 +14,14 @@
 
 .modal-content {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 1300px;
-  height: 80%;
+  padding: 40px;
+  border-radius: 15px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 95%; 
+  max-width: 1600px;
+  height: 85%; 
   position: relative;
-  gap: 20px;
+  gap: 30px;
   overflow-y: auto;
 }
 
@@ -53,12 +53,12 @@
 .Post-title-form {
   color: #BCB8B1;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 36px;
+  font-size: 48px; 
   font-weight: 700;
-  line-height: 80px;
+  line-height: 90px; 
   border: none;
-  width: 80%;
-  margin-bottom: 20px;
+  width: 90%;
+  margin-bottom: 30px; 
   margin-left: 50px;
 }
 
@@ -69,7 +69,8 @@ input[type="file"] {
 .upload-box {
   width: 100%;
   height: 100%;
-  max-width: 300px;
+  max-width: 400px; 
+  max-height: 400px; 
   background-color: #f0f0f0;
   border: 2px dashed #ccc;
   border-radius: 10px;
@@ -84,10 +85,9 @@ input[type="file"] {
 
 .upload-box::before {
   content: 'Upload an Image';
-  font-size: 16px;
+  font-size: 20px; 
   color: #BCB8B1;
   position: absolute;
-  display: block;
 }
 
 .upload-box.image-uploaded::before {
@@ -103,68 +103,52 @@ input[type="file"] {
   width: calc(50% - 10px);
   background-color: #EEE;
   color: #5e636e;
-  padding: 10px;
+  padding: 20px; 
   margin: 10px 5px;
   border-radius: 5px;
   border: none;
-  font-size: 16px;
+  font-size: 20px; 
 }
 
 .animal-type, .priority-level {
   color: #5e636e;
   background-color: #EEE;
   width: calc(50% - 10px);
-  padding: 10px;
+  padding: 20px; 
   margin: 10px 5px;
   border-radius: 5px;
   border: none;
-  font-size: 16px;
-  height: 60px;
-}
-
-.animal-type {
-  margin-right: 50px;
+  font-size: 20px; 
+  height: 70px; 
 }
 
 textarea {
   resize: none;
-  width: 94%;
-  padding: 15px;
-  border-radius: 5px;
+  width: 95%;
+  padding: 20px; 
+  border-radius: 10px;
   border: none;
   background-color: #EEE;
   color: #5e636e;
   margin: 15px 5px;
-  font-size: 16px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .symptom-tags-form {
-  max-height: 130px;
+  max-height: 150px; 
   overflow-y: auto;
   display: flex;
   background-color: #EEE;
-  border-radius: 5px;
-  display: flex;
-  gap: 10px;
+  border-radius: 10px;
+  gap: 15px;
   flex-wrap: wrap;
-  width: 94%;
-  padding: 10px;
-  margin: 15px 5px;
+  width: 95%; 
+  padding: 15px;
+  margin: 20px 5px;
   border: none;
-  font-size: 16px;
+  font-size: 22px;
   color: #276749;
-}
-
-.symptom-tags div {
-  flex: 1 1 100px;
-}
-
-.symptom-selector {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 16px;
 }
 
 .symptom-tag {
@@ -172,8 +156,8 @@ textarea {
   color: #999;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 15px 30px; 
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -191,10 +175,10 @@ textarea {
 button[type="submit"] {
   background-color: #2F855A;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px; 
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
   align-self: flex-end;
   margin-right: 50px;
@@ -206,18 +190,16 @@ button[type="submit"]:hover {
 
 .close-modal {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px; 
+  right: 15px;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: 3rem; 
   cursor: pointer;
   color: #999;
   background-color: #EEEEEE;
   border-radius: 5px;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px; 
   margin-right: 60px;
   margin-top: 20px;
 }
@@ -225,7 +207,7 @@ button[type="submit"]:hover {
 @media (max-width: 768px) {
   .modal-content {
     height: auto;
-    padding: 10px;
+    padding: 20px; 
   }
 
   .form-layout {
@@ -251,8 +233,8 @@ button[type="submit"]:hover {
   .close-modal {
     top: 10px;
     right: 10px;
-    padding: 5px;
-    font-size: 1.5rem;
+    padding: 10px;
+    font-size: 2rem;
     margin-right: 20px;
   }
 }
@@ -261,12 +243,12 @@ button[type="submit"]:hover {
   .modal-content {
     width: 100%;
     height: auto;
-    padding: 5px;
+    padding: 10px;
   }
 
   .Post-title-form {
-    font-size: 24px;
-    margin: 10px 0;
+    font-size: 32px; 
+    margin: 20px 0;
   }
 
   .form-section {
