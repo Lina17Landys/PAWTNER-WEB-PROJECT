@@ -1,0 +1,267 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3CA38080;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 95%; 
+  max-width: 1600px;
+  height: 85%; 
+  position: relative;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+.inputs-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-layout {
+  display: flex;
+  width: 100%;
+}
+
+.upload-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Post-title-form {
+  color: #BCB8B1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px; 
+  font-weight: 700;
+  line-height: 90px; 
+  border: none;
+  width: 90%;
+  margin-bottom: 30px; 
+  margin-left: 50px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-box {
+  width: 100%;
+  height: 100%;
+  max-width: 400px; 
+  max-height: 400px; 
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.upload-box::before {
+  content: 'Upload an Image';
+  font-size: 20px; 
+  color: #BCB8B1;
+  position: absolute;
+}
+
+.upload-box.image-uploaded::before {
+  display: none;
+}
+
+.pet-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pet-name {
+  width: calc(50% - 10px);
+  background-color: #EEE;
+  color: #5e636e;
+  padding: 20px; 
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px; 
+}
+
+.animal-type, .priority-level {
+  color: #5e636e;
+  background-color: #EEE;
+  width: calc(50% - 10px);
+  padding: 20px; 
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px; 
+  height: 70px; 
+}
+
+textarea {
+  resize: none;
+  width: 95%;
+  padding: 20px; 
+  border-radius: 10px;
+  border: none;
+  background-color: #EEE;
+  color: #5e636e;
+  margin: 15px 5px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.symptom-tags-form {
+  max-height: 150px; 
+  overflow-y: auto;
+  display: flex;
+  background-color: #EEE;
+  border-radius: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 95%; 
+  padding: 15px;
+  margin: 20px 5px;
+  border: none;
+  font-size: 22px;
+  color: #276749;
+}
+
+.symptom-tag {
+  background-color: #f0f0f0;
+  color: #999;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px 30px; 
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.symptom-tag:hover {
+  background-color: #e0e0e0;
+}
+
+.symptom-tag.selected {
+  border-radius: 5px;
+  background-color: #2F855A; 
+  color: white;
+}
+
+button[type="submit"] {
+  background-color: #2F855A;
+  color: white;
+  padding: 15px 30px; 
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 50px;
+}
+
+button[type="submit"]:hover {
+  background-color: #276749;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px; 
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 3rem; 
+  cursor: pointer;
+  color: #999;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  padding: 15px; 
+  margin-right: 60px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    height: auto;
+    padding: 20px; 
+  }
+
+  .form-layout {
+    flex-direction: column;
+  }
+
+  .upload-box {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+    border: 2px dashed #ccc;
+  }
+
+  .pet-name, .animal-type, .priority-level {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .close-modal {
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 2rem;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .Post-title-form {
+    font-size: 32px; 
+    margin: 20px 0;
+  }
+
+  .form-section {
+    margin-bottom: 10px;
+  }
+
+  .upload-box {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+
+  .pet-description {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,74 @@
+.disease-card {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.disease-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.disease-card {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+.divisor {
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc
+}
+
+.pet-info {
+  color: black;
+  font-weight: 600;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.priority {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.priority.low {
+  background-color: #A1C349;
+  color: #6B900A;
+}
+
+.priority.medium {
+  background-color: #FFAF03;
+  color: #D28A02;
+}
+
+.priority.high {
+  background-color: #E21E27;
+  color: #9A0209;
+}
+
+.priority.emergency {
+  background-color: #800E13;
+  color: #360002;
+}
+
+.symptoms-list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.description-section-card {
+  margin-bottom: 10px;
+  font-weight: 500;
+}

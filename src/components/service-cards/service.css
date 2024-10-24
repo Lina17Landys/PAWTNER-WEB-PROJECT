@@ -1,45 +1,44 @@
 .cardServ-line {
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start;
-    margin: 0 40px; 
-    gap: 20px; 
-    flex-wrap: wrap; 
-    overflow-y: hidden;
-  }
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  margin: 0 40px; 
+  gap: 10px; 
+  flex-wrap: wrap; 
+  overflow-y: hidden;
+}
 
 .cardServ {
-  overflow-y: hidden;
-    background: linear-gradient(to bottom right,#8BBEB2, #E6F9AF );
-    border-radius: 15px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    padding: 70px; 
-    text-align: center; 
-    width: 285px; 
-    height: 300px;
-    margin: 20px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  }
-  
-  .cardServ:hover {
-    transform: translateY(-10px); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-  }
-  
-  .i-Line {
-    max-width: 60%;
-    margin-bottom: 15px; 
-  }
-  
-  .title-s {
-    font-size: 28px; 
-    color: #3CA380;
-    margin-bottom: 10px; 
-  }
-  
-  .description-s {
-    font-size: 18px; 
-    color: #3CA380; 
-    margin-bottom: 0; 
-  }
-  
+overflow-y: hidden;
+  background: linear-gradient(to bottom right,#8BBEB2, #E6F9AF );
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 30px; 
+  text-align: center; 
+  width: 400px; 
+  height: 380px;
+  margin: 20px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.cardServ:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.i-Line {
+  max-width: 40%;
+  margin-bottom: 15px; 
+}
+
+.title-s {
+  font-size: 28px; 
+  color: #3CA380;
+  margin-bottom: 10px; 
+}
+
+.description-s {
+  font-size: 18px; 
+  color: #3CA380; 
+  margin-bottom: 0; 
+}
