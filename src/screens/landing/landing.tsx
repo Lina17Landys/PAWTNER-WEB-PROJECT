@@ -55,8 +55,8 @@ function LandingPage() {
       </div>
 
       <div className="section-3">
-        <h1 className="title-4">Meet a new friend!</h1>
         <img className="star2-img" src="./src/img/star2.png" />
+        <h1 className="title-4">Meet a <br />new friend!</h1>
 
         <div className="animal-cards">
           <img className="animal-img" src="./src/img/c1.png" />
@@ -81,18 +81,18 @@ function LandingPage() {
               rescue, and responsible pet ownership.
             </p>
           </div>
-                    <img className="cat-yell" src="./src/img/yell-cat.png" />
+          <img className="cat-yell" src="./src/img/yell-cat.png" />
 
         </div>
       </div>
 
       <div className="frame-container">
-      <img className="cat-yell" src="./src/img/frame.png" />
+        <img className="caring" src="./src/img/frame.png" />
       </div>
 
       <div className="f-c">
-      <img className="footer-img" src="./src/img/footer.png" />
-</div>
+        <img className="footer-img" src="./src/img/footer.png" />
+      </div>
     </div>
   );
 }

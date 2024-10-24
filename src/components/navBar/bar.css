@@ -1,11 +1,11 @@
 header {
+  width: 100%;
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: space-between;
+  /* Align logo and menu to the sides */
   align-items: center;
   box-sizing: border-box;
-  margin-top: 20px;
-  padding: 0 20px; 
   position: relative;
 }
 
@@ -23,28 +23,29 @@ header {
 
 .text-line {
   display: flex;
-  gap: 50px;
+  align-items: center;
+  gap: 3vw;
 }
 
 .text-line p {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   cursor: pointer;
 }
 
 .btn-line {
   display: flex;
-  gap: 20px;
+  gap: 2vw;
 }
 
 .log-btn,
 .sign-btn {
-  width: 120px;
-  height: 60px;
-  font-size: 22px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 20px;
   font-weight: normal;
-  padding: 6px 12px;
+  padding: 1vh;
   border-radius: 10px;
   border: 2px solid white;
   cursor: pointer;
@@ -56,7 +57,6 @@ header {
   background-color: #3ca380;
   border: none;
 }
-
 
 .log-btn:hover,
 .sign-btn:hover {
