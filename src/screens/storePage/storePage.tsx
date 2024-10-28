@@ -1,6 +1,8 @@
 import './storePage.css'
 import BarDash from '../../components/BarDashboard/nav-dash';
 import ShopCards from '../../components/shop-cards/shopCards';
+import InfoCardShop from '../../components/info-shop/infoShop';
+
 function Shop() {
   return (
     <>
@@ -12,6 +14,7 @@ function Shop() {
 <h1>Top Categories</h1>
 
 <ShopCards/>
+<InfoCardShop/>
    </>
   );
 }
