@@ -17,5 +17,7 @@
     align-items: center;
   }
 
-
+.products-section {
+  background: linear-gradient(to bottom right, #8bbeb287, #18314faf);
+}
   

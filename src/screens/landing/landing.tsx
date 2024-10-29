@@ -7,7 +7,7 @@ import "./landing.css";
 function LandingPage() {
   return (
     <div className="landing-page">
-      <section>
+      <section className="main-section">
         <div className="container-1">
           <NavBar />
           <div className="texts-div">

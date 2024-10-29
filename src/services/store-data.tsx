@@ -95,7 +95,7 @@ const products = [
     category: "food",
     emoji: "🐶",
     image: "./src/img/shop10.webp",
-    name: "Smartbones Dog Treats Chicken Bones Veg Without Meat 16pcs",
+    name: "Smartbones Dog Treats Chicken Bones 16pcs",
     stars: "⭐⭐⭐⭐⭐",
     description: "Your dog won't be able to resist the exquisite flavour of Smartbones Chicken Mini premium snacks. They are made with vegetables and have an inner layer of chicken that will brighten up your canine friend's days.",
     price: 12.0,

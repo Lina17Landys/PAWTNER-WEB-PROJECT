@@ -2,7 +2,7 @@ import './storePage.css'
 import BarDash from '../../components/BarDashboard/nav-dash';
 import ShopCards from '../../components/shop-cards/shopCards';
 import InfoCardShop from '../../components/info-shop/infoShop';
-
+import ShopItems from '../../components/shop-items/shopItems';
 function Shop() {
   return (
     <>
@@ -15,6 +15,11 @@ function Shop() {
 
 <ShopCards/>
 <InfoCardShop/>
+
+<section className='products-section'>
+<h1>Trending Products</h1>
+<ShopItems/>
+</section>
    </>
   );
 }
