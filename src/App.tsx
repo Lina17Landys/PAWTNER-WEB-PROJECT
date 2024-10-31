@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './screens/landing/landing';   
 import Login from './screens/Login/Login';
 import Signup from './screens/Signup/Signup';
+import ReportSystem from './screens/ReportSystem/ReportSystem';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/Dashboard" element={<DashBoard />} />
         <Route path="/DiseaseForum" element={<DiseaseForum />} />
+        <Route path="/ReportSystem" element={<ReportSystem />} />
         
       </Routes>
     </Router>

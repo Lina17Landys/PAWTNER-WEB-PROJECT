@@ -26,7 +26,7 @@ const BarDash: React.FC = () => {
         <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/Dashboard">Home</Link></li>
           <li><Link to="/pets">Pets</Link></li>
-          <li><Link to="/report-system">Report System</Link></li>
+          <li><Link to="/ReportSystem">Report System</Link></li>
           <li><Link to="/DiseaseForum">Forum</Link></li>
           <li><Link to="/shop">Shop</Link></li>
         </ul>
