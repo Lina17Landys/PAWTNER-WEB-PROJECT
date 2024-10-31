@@ -227,7 +227,7 @@ const products = [
     image: "./src/img/shop23.jpg",
     name: "Hallowen costume for cats",
     stars: "⭐⭐⭐⭐",
-    description:"Este disfraz de Chucky para gato es ideal para darle a tu felino un toque aterrador y divertido en Halloween o cualquier ocasión especial. El conjunto incluye una camiseta con tirantes que imita el icónico atuendo del personaje, con una camiseta de rayas y un peto de mezclilla. Además, lleva un cuchillo de juguete suave que parece estar en las manos de tu gato cuando camina. Fabricado con materiales ligeros y cómodos, este disfraz no limita la movilidad de tu mascota y es fácil de poner y quitar. ¡Convierte a tu gato en el protagonista de una película de terror con este disfraz único y lleno de personalidad!",
+    description:"This Chucky cat costume is ideal for giving your feline a scary and fun touch for Halloween or any special occasion. The outfit includes a tank top that imitates the character's iconic outfit, with a striped T-shirt and denim overalls. In addition, he carries a soft toy knife that seems to be in your cat's hands when he walks. Made of light and comfortable materials, this costume does not limit your pet's mobility and is easy to put on and take off. Turn your cat into the star of a horror movie with this unique and personality-packed costume!",
     price: 40.00
   },
   {

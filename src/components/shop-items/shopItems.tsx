@@ -1,10 +1,24 @@
+// ShopItems.tsx
 import { useState } from 'react';
 import products from "../../services/store-data";
+import ProductDetail from './ProductDetail';
 import './items.css';
 
+interface Product {
+  id: number;
+  category: string;
+  emoji: string;
+  image: string;
+  name: string;
+  stars: string;
+  description: string;
+  price: number;
+}
+
 function ShopItems() {
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [showAll, setShowAll] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Estado para el producto seleccionado
 
   const filterByCategory = (category: string) => {
     const filtered = products.filter((product) => product.category === category);
@@ -27,6 +41,10 @@ function ShopItems() {
     setShowAll(!showAll);
   };
 
+  const handleProductClick = (product: Product) => {
+    setSelectedProduct(product); // Al hacer clic, establece el producto seleccionado
+  };
+
   const productsToDisplay = showAll ? filteredProducts : filteredProducts.slice(0, 5);
 
   return (
@@ -40,7 +58,7 @@ function ShopItems() {
 
       <div className="product-grid">
         {productsToDisplay.map((product) => (
-          <div key={product.id} className="product-card">
+          <div key={product.id} className="product-card" onClick={() => handleProductClick(product)}>
             <img src={product.image} alt={product.name} className="product-image" />
             <div className="product-info">
               <h3>
@@ -56,13 +74,15 @@ function ShopItems() {
       </div>
 
       {filteredProducts.length > 5 && (
-  <div className="show-more">
-    <button className="btn" onClick={toggleShowAll}>
-      {showAll ? "See Less" : "See more"}
-    </button>
-  </div>
-)}
+        <div className="show-more">
+          <button className="btn" onClick={toggleShowAll}>
+            {showAll ? "See Less" : "See more"}
+          </button>
+        </div>
+      )}
 
+      {/* Mostrar detalles del producto si se ha seleccionado uno */}
+      {selectedProduct && <ProductDetail product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
     </>
   );
 }
