@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Post } from '../../../types/postTypes';
 import dogIcon from '../../../assets/images/Dog-Icon.png';
 import catIcon from '../../../assets/images/Cat-Icon.png';
 import './DiseaseCard.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 interface DiseaseCardProps {
   post: Post;
@@ -10,9 +11,22 @@ interface DiseaseCardProps {
 }
 
 const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails }) => {
+  const [comments, setComments] = useState(post.comments || []);
+
+  const handleAddComment = (newCommentText: string) => {
+    const newComment = {
+      id: Date.now().toString(),
+      username: 'User',
+      text: newCommentText,
+      createdAt: new Date().toISOString(),
+    };
+    
+    setComments((prevComments) => [...prevComments, newComment]);
+  };
+
   return (
-    <div className="disease-card" onClick={onViewDetails} style={{ cursor: 'pointer' }}>
-      <h3 className='Post-title-card'>{post.title}</h3>
+    <div className="disease-card">
+      <h3 className="Post-title-card">{post.title}</h3>
 
       {post.photo && (
         <div className="post-image">
@@ -20,14 +34,12 @@ const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails }) => {
         </div>
       )}
 
-      <hr className='divisor'/>
-      
-      <p className='pet-info'>
-        <img src={post.animalType === 'dog' ? dogIcon : catIcon} className="pet-icon" /> 
-        <span className='pet-name-card'>{post.petName}</span>
-        <span className={`priority ${post.priority.toLowerCase()}`}>
-            {post.priority}
-        </span>
+      <hr className="divisor" />
+
+      <p className="pet-info">
+        <img src={post.animalType === 'dog' ? dogIcon : catIcon} className="pet-icon" />
+        <span className="pet-name-card">{post.petName}</span>
+        <span className={`priority ${post.priority.toLowerCase()}`}>{post.priority}</span>
       </p>
 
       <div className="symptoms-list">
@@ -38,9 +50,15 @@ const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails }) => {
         ))}
       </div>
 
-      <p className='description-section-card'>{post.description}</p>
+      <p className="description-section-card">{post.description}</p>
 
-      <hr className='divisor'/>
+      <button className="details-button" onClick={onViewDetails}>
+        Ver Detalles
+      </button>
+
+      <hr className="divisor" />
+
+      <CommentSection comments={comments} onAddComment={handleAddComment} />
     </div>
   );
 };
