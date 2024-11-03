@@ -9,6 +9,14 @@ export interface Post {
   photoUrl?: string;
   photo?: File;
   gptRecommendation?: string | null;
+  comments?: Comment[];
+}
+
+export interface Comment {
+  id: string;
+  username: string;
+  text: string;
+  createdAt: string;
 }
 
 export interface PostData {

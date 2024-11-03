@@ -1,13 +1,52 @@
+import { useEffect, useState } from "react";
+import { auth, db } from "../../../firebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
 import "./dash.css";
 import BarDash from "../../components/BarDashboard/nav-dash";
 import BannersPets from "../../components/banners/banners";
 import ServiceCards from "../../components/service-cards/serviceCard";
 import BestProducts from "../../components/best-product/best";
+
 function DashBoard() {
+  const [username, setUsername] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUsername = async () => {
+      setIsLoading(true);
+      const user = auth.currentUser;
+
+      if (user) {
+        try {
+          const userDoc = await getDoc(doc(db, "users", user.uid));
+          if (userDoc.exists()) {
+            setUsername(userDoc.data().username || "");
+          } else {
+            console.log("El documento del usuario no existe.");
+          }
+        } catch (error) {
+          console.error("Error al obtener el nombre de usuario:", error);
+        }
+      } else {
+        console.log("Usuario no autenticado.");
+      }
+      setIsLoading(false);
+    };
+
+    fetchUsername();
+  }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
       <BarDash />
-      <BannersPets />
+      <BannersPets username={username || "User"} />
+      <div className="welcome-message">
+        <h1>Welcome, {username ? username : "User"}!</h1>
+      </div>
 
       <div className="services">
         <h2 className="title-serv">Our services</h2>
@@ -34,21 +73,19 @@ function DashBoard() {
           <button className="stray-animal">Report a stray Animal</button>
           <button className="stray-animal">Report a lost Animal</button>
         </div>
-        <img className="map-img" src="./src/img/mapa-img.png" />
+        <img className="map-img" src="./src/img/mapa-img.png" alt="Map" />
       </div>
 
       <div className="forum-info">
-  <img className="sick-dog" src="./src/img/sick-dog.png" />
-
-  <div className="forum-container">
-    <h1 className="Forum-title">Pet Health Forum</h1>
-    <p className="place-holder">
-      Is your pet sick or in pain? Check out our collaborative forum to
-      see what might be wrong with your buddy.
-    </p>
-  </div>
-</div>
-
+        <img className="sick-dog" src="./src/img/sick-dog.png" alt="Sick Dog" />
+        <div className="forum-container">
+          <h1 className="Forum-title">Pet Health Forum</h1>
+          <p className="place-holder">
+            Is your pet sick or in pain? Check out our collaborative forum to
+            see what might be wrong with your buddy.
+          </p>
+        </div>
+      </div>
     </>
   );
 }
