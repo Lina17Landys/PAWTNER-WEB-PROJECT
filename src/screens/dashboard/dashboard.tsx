@@ -9,25 +9,41 @@ import BestProducts from "../../components/best-product/best";
 
 function DashBoard() {
   const [username, setUsername] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchUsername = async () => {
+      setIsLoading(true);
       const user = auth.currentUser;
+
       if (user) {
-        const userDoc = await getDoc(doc(db, "users", user.uid));
-        if (userDoc.exists()) {
-          setUsername(userDoc.data().username);
+        try {
+          const userDoc = await getDoc(doc(db, "users", user.uid));
+          if (userDoc.exists()) {
+            setUsername(userDoc.data().username || "");
+          } else {
+            console.log("El documento del usuario no existe.");
+          }
+        } catch (error) {
+          console.error("Error al obtener el nombre de usuario:", error);
         }
+      } else {
+        console.log("Usuario no autenticado.");
       }
+      setIsLoading(false);
     };
 
     fetchUsername();
   }, []);
 
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
       <BarDash />
-      <BannersPets />
+      <BannersPets username={username || "User"} />
       <div className="welcome-message">
         <h1>Welcome, {username ? username : "User"}!</h1>
       </div>
@@ -52,6 +68,7 @@ function DashBoard() {
           to help others recognize them. Together, we can ensure that every pet
           finds its way back home.
         </p>
+
         <div className="buttons-line">
           <button className="stray-animal">Report a stray Animal</button>
           <button className="stray-animal">Report a lost Animal</button>
