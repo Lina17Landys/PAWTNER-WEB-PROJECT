@@ -16,13 +16,10 @@ interface ProductDetailProps {
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
-  // Estado para manejar la cantidad de unidades
   const [quantity, setQuantity] = useState(1);
 
-  // Función para incrementar la cantidad de unidades
   const incrementQuantity = () => setQuantity(quantity + 1);
 
-  // Función para disminuir la cantidad de unidades (sin bajar de cero)
   const decrementQuantity = () => {
     if (quantity > 0) {
       setQuantity(quantity - 1);
@@ -38,7 +35,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
         <div className="product-details">
           <div className="product-category">
             <span className="emoji">{product.emoji}</span>
-            <span>{product.category}</span>
+            <span className='category'>{product.category}</span>
           </div>
           <h2 className="product-name">{product.name}</h2>
           <p className="product-description">{product.description}</p>
@@ -48,7 +45,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
             <button className="quantity-button" onClick={decrementQuantity}>-</button>
             <span className="quantity-display">{quantity}</span>
             <button className="quantity-button" onClick={incrementQuantity}>+</button>
-            <button className="buy-button">Comprar</button>
+            <button className="buy-button">Buy now</button>
           </div>
         </div>
       </div>
@@ -57,5 +54,3 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onClose }) => {
 };
 
 export default ProductDetail;
-
-

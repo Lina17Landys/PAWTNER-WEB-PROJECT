@@ -18,41 +18,76 @@ function ShopItems() {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [showAll, setShowAll] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); 
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedEmoji, setSelectedEmoji] = useState<string | null>(null);
 
-  const filterByCategory = (category: string) => {
-    const filtered = products.filter((product) => product.category === category);
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    applyFilters(category, selectedEmoji);
+  };
+
+  const handleEmojiChange = (emoji: string) => {
+    setSelectedEmoji(emoji);
+    applyFilters(selectedCategory, emoji);
+  };
+
+  const applyFilters = (category: string | null, emoji: string | null) => {
+    let filtered = products;
+
+    if (category) {
+      filtered = filtered.filter((product) => product.category === category);
+    }
+    if (emoji) {
+      filtered = filtered.filter((product) => product.emoji === emoji);
+    }
+
     setFilteredProducts(filtered);
-    setShowAll(false); 
+    setShowAll(false);
   };
 
   const clearFilters = () => {
     setFilteredProducts(products);
+    setSelectedCategory(null);
+    setSelectedEmoji(null);
     setShowAll(false); 
-  };
-
-  const showBestSellers = () => {
-    const bestSellers = products.slice(0, 5);
-    setFilteredProducts(bestSellers);
-    setShowAll(false);  
-  };
-
-  const toggleShowAll = () => {
-    setShowAll(!showAll);
   };
 
   const handleProductClick = (product: Product) => {
     setSelectedProduct(product); 
   };
 
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
   const productsToDisplay = showAll ? filteredProducts : filteredProducts.slice(0, 5);
 
   return (
     <>
-      <div className="filter-btn">
-        <button className="btn" onClick={() => filterByCategory('food')}>Food</button>
-        <button className="btn" onClick={() => filterByCategory('toy')}>Toys</button>
-        <button className="btn" onClick={showBestSellers}>Best Seller</button>
-        <button className="btn" onClick={clearFilters}>X</button>
+      <div className="filter-container">
+        <select
+          className="filter-select"
+          value={selectedCategory || ""}
+          onChange={(e) => handleCategoryChange(e.target.value)}
+        >
+          <option value="">All Categories</option>
+          <option value="clothes">Clothes</option>
+          <option value="toy">Toys</option>
+          <option value="medicine">Medicine</option>
+          <option value="food">Food</option>
+        </select>
+
+        <select
+          className="filter-select"
+          value={selectedEmoji || ""}
+          onChange={(e) => handleEmojiChange(e.target.value)}
+        >
+          <option value="">All Pets</option>
+          <option value="🐱">Cat</option>
+          <option value="🐶">Dog</option>
+        </select>
+
+        <button className="btn clear-filters" onClick={clearFilters}>Clear Filters</button>
       </div>
 
       <div className="product-grid">
