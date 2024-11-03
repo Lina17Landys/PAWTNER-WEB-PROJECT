@@ -1,4 +1,3 @@
-// ShopItems.tsx
 import { useState } from 'react';
 import products from "../../services/store-data";
 import ProductDetail from './ProductDetail';
@@ -18,7 +17,7 @@ interface Product {
 function ShopItems() {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [showAll, setShowAll] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); // Estado para el producto seleccionado
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null); 
 
   const filterByCategory = (category: string) => {
     const filtered = products.filter((product) => product.category === category);
@@ -42,7 +41,7 @@ function ShopItems() {
   };
 
   const handleProductClick = (product: Product) => {
-    setSelectedProduct(product); // Al hacer clic, establece el producto seleccionado
+    setSelectedProduct(product); 
   };
 
   const productsToDisplay = showAll ? filteredProducts : filteredProducts.slice(0, 5);
@@ -64,7 +63,7 @@ function ShopItems() {
               <h3>
                 {product.category} {product.emoji}
               </h3>
-              <h1 className="product-name">{product.name}</h1>
+              <h1 className="product-title">{product.name}</h1>
               <p>{product.stars}</p>
               <p>${product.price}</p>
             </div>
@@ -81,7 +80,6 @@ function ShopItems() {
         </div>
       )}
 
-      {/* Mostrar detalles del producto si se ha seleccionado uno */}
       {selectedProduct && <ProductDetail product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
     </>
   );
