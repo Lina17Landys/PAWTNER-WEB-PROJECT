@@ -104,7 +104,7 @@ const Signup: React.FC = () => {
               />
               <label htmlFor="terms-checkbox">Agree to Terms and Conditions</label>
             </div>
-            <button type="submit">Create Account</button>
+            <button className='submit-signup-btn' type="submit">Create Account</button>
           </form>
           <p>Already have an account? <a href="/login">Log In</a></p>
         </div>

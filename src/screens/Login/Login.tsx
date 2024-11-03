@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebaseConfig';
+import logo from '../../img/logo.png';
 import './Login.css';
 
 const Login: React.FC = () => {
@@ -31,7 +32,7 @@ const Login: React.FC = () => {
         
         <form onSubmit={handleLogin} className="login-form">
           <div className="login-logo">
-            <img src="src/assets/images/logo.png" alt="Pawtner Logo" />
+          <img src={logo} alt="Pawtner Logo" />
           </div>
           <h2>Log In</h2>
           {error && <p className="error">{error}</p>}
