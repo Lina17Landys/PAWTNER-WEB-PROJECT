@@ -12,9 +12,8 @@ function NavBar() {
         <p>Store</p>
       </div>
       <div className="btn-line">
-        
-        <Link to="/login" className="log-btn">Log In</Link>
-        <Link to="/signup" className="sign-btn">Sign Up</Link>
+        <Link to="/login" className="sign-btn">Log In</Link>
+        <Link to='/Signup' className="log-btn">Sign Up</Link>
       </div>
     </header>
   );

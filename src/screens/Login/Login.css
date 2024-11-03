@@ -120,10 +120,9 @@ body, html {
     display: block;
 }
 
-.login-button:hover {
+.login-button-2:hover {
     background-color: #1e603b;
 }
-
 .login-image {
     width: 45%;
     height: auto;

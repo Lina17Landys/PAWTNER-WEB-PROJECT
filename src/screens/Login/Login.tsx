@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import './Login.css';
-import logo from '../../img/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebaseConfig';
+import './Login.css';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -15,31 +14,24 @@ const Login: React.FC = () => {
     e.preventDefault();
     setError('');
 
-    if (!email || !password) {
-      setError('Please fill in all fields');
-      return;
-    }
-
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/Dashboard'); 
     } catch (error) {
       setError('Invalid login credentials');
-      console.error(error);
     }
   };
 
   return (
     <div className="login-container">
       <div className="login-wrapper">
-        
         <div className="login-image">
-          <img src="src\assets\images\LogIn-img.png" alt="background-login" />
+          <img src="src/assets/images/LogIn-img.png" alt="background-login" />
         </div>
         
         <form onSubmit={handleLogin} className="login-form">
-        <div className="login-logo">
-            <img src={logo} alt="Pawtner Logo" />
+          <div className="login-logo">
+            <img src="src/assets/images/logo.png" alt="Pawtner Logo" />
           </div>
           <h2>Log In</h2>
           {error && <p className="error">{error}</p>}
@@ -47,7 +39,6 @@ const Login: React.FC = () => {
             <input
               type="email"
               placeholder="Email"
-              id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -57,7 +48,6 @@ const Login: React.FC = () => {
             <input
               type="password"
               placeholder="Password"
-              id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
