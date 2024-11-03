@@ -10,6 +10,8 @@ export interface Post {
   photo?: File;
   gptRecommendation?: string | null;
   comments?: Comment[];
+  userId: string;
+  username: string;   
 }
 
 export interface Comment {

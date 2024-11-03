@@ -56,7 +56,7 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
       petName,
       priority,
       photo,
-      gptRecommendation: response, 
+      gptRecommendation: response,
     });
   };
 
