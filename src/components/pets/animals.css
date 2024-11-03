@@ -1,0 +1,86 @@
+.animal-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;           
+  padding: 0 20px;        
+  box-sizing: border-box;  
+}
+
+.buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px; 
+}
+
+.btn {
+  background-color: #3ca381;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #2f8b6f;
+}
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  width: 100%;            
+  max-width: 1200px;     
+  justify-items: center;   
+  margin-bottom: 30px;
+}
+
+.animal-card {
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;           
+  width: 250px;             
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.animal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;   
+}
+
+.animal-name {
+  font-size: 20px;     
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.animal-size,
+.animal-age {
+  font-size: 16px;       
+  color: #555;
+}
+
+.select-pet {
+  background-color: #18314F;
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease; 
+}
+
+.select-pet:hover {
+  background-color: #E6E6E6; 
+  color: #555;
+}

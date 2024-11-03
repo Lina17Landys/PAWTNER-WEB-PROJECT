@@ -8,6 +8,7 @@ import Landing from './screens/landing/landing';
 import Login from './screens/Login/Login';
 import Signup from './screens/Signup/Signup';
 import Shop from './screens/storePage/storePage';
+import PetsAdoption from './screens/adoption/Pets';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/Dashboard" element={<DashBoard />} />
         <Route path="/DiseaseForum" element={<DiseaseForum />} />
         <Route path="/Shop" element={<Shop/>} />
-
+        <Route path="/PetsAdoption" element={<PetsAdoption/>} />
       </Routes>
     </Router>
   );
