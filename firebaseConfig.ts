@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import 'leaflet/dist/leaflet.css';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC6bqDmLXIfi59GIrxyau_5Cz4RB-wU_bI",

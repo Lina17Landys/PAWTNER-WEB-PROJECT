@@ -8,6 +8,8 @@ import Landing from './screens/landing/landing';
 import Login from './screens/Login/Login';
 import Signup from './screens/Signup/Signup';
 import ReportSystem from './screens/ReportSystem/ReportSystem';
+import 'leaflet/dist/leaflet.css';
+
 
 function App() {
   return (
