@@ -42,11 +42,13 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
         </div>
 
         <div className="post-body">
-          {post.photo && (
-            <div className="post-image-detail">
-              <img src={URL.createObjectURL(post.photo)} alt={post.petName} />
-            </div>
-          )}
+        <div className="post-image-detail">
+          {post.photo ? (
+            <img src={URL.createObjectURL(post.photo)} alt={post.petName} />
+          ) : (
+        <div className="image-placeholder">No Image Available</div>
+        )}
+        </div>
 
           <div className="post-info">
             <hr className='divisor'/>
