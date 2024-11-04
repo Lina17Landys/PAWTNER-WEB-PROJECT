@@ -1,27 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Post } from '../../../types/postTypes';
 import dogIcon from '../../../assets/images/Dog-Icon.png';
 import catIcon from '../../../assets/images/Cat-Icon.png';
 import './DiseaseCard.css';
 import CommentSection from '../CommentSection/CommentSection';
+import { useAuthUser } from '../../../hooks/useAuthUser';
+import { Comment } from '../../../types/postTypes';
+import { addCommentToPost, deleteComment } from '../../../services/postService';
+import { useFetchComments } from '../../../hooks/useFetchComments';
 
 interface DiseaseCardProps {
   post: Post;
   onViewDetails: () => void;
+  onDelete: (postId: string) => void;
 }
 
-const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails }) => {
-  const [comments, setComments] = useState(post.comments || []);
+const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails, onDelete }) => {
+  const authUser = useAuthUser();
+  const { comments, loading } = useFetchComments(post.id);
 
-  const handleAddComment = (newCommentText: string) => {
-    const newComment = {
-      id: Date.now().toString(),
-      username: 'User',
-      text: newCommentText,
-      createdAt: new Date().toISOString(),
-    };
-    
-    setComments((prevComments) => [...prevComments, newComment]);
+  const handleAddComment = async (newComment: Comment) => {
+    try {
+      await addCommentToPost(post.id, newComment);
+    } catch (error) {
+      console.error('Error al agregar comentario:', error);
+    }
+  };
+
+  const handleDeleteComment = async (commentId: string) => {
+    try {
+      await deleteComment(post.id, commentId);
+    } catch (error) {
+      console.error('Error eliminando el comentario:', error);
+    }
   };
 
   return (
@@ -37,7 +48,7 @@ const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails }) => {
       <hr className="divisor" />
 
       <p className="pet-info">
-        <img src={post.animalType === 'dog' ? dogIcon : catIcon} className="pet-icon" />
+        <img src={post.animalType === 'dog' ? dogIcon : catIcon} className="pet-icon" alt="Pet icon" />
         <span className="pet-name-card">{post.petName}</span>
         <span className={`priority ${post.priority.toLowerCase()}`}>{post.priority}</span>
       </p>
@@ -56,9 +67,23 @@ const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails }) => {
         Ver Detalles
       </button>
 
+      {authUser && authUser.uid === post.userId && (
+        <button className="delete-button" onClick={() => onDelete(post.id)}>
+          Eliminar Post
+        </button>
+      )}
+
       <hr className="divisor" />
 
-      <CommentSection comments={comments} onAddComment={handleAddComment} />
+      {loading ? (
+        <p>Cargando comentarios...</p>
+      ) : (
+        <CommentSection 
+          comments={comments} 
+          onAddComment={handleAddComment} 
+          onDeleteComment={handleDeleteComment} 
+        />
+      )}
     </div>
   );
 };

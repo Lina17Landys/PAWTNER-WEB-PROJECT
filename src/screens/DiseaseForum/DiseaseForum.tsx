@@ -3,7 +3,7 @@ import BarDash from "../../components/BarDashboard/nav-dash";
 import Column from '../../components/DiseaseForum/Column/Column';
 import PostForm from '../../components/DiseaseForum/PostForm/PostForm';
 import { useFetchPosts } from '../../hooks/useFetchPosts';
-import { createPost } from '../../services/postService';
+import { createPost, deletePost } from '../../services/postService';
 import { diseaseSymptomMap } from '../../services/diseaseSymptomMap';
 import { Post, PostData } from '../../types/postTypes';
 import { useAuthUser } from '../../hooks/useAuthUser';
@@ -44,6 +44,16 @@ const DiseaseForum: React.FC = () => {
     closeModal();
   };
 
+  const handleDeletePost = async (postId: string) => {
+    try {
+      await deletePost(postId);
+      setPosts((prevPosts) => prevPosts.filter((post) => post.id !== postId));
+    } catch (error) {
+      console.error('Error deleting post:', error);
+      alert('Failed to delete post. Please try again.');
+    }
+  };
+
   const getDiseaseForPost = (symptoms: string[]): string[] => {
     return diseases.filter(disease =>
       symptoms.some(symptom => diseaseSymptomMap[disease]?.includes(symptom))
@@ -76,6 +86,7 @@ const DiseaseForum: React.FC = () => {
               key={disease}
               diseaseName={disease}
               posts={filteredPosts}
+              onDelete={handleDeletePost}
             />
           );
         })}
