@@ -13,7 +13,7 @@
   gap: 10px; 
 }
 
-.btn {
+.btn-animal {
   background-color: #3ca381;
   color: white;
   padding: 10px 20px;
@@ -21,10 +21,14 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+  border: 3px solid transparent;
 }
 
-.btn:hover {
-  background-color: #2f8b6f;
+.btn-animal:hover {
+  background-color: #ffff;
+  color: #3ca381;
+  border-color: #3ca381;
 }
 
 .animal-grid {

@@ -1,15 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { dogs } from '../../services/pets';
 import cats from '../../services/pets';
 import './animals.css';
-
 
 interface Animal {
     name: string;
     size: string;
     age: string; 
     image: string;
-  }
+}
   
 const AnimalList = () => {
     const [animals, setAnimals] = useState<Animal[]>([]); 
@@ -20,7 +19,7 @@ const AnimalList = () => {
             age: typeof dog.age === "string" ? dog.age : `${dog.age} years old`, 
         }));
         setAnimals(formattedDogs);
-    }
+    };
 
     const showCats = () => {
         const formattedCats = cats.map(cat => ({
@@ -30,11 +29,16 @@ const AnimalList = () => {
         setAnimals(formattedCats);
     };
 
+    // Llama a showDogs automáticamente cuando el componente se monta
+    useEffect(() => {
+        showDogs();
+    }, []);
+
     return (
         <div className="animal-list">
             <div className="buttons">
-                <button onClick={showDogs} className="btn">Show Dogs</button>
-                <button onClick={showCats} className="btn">Show Cats</button>
+                <button onClick={showDogs} className="btn-animal">Show Dogs</button>
+                <button onClick={showCats} className="btn-animal">Show Cats</button>
             </div>
             <div className="animal-grid">
                 {animals.map((animal, index) => (
@@ -44,7 +48,6 @@ const AnimalList = () => {
                         <p className="animal-size">Size: {animal.size}</p>
                         <p className="animal-age">Age: {animal.age}</p>
                         <button className='select-pet'>Information</button>
- 
                     </div>
                 ))}
             </div>

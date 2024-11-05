@@ -3,73 +3,97 @@ export const dogs = [
         name: "Draco",
         size: "Large",
         age: "4 years old",
-        image: "./src/img/p9.jpeg"
+        image: "./src/img/p9.jpeg",
+        personality: "He's is a calm, loving soul who thrives on gentle attention and warm cuddles. He may be big, but his heart is even bigger! Perfect for a laid-back family or a single owner, Bailey’s calm demeanor and patience make him a great companion.",
+        temperament: ["happy", "curious", "playful"],
     },
     {
         name: "Toby",
         size: "Medium",
         age: "2 years old",
-        image: "./src/img/p8.jpeg"
+        image: "./src/img/p8.jpeg",
+        personality: "Toby is full of energy and curiosity! He loves sniffing around the yard, meeting new friends, and learning new tricks. If you’re an active family or individual who loves outdoor adventures, Toby will be your loyal sidekick!",
+        temperament: ["energetic", "playfull", "cheerful"],
     },
     {
-        name: "Perro",
+        name: "Max",
         size: "Small",
         age: "3 years old",
-        image: "./src/img/p7.jpeg"
+        image: "./src/img/p7.jpeg",
+        personality: "Max is always on guard, ready to keep you safe. He’s loyal, courageous, and highly intelligent. Max would do well with an experienced owner who can channel his strong, protective instincts into structured training and fun challenges.",
+        temperament: ["loyal", "serious", "smart"],
     },
     {
         name: "Luna",
         size: "Medium",
         age: "4 years old",
-        image: "./src/img/p6.jpeg"
+        image: "./src/img/p6.jpeg",
+        personality: "She's all about love and affection! Her favorite place is right by your side or curled up in your lap. She’s a perfect fit for anyone looking for a loyal, affectionate companion who’s happiest just being close to you.",
+        temperament: ["lovely", "friendly", "nice"],
     },
     {
         name: "Mango",
         size: "Medium",
         age: "6 months old",
-        image: "./src/img/p5.jpeg"
+        image: "./src/img/p5.jpeg",
+        personality: "Mango is bursting with energy and loves to run, jump, and play! He’s perfect for an active owner who enjoys outdoor sports, jogging, or long hikes. With Mango, every day is an adventure, and he’s ready to explore it all with you.",
+        temperament: ["playful", "energetic", "curious"],
     },
     {
         name: "Stinky",
         size: "Small",
         age: "3 years old",
-        image: "./src/img/p4.jpeg"
+        image: "./src/img/p4.jpeg",
+        personality: "Stinky might look big and strong, but he has a heart of gold. He’s calm, loving, and great with kids, making him a wonderful family dog. He enjoys quiet moments and gentle play – he’s all about peaceful companionship.",
+        temperament: ["calm", "friendly", "shy"],
     },
     {
         name: "Mimi",
         size: "Large",
         age: "4 years old",
-        image: "./src/img/p3.jpeg"
+        image: "./src/img/p3.jpeg",
+        personality: "She is bright, curious, and loves learning new tricks. She’s eager to please and quick to pick up commands, making her ideal for someone who enjoys teaching and training. Mimi’s bound to impress with her smarts!",
+        temperament: ["smart", "curious", "energetic"],
     },
     {
         name: "Yuji",
         size: "Medium",
         age: "2 years old",
-        image: "./src/img/p2.jpeg"
+        image: "./src/img/p2.jpeg",
+        personality: "He's independent and adventurous, always ready to explore her surroundings. He’s confident and curious, making him perfect for a family who appreciates his spirited nature and can offer him room to roam and discover.",
+        temperament: ["nice", "playful", "dumb"],
     },
     {
         name: "Megumi",
         size: "Small",
         age: "3 years old",
-        image: "./src/img/p1.jpeg"
+        image: "./src/img/p1.jpeg",
+        personality: "Megumi is a devoted friend who sticks by your side through thick and thin. He’s loyal, gentle, and always ready to comfort you after a long day. Perfect for someone looking for a true companion, Buddy thrives on connection and will quickly become part of the family.",
+        temperament: ["loyal", "curious", "smart"],
     },
     {
         name: "Nobara",
         size: "Small",
         age: "3 years old",
-        image: "./src/img/p10.jpeg"
+        image: "./src/img/p10.jpeg",
+        personality: "Don’t be fooled by her small size—Nobara is packed with personality! She’s sassy, spirited, and always up for a bit of fun. Ideal for someone who wants a dog with a big attitude in a small package, Nobara will keep you entertained with her playful energy and cheeky charm.",
+        temperament: ["sassy", "smart", "cute"],
     },
     {
-        name: "Ciel",
+        name: "Maxie",
         size: "Large",
         age: "3 years old",
-        image: "./src/img/p11.jpeg"
+        image: "./src/img/p11.jpeg",
+        personality: "Maxie loves playtime just as much as any kid! He’s friendly, fun, and has endless energy for fetch, tag, and all sorts of games. He’s gentle around little ones and loves to be part of the action, making him the perfect furry buddy for a family with children.",
+        temperament: ["calm", "loyal", "playful"],
     },
     {
-        name: "Edward",
+        name: "Pippa",
         size: "Large",
         age: "3 years old",
-        image: "./src/img/p12.jpeg"
+        image: "./src/img/p12.jpeg",
+        personality: "Pippa is calm, gentle, and very patient. She’s fantastic with kids and loves to be around them, whether they’re reading her a story, brushing her fur, or giving her big hugs. Pippa’s sweet and steady nature makes her a great friend for kids of all ages.",
+        temperament: ["gentle", "smart", "loyal"],
     }
 ];
 
@@ -79,73 +103,97 @@ const cats = [
         name: "Dave the magical cheese wizard",
         size: "Small",
         age: "9 years old",
-        image: "./src/img/g1.webp"
+        image: "./src/img/g1.webp",
+        personality: "Dave has a lot to say! This talkative kitty will “chat” with you throughout the day, especially when it’s feeding time or she wants attention. Ideal for someone who enjoys an interactive, vocal pet.",
+        temperament: ["loud", "playful", "curious"],
     },
     {
         name: "Viktor",
         size: "Medium",
         age: "3 months old",
-        image: "./src/img/g2.jpeg"
+        image: "./src/img/g2.jpeg",
+        personality: "Viktor is full of energy and always on the move! He loves climbing, jumping, and chasing his toys around. Great for someone who loves an active, playful kitty, Viktor will fill your home with fun and excitement.",
+        temperament: ["energetic", "loud", "curious"],
     },
     {
-        name: "Sebastian",
+        name: "Cleo",
         size: "Large",
         age: "7 years old",
-        image: "./src/img/g3.jpeg"
+        image: "./src/img/g3.jpeg",
+        personality: "Cleo loves her comfort zones! She’ll curl up in the coziest spot she can find and nap for hours. If you’re looking for a relaxed companion who appreciates a good nap as much as you do, Cleo is the one.",
+        temperament: ["independent", "curious", "calm"],
     },
     {
-        name: "Penny",
+        name: "Patches",
         size: "Small",
         age: "4 years old",
-        image: "./src/img/g4.avif"
+        image: "./src/img/g4.avif",
+        personality: "Patches is a big, friendly kitty who’s as gentle as they come. He’s great with kids and other pets, making him a perfect addition to a family who wants a laid-back, easygoing friend.",
+        temperament: [],
     },
     {
         name: "Oliver",
         size: "Medium",
         age: 5,
-        image: "./src/img/g5.webp"
+        image: "./src/img/g5.webp",
+        personality: "Oliver’s favorite time of day? Mealtime! He loves treats and will follow you around if he thinks a snack is coming his way. If you’re looking for a companion who’ll keep you company in the kitchen, Oliver’s your guy.",
+        temperament: ["curious", "loud", "playful"],
     },
     {
-        name: "Milo",
+        name: "Bella",
         size: "Large",
         age: "2 years old",
-        image: "./src/img/g6.jpeg"
+        image: "./src/img/g6.jpeg",
+        personality: "Bella loves everyone she meets! Whether it’s a friend, a family member, or a new visitor, Bella will be right there, greeting them with a purr and a rub. She’s perfect for a busy household that enjoys her affectionate and outgoing nature.",
+        temperament: [ "social", "energetic", "loyal"],
     },
     {
         name: "Luna",
         size: "Small",
         age: "1 year old",
-        image: "./src/img/g7.webp"
+        image: "./src/img/g7.webp",
+        personality: "Luna is curious and loves exploring every nook and cranny! She’s happiest when she’s investigating new spaces or climbing to a high perch to watch the world around her. Perfect for someone who appreciates a playful, independent cat.",
+        temperament: ["independent", "playful", "curious"],
     },
     {
         name: "Alan",
         size: "Medium",
         age: "5 months old",
-        image: "./src/img/g8.webp"
+        image: "./src/img/g8.webp",
+        personality: "Alan is a calm and thoughtful kitty who likes to sit back and observe his surroundings. He’s shy at first, but once he warms up, he’ll quietly keep you company with a soft purr, making him a gentle addition to a peaceful home.",
+        temperament: ["shy", "calm", "curious"],
     },
     {
         name: "Gojo",
         size: "Large",
         age: "6 years old",
-        image: "./src/img/g9.jpeg"
+        image: "./src/img/g9.jpeg",
+        personality: "Gojo is confident and loves keeping an eye on his home. He’ll make sure everything is in order, strolling around with pride and giving you gentle headbutts to show his affection. Perfect for someone who wants a loyal and watchful buddy, Gojo will always be nearby to “protect” his family.",
+        temperament: ["loyal", "playful", "curious"],
     },
     {
         name: "Geto",
         size: "Large",
         age: "3 years old",
-        image: "./src/img/g10.jpeg"
+        image: "./src/img/g10.jpeg",
+        personality: "Geto is always ready for fun! He’s playful, friendly, and loves a good game of chase or a round with his feather toy. Great with kids and other pets, Geto is the ideal companion for a family looking for a cat with a cheerful, easygoing personality.",
+        temperament: ["friendly", "shy", "playful"],
     },
     {
-        name: "Taison",
+        name: "Leo",
         size: "Large",
         age: "6 years old",
-        image: "./src/img/g11.jpeg"
+        image: "./src/img/g11.jpeg",
+        personality: "Leo is dedicated and loves following his favorite people around. He’ll be your little shadow, always nearby to offer a headbutt or a comforting purr. Perfect for someone who wants a close, affectionate bond with their kitty.",
+        temperament: ["friendly", "loyal", "social"],
     },
     {
         name: "Suriel",
         size: "Large",
         age: "2 years old",
-        image: "./src/img/g12.jpeg"
+        image: "./src/img/g12.jpeg",
+        personality: "He adores snuggling up on your lap and soaking up all the attention he can get. He’s sweet, affectionate, and always ready for a cozy nap with his favorite humans.",
+        temperament: ["calm", "shy", "smart"],
     }
 ];
 export default cats
