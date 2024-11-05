@@ -3,7 +3,7 @@ import SymptomSelector from '../SymptomSelector/SymptomSelector';
 import { PostData } from '../../../types/postTypes';
 import { AnimalType } from '../../../types/diseaseTypes';
 import './PostForm.css';
-import { useChatGPT } from '../../../hooks/useChatGPT';
+import { useCohere } from '../../../hooks/useCohere';
 
 interface PostFormProps {
   onSubmit: (newPost: PostData) => void;
@@ -35,7 +35,7 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
   const [photo, setPhoto] = useState<File | undefined>(undefined);
   const [photoPreview, setPhotoPreview] = useState<string | undefined>(undefined);
 
-  const { fetchRecommendation, response, loading, error } = useChatGPT();
+  const { getRecommendation, response, loading, error } = useCohere();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,11 +43,12 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
       alert('Please select your pet type.');
       return;
     }
-
-    await fetchRecommendation(symptoms.join(', '));
-
+  
+    const recommendation = await getRecommendation(symptoms.join(', '));
+    console.log('Recommendation:', recommendation);
+  
     const priority = determinePriority(symptoms);
-
+  
     onSubmit({
       title,
       description,
@@ -56,8 +57,10 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
       petName,
       priority,
       photo,
-      gptRecommendation: response,
+      iaRecommendation: recommendation,
     });
+  
+    onClose();
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -82,19 +85,40 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
         <button className="close-modal" onClick={onClose}>&times;</button>
 
         <form onSubmit={handleSubmit} className="post-form">
-          <input className="Post-title-form" type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required />
+          <input
+            className="Post-title-form"
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
 
           <div className="form-layout">
             <div className="upload-section">
-              <label className={`upload-box ${photoPreview ? 'image-uploaded' : ''}`} style={{ backgroundImage: `url(${photoPreview})` }}>
+              <label
+                className={`upload-box ${photoPreview ? 'image-uploaded' : ''}`}
+                style={{ backgroundImage: `url(${photoPreview})` }}
+              >
                 <input type="file" onChange={handleFileChange} />
               </label>
             </div>
 
             <div className="form-section">
               <div className="pet-description">
-                <input className="pet-name" type="text" placeholder="Pet Name" value={petName} onChange={(e) => setPetName(e.target.value)} required />
-                <select className="animal-type" value={animalType || ''} onChange={(e) => setAnimalType(e.target.value as AnimalType)}>
+                <input
+                  className="pet-name"
+                  type="text"
+                  placeholder="Pet Name"
+                  value={petName}
+                  onChange={(e) => setPetName(e.target.value)}
+                  required
+                />
+                <select
+                  className="animal-type"
+                  value={animalType || ''}
+                  onChange={(e) => setAnimalType(e.target.value as AnimalType)}
+                >
                   <option value="">Type of animal</option>
                   <option value="dog">Dog</option>
                   <option value="cat">Cat</option>
@@ -105,7 +129,12 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
                 <SymptomSelector symptoms={symptoms} setSymptoms={setSymptoms} />
               </div>
 
-              <textarea placeholder="Additional description" value={description} onChange={(e) => setDescription(e.target.value)} required />
+              <textarea
+                placeholder="Additional description"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                required
+              />
 
               <button type="submit" disabled={loading}>
                 {loading ? 'Uploading post...' : 'Submit Post'}

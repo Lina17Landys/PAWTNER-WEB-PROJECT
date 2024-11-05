@@ -8,7 +8,7 @@ export interface Post {
   priority: 'low' | 'medium' | 'high' | 'emergency';
   photoUrl?: string;
   photo?: File;
-  gptRecommendation?: string | null;
+  iaRecommendation?: string | null;
   comments?: Comment[];
   userId: string;
   username: string;   
@@ -30,5 +30,5 @@ export interface PostData {
   petName: string;
   priority: 'low' | 'medium' | 'high' | 'emergency';
   photo?: File;
-  gptRecommendation?: string | null;
+  iaRecommendation?: string | null;
 }

@@ -39,6 +39,8 @@ const DiseaseForum: React.FC = () => {
       username: authUser.username,
     };
 
+    console.log("New post created:", postWithId); 
+
     setPosts((prevPosts) => [...prevPosts, postWithId]);
     await createPost(postWithId);
     closeModal();
