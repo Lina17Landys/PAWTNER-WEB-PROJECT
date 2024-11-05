@@ -4,6 +4,7 @@ import dogIcon from '../../../assets/images/Dog-Icon.png';
 import catIcon from '../../../assets/images/Cat-Icon.png';
 import './PostDetail.css';
 import { symptomMedicationMap } from '../../../services/symptomMedicationMap';
+import { diseaseSymptomMap } from '../../../services/diseaseSymptomMap';
 
 const getMedicationRecommendations = (selectedSymptoms: string[]): string[] => {
   const recommendedMedications: Set<string> = new Set();
@@ -18,6 +19,17 @@ const getMedicationRecommendations = (selectedSymptoms: string[]): string[] => {
   return Array.from(recommendedMedications);
 };
 
+const getRelatedDiseases = (symptoms: string[]): string[] => {
+  const relatedDiseases: Set<string> = new Set();
+
+  for (const [disease, diseaseSymptoms] of Object.entries(diseaseSymptomMap)) {
+    if (symptoms.some(symptom => diseaseSymptoms.includes(symptom))) {
+      relatedDiseases.add(disease);
+    }
+  }
+  return Array.from(relatedDiseases);
+};
+
 interface PostDetailProps {
   post: Post;
   onClose: () => void;
@@ -28,7 +40,9 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
     return getMedicationRecommendations(post.symptoms);
   }, [post.symptoms]);
 
-  console.log("Post Detail:", post);
+  const relatedDiseases = useMemo(() => {
+    return getRelatedDiseases(post.symptoms);
+  }, [post.symptoms]);
 
   return (
     <div className="detail-modal">
@@ -77,6 +91,15 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
                     <span key={index} className="symptom-tag-detail">
                       {symptom}
                     </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="related-diseases">
+                <h4 className="related-diseases-title">Related Diseases</h4>
+                <div className="related-disease-tags">
+                  {relatedDiseases.map((disease, index) => (
+                    <span key={index} className="disease-tag">{disease}</span>
                   ))}
                 </div>
               </div>

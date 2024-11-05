@@ -11,6 +11,15 @@ import './DiseaseForum.css';
 
 const diseases = Object.keys(diseaseSymptomMap);
 
+const getPrimaryDisease = (symptoms: string[]): string | null => {
+  for (let disease of diseases) {
+    if (symptoms.some(symptom => diseaseSymptomMap[disease]?.includes(symptom))) {
+      return disease;
+    }
+  }
+  return null;
+};
+
 const DiseaseForum: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { posts: fetchedPosts, loading, error } = useFetchPosts();
@@ -39,8 +48,6 @@ const DiseaseForum: React.FC = () => {
       username: authUser.username,
     };
 
-    console.log("New post created:", postWithId); 
-
     setPosts((prevPosts) => [...prevPosts, postWithId]);
     await createPost(postWithId);
     closeModal();
@@ -54,12 +61,6 @@ const DiseaseForum: React.FC = () => {
       console.error('Error deleting post:', error);
       alert('Failed to delete post. Please try again.');
     }
-  };
-
-  const getDiseaseForPost = (symptoms: string[]): string[] => {
-    return diseases.filter(disease =>
-      symptoms.some(symptom => diseaseSymptomMap[disease]?.includes(symptom))
-    );
   };
 
   if (loading) return <p>Loading...</p>;
@@ -80,9 +81,8 @@ const DiseaseForum: React.FC = () => {
 
       <div className="columns">
         {diseases.map(disease => {
-          const filteredPosts = posts.filter(post =>
-            getDiseaseForPost(post.symptoms).includes(disease)
-          );
+          
+          const filteredPosts = posts.filter(post => getPrimaryDisease(post.symptoms) === disease);
           return (
             <Column
               key={disease}
