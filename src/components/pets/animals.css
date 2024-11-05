@@ -81,10 +81,70 @@
   border-radius: 5px; 
   cursor: pointer;
   margin-top: 20px;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s, color 0.3s; 
+  border: 3px solid transparent;
 }
 
 .select-pet:hover {
-  background-color: #E6E6E6; 
+  background-color: #ffff; 
+  color: #18314F;
+  border-color: #18314F;
+}
+
+.pet-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.back-button {
+  align-self: flex-start;
+  background-color: #3ca381;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #2f8b6f;
+}
+
+.pet-detail-card {
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pet-detail-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.pet-detail-size,
+.pet-detail-age,
+.pet-detail-personality {
+  font-size: 16px;
   color: #555;
+}
+
+.pet-detail-temperament {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  color: #3ca381;
 }

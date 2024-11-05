@@ -1,17 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { dogs } from '../../services/pets';
 import cats from '../../services/pets';
 import './animals.css';
+import PetsDetail from './petsDetail';
 
 interface Animal {
     name: string;
     size: string;
-    age: string; 
+    age: string;
     image: string;
+    personality: string;
+    temperament: string[];
 }
-  
+
 const AnimalList = () => {
-    const [animals, setAnimals] = useState<Animal[]>([]); 
+    const [animals, setAnimals] = useState<Animal[]>([]);
+    const [selectedAnimal, setSelectedAnimal] = useState<Animal | null>(null); 
+
+    useEffect(() => {
+        const formattedDogs = dogs.map(dog => ({
+            ...dog,
+            age: typeof dog.age === "string" ? dog.age : `${dog.age} years old`, 
+        }));
+        setAnimals(formattedDogs);
+    }, []); 
 
     const showDogs = () => {
         const formattedDogs = dogs.map(dog => ({
@@ -29,28 +42,45 @@ const AnimalList = () => {
         setAnimals(formattedCats);
     };
 
-    // Llama a showDogs automáticamente cuando el componente se monta
-    useEffect(() => {
-        showDogs();
-    }, []);
+    const handleSelectAnimal = (animal: Animal) => {
+        setSelectedAnimal(animal);
+    };
+
+    const handleBack = () => {
+        setSelectedAnimal(null);
+    };
 
     return (
         <div className="animal-list">
-            <div className="buttons">
-                <button onClick={showDogs} className="btn-animal">Show Dogs</button>
-                <button onClick={showCats} className="btn-animal">Show Cats</button>
-            </div>
-            <div className="animal-grid">
-                {animals.map((animal, index) => (
-                    <div key={index} className="animal-card">
-                        <img src={animal.image} alt={animal.name} className="animal-image" />
-                        <h3 className="animal-name">{animal.name}</h3>
-                        <p className="animal-size">Size: {animal.size}</p>
-                        <p className="animal-age">Age: {animal.age}</p>
-                        <button className='select-pet'>Information</button>
+            {selectedAnimal ? (
+                <PetsDetail 
+                    name={selectedAnimal.name} 
+                    size={selectedAnimal.size} 
+                    age={selectedAnimal.age} 
+                    image={selectedAnimal.image} 
+                    personality={selectedAnimal.personality} 
+                    temperament={selectedAnimal.temperament}
+                    onBack={handleBack}
+                />
+            ) : (
+                <>
+                    <div className="buttons">
+                        <button onClick={showDogs} className="btn-animal">Show Dogs</button>
+                        <button onClick={showCats} className="btn-animal">Show Cats</button>
                     </div>
-                ))}
-            </div>
+                    <div className="animal-grid">
+                        {animals.map((animal, index) => (
+                            <div key={index} className="animal-card">
+                                <img src={animal.image} alt={animal.name} className="animal-image" />
+                                <h3 className="animal-name">{animal.name}</h3>
+                                <p className="animal-size">Size: {animal.size}</p>
+                                <p className="animal-age">Age: {animal.age}</p>
+                                <button onClick={() => handleSelectAnimal(animal)} className='select-pet'>Information</button>
+                            </div>
+                        ))}
+                    </div>
+                </>
+            )}
         </div>
     );
 };
