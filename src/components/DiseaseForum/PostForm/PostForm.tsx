@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SymptomSelector from '../SymptomSelector/SymptomSelector';
 import { PostData } from '../../../types/postTypes';
 import { AnimalType } from '../../../types/diseaseTypes';
 import './PostForm.css';
 import { useCohere } from '../../../hooks/useCohere';
+import { diseaseSymptomMap } from '../../../services/diseaseSymptomMap';
 
 interface PostFormProps {
   onSubmit: (newPost: PostData) => void;
   onClose: () => void;
 }
+
+const getPrimaryDisease = (symptoms: string[]): string | null => {
+  let maxMatches = 0;
+  let primaryDisease: string | null = null;
+
+  for (const [disease, diseaseSymptoms] of Object.entries(diseaseSymptomMap)) {
+    const matches = symptoms.filter(symptom => diseaseSymptoms.includes(symptom)).length;
+
+    if (matches > maxMatches) {
+      maxMatches = matches;
+      primaryDisease = disease;
+    }
+  }
+
+  return primaryDisease;
+};
 
 const determinePriority = (symptoms: string[]): "low" | "medium" | "high" | "emergency" => {
   const emergencySymptoms = ["Difficulty Breathing", "Blue Gums or Tongue", "Severe Pain"];
@@ -34,8 +51,16 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
   const [petName, setPetName] = useState('');
   const [photo, setPhoto] = useState<File | undefined>(undefined);
   const [photoPreview, setPhotoPreview] = useState<string | undefined>(undefined);
+  const [disease, setDisease] = useState<string | null>(null);
 
   const { getRecommendation, response, loading, error } = useCohere();
+
+  useEffect(() => {
+    if (symptoms.length > 0) {
+      const determinedDisease = getPrimaryDisease(symptoms);
+      setDisease(determinedDisease);
+    }
+  }, [symptoms]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +73,11 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
     console.log('Recommendation:', recommendation);
   
     const priority = determinePriority(symptoms);
-  
+
+    if (!disease) {
+      alert('Disease could not be determined. Please check symptoms.');
+      return;
+    }
     onSubmit({
       title,
       description,
@@ -58,8 +87,9 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
       priority,
       photo,
       iaRecommendation: recommendation,
+      disease
     });
-  
+
     onClose();
   };
 
@@ -136,7 +166,7 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, onClose }) => {
                 required
               />
 
-              <button type="submit" disabled={loading}>
+              <button type="submit" disabled={loading || !disease}>
                 {loading ? 'Uploading post...' : 'Submit Post'}
               </button>
 

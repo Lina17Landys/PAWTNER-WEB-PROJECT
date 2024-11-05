@@ -81,7 +81,6 @@ const DiseaseForum: React.FC = () => {
 
       <div className="columns">
         {diseases.map(disease => {
-          
           const filteredPosts = posts.filter(post => getPrimaryDisease(post.symptoms) === disease);
           return (
             <Column

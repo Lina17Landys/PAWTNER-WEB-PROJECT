@@ -123,7 +123,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
                   ))}
                 </ul>
               ) : (
-                <p>No medications recommended based on selected symptoms.</p>
+                <p>No medications recommended based on selected symptoms of your pet.</p>
               )}
             </div>
           </div>

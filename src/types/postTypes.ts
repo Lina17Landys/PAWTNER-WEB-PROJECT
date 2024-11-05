@@ -11,7 +11,8 @@ export interface Post {
   iaRecommendation?: string | null;
   comments?: Comment[];
   userId: string;
-  username: string;   
+  username: string;
+  disease: string;
 }
 
 export interface Comment {
@@ -31,4 +32,5 @@ export interface PostData {
   priority: 'low' | 'medium' | 'high' | 'emergency';
   photo?: File;
   iaRecommendation?: string | null;
+  disease: string;
 }
