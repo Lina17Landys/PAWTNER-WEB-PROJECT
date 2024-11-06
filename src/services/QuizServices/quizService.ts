@@ -11,24 +11,25 @@ import Img9 from '../../assets/images/Quiz-illustration/img-9.png';
 import Img10 from '../../assets/images/Quiz-illustration/img-10.png';
 import Img11 from '../../assets/images/Quiz-illustration/img-11.png';
 import Img12 from '../../assets/images/Quiz-illustration/img-12.png';
+
 export const questions: Question[] = [
   {
     id: 1,
     text: "What type of living environment do you have?",
     options: [
-      { text: "Apartment", value: "cat", image: Img1 },
-      { text: "House with a yard", value: "dog", image: Img2 },
-      { text: "Farm/Rural", value: "dog", image: Img3 },
+      { text: "Apartment", value: "cat", image: Img1, characteristics: ["small", "calm"] },
+      { text: "House with a yard", value: "dog", image: Img2, characteristics: ["medium", "active"] },
+      { text: "Farm/Rural", value: "dog", image: Img3, characteristics: ["large", "very active"] },
     ],
   },
   {
     id: 2,
     text: "How much time can you dedicate to your pet daily?",
     options: [
-      { text: "Less than 1 hour", value: "cat" },
-      { text: "1-2 hours", value: "cat" },
-      { text: "2-4 hours", value: "dog" },
-      { text: "4+ hours", value: "dog" },
+      { text: "Less than 1 hour", value: "cat", characteristics: ["low energy"] },
+      { text: "1-2 hours", value: "cat", characteristics: ["calm"] },
+      { text: "2-4 hours", value: "dog", characteristics: ["active"] },
+      { text: "4+ hours", value: "dog", characteristics: ["very active"] },
     ],
   },
   {

@@ -1,0 +1,21 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.result-screen {
+    padding: 2rem;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(to right, #8BBEB2, #E6F9AF);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.result-title {
+    color: white;
+}
