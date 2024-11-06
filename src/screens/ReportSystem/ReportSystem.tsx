@@ -1,4 +1,3 @@
-// src/screens/ReportSystem/ReportSystem.tsx
 import BarDash from "../../components/BarDashboard/nav-dash";
 import MapComponent from "../../components/MapComponent/MapComponent"; // Nueva ruta
 

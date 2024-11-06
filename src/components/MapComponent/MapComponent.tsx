@@ -1,35 +1,72 @@
-// src/components/MapComponent/MapComponent.tsx
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+import React, { useEffect, useRef, useState } from 'react';
+import 'ol/ol.css';
+import { Map, View } from 'ol';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
+import { fromLonLat } from 'ol/proj';
+import { Vector as VectorLayer } from 'ol/layer';
+import { Vector as VectorSource } from 'ol/source';
+import { Feature } from 'ol';
+import { Point } from 'ol/geom';
+import { Style, Icon } from 'ol/style';
+import { click } from 'ol/events/condition';
+import Select from 'ol/interaction/Select';
 
+const MapComponent: React.FC = () => {
+  const mapRef = useRef<HTMLDivElement | null>(null);
+  const [map, setMap] = useState<Map | null>(null);
+  const [vectorSource, setVectorSource] = useState<VectorSource | null>(null);
 
-// Configuración del ícono de marcador
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-});
+  useEffect(() => {
+    if (mapRef.current && !map) {
+      // Crear la fuente vectorial para los pines (marcadores)
+      const source = new VectorSource();
 
-const MapComponent = () => {
-  return (
-    <div style={{ height: '500px', width: '100%' }}>
-      <MapContainer
-        center={[3.4516, -76.5320]}  // Cali, Colombia
-        zoom={13}
-        style={{ height: '100%', width: '100%' }}
-      >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        />
-        <Marker position={[3.4516, -76.5320]}>
-          <Popup>Cali, Colombia</Popup>
-        </Marker>
-      </MapContainer>
-    </div>
-  );
+      // Crear el mapa
+      const mapObject = new Map({
+        target: mapRef.current,
+        layers: [
+          // Capa base de OpenStreetMap
+          new TileLayer({
+            source: new OSM(),
+          }),
+          // Capa para los pines
+          new VectorLayer({
+            source: source,
+          }),
+        ],
+        view: new View({
+          center: fromLonLat([-76.5320, 3.4516]), // Coordenadas de Cali, Colombia
+          zoom: 13,
+        }),
+      });
+
+      // Agregar interacción de clic para agregar pines
+      mapObject.on('click', (event) => {
+        const coordinate = event.coordinate; // Obtener coordenadas del clic
+        const feature = new Feature({
+          geometry: new Point(coordinate),
+        });
+
+        // Estilo personalizado del pin (marcador)
+        feature.setStyle(
+          new Style({
+            image: new Icon({
+              anchor: [0.5, 1],
+              src: 'https://openlayers.org/en/latest/examples/data/icon.png', // URL de ícono personalizado
+            }),
+          })
+        );
+
+        source.addFeature(feature); // Añadir el pin a la capa
+      });
+
+      setMap(mapObject);
+      setVectorSource(source);
+    }
+  }, [map]);
+
+  return <div ref={mapRef} style={{ width: '100%', height: '500px' }} />;
 };
 
 export default MapComponent;
