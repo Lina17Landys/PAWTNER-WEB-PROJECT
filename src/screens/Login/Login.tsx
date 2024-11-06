@@ -27,7 +27,7 @@ const Login: React.FC = () => {
     <div className="login-container">
       <div className="login-wrapper">
         <div className="login-image">
-          <img src="src/assets/images/LogIn-img.png" alt="background-login" />
+          <img src="src\assets\images\LoginImg\LogIn-img.png" alt="background-login" />
         </div>
         
         <form onSubmit={handleLogin} className="login-form">

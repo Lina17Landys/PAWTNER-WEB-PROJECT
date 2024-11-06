@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DiseaseCard from '../DiseaseCard/DiseaseCard';
-import { Post } from '../../../types/postTypes';
+import { Post } from '../../../types/DiseaseforumTypes/postTypes';
 import PostDetail from '../PostDetail/PostDetail';
 
 interface ColumnProps {

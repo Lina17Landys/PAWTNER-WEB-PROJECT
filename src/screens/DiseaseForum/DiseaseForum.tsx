@@ -3,9 +3,9 @@ import BarDash from "../../components/BarDashboard/nav-dash";
 import Column from '../../components/DiseaseForum/Column/Column';
 import PostForm from '../../components/DiseaseForum/PostForm/PostForm';
 import { useFetchPosts } from '../../hooks/useFetchPosts';
-import { createPost, deletePost } from '../../services/postService';
-import { diseaseSymptomMap } from '../../services/diseaseSymptomMap';
-import { Post, PostData } from '../../types/postTypes';
+import { createPost, deletePost } from '../../services/DiseaseforumServices/postService';
+import { diseaseSymptomMap } from '../../services/DiseaseforumServices/diseaseSymptomMap';
+import { Post, PostData } from '../../types/DiseaseforumTypes/postTypes';
 import { useAuthUser } from '../../hooks/useAuthUser';
 import './DiseaseForum.css';
 

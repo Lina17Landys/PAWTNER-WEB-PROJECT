@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { fetchRecommendation } from '../services/getCohereRecommendation';
+import { fetchRecommendation } from '../services/DiseaseforumServices/getCohereRecommendation';
 
 export const useCohere = () => {
   const [response, setResponse] = useState<string | null>(null);

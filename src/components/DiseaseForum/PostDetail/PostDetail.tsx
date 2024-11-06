@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
-import { Post } from '../../../types/postTypes';
-import dogIcon from '../../../assets/images/Dog-Icon.png';
-import catIcon from '../../../assets/images/Cat-Icon.png';
+import { Post } from '../../../types/DiseaseforumTypes/postTypes';
+import dogIcon from '../../../assets/images/Icons/Dog-Icon.png';
+import catIcon from '../../../assets/images/Icons/Cat-Icon.png';
 import './PostDetail.css';
-import { symptomMedicationMap } from '../../../services/symptomMedicationMap';
-import { diseaseSymptomMap } from '../../../services/diseaseSymptomMap';
+import { symptomMedicationMap } from '../../../services/DiseaseforumServices/symptomMedicationMap';
+import { diseaseSymptomMap } from '../../../services/DiseaseforumServices/diseaseSymptomMap';
 
 const getMedicationRecommendations = (selectedSymptoms: string[]): string[] => {
   const recommendedMedications: Set<string> = new Set();

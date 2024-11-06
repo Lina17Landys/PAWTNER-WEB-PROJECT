@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import SymptomSelector from '../SymptomSelector/SymptomSelector';
-import { PostData } from '../../../types/postTypes';
-import { AnimalType } from '../../../types/diseaseTypes';
+import { PostData } from '../../../types/DiseaseforumTypes/postTypes';
+import { AnimalType } from '../../../types/DiseaseforumTypes/diseaseTypes';
 import './PostForm.css';
 import { useCohere } from '../../../hooks/useCohere';
-import { diseaseSymptomMap } from '../../../services/diseaseSymptomMap';
+import { diseaseSymptomMap } from '../../../services/DiseaseforumServices/diseaseSymptomMap';
 
 interface PostFormProps {
   onSubmit: (newPost: PostData) => void;

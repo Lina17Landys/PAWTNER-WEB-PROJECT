@@ -1,15 +1,15 @@
 import React from 'react';
-import { Post } from '../../../types/postTypes';
-import dogIcon from '../../../assets/images/Dog-Icon.png';
-import catIcon from '../../../assets/images/Cat-Icon.png';
+import { Post } from '../../../types/DiseaseforumTypes/postTypes';
+import dogIcon from '../../../assets/images/Icons/Dog-Icon.png';
+import catIcon from '../../../assets/images/Icons/Cat-Icon.png';
 import './DiseaseCard.css';
 import CommentSection from '../CommentSection/CommentSection';
 import { useAuthUser } from '../../../hooks/useAuthUser';
-import { Comment } from '../../../types/postTypes';
-import { addCommentToPost, deleteComment } from '../../../services/postService';
+import { Comment } from '../../../types/DiseaseforumTypes/postTypes';
+import { addCommentToPost, deleteComment } from '../../../services/DiseaseforumServices/postService';
 import { useFetchComments } from '../../../hooks/useFetchComments';
-import { diseaseSymptomMap } from '../../../services/diseaseSymptomMap';
-import { diseaseColorMap } from '../../../services/diseaseColorMap';
+import { diseaseSymptomMap } from '../../../services/DiseaseforumServices/diseaseSymptomMap';
+import { diseaseColorMap } from '../../../services/DiseaseforumServices/diseaseColorMap';
 
 interface DiseaseCardProps {
   post: Post;
@@ -87,7 +87,7 @@ const DiseaseCard: React.FC<DiseaseCardProps> = ({ post, onViewDetails, onDelete
 
       {authUser && authUser.uid === post.userId && (
         <button className="delete-button" onClick={() => onDelete(post.id)}>
-          <img className='delete-icon' src="src/assets/images/trash.svg" alt="" />
+          <img className='delete-icon' src="src\assets\images\Icons\trash.svg" alt="" />
         </button>
       )}
 

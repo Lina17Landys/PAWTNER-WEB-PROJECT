@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
-import { Comment } from '../types/postTypes';
+import { Comment } from '../types/DiseaseforumTypes/postTypes';
 
 export const useFetchComments = (postId: string) => {
   const [comments, setComments] = useState<Comment[]>([]);

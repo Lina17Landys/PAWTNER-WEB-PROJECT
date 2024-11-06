@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Post } from '../types/postTypes';
+import { Post } from '../types/DiseaseforumTypes/postTypes';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 

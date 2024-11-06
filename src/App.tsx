@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Landing from './screens/landing/landing';   
 import Login from './screens/Login/Login';
 import Signup from './screens/Signup/Signup';
+import Quiz from './screens/Quiz/Quiz';
+import { QuizProvider } from './context/QuizContext/QuizContext';
 
 function App() {
   return (
@@ -18,6 +20,14 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/Dashboard" element={<DashBoard />} />
         <Route path="/DiseaseForum" element={<DiseaseForum />} />
+        <Route
+          path="/quiz/*"
+          element={
+            <QuizProvider>
+              <Quiz />
+            </QuizProvider>
+          }
+        />
         
       </Routes>
     </Router>

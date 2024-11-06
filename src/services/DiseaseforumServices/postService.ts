@@ -1,7 +1,7 @@
-import { db } from '../../firebaseConfig';
+import { db } from '../../../firebaseConfig';
 import { collection, addDoc, Timestamp, deleteDoc, doc } from 'firebase/firestore';
-import { Post } from '../types/postTypes';
-import { Comment } from '../types/postTypes';
+import { Post } from '../../types/DiseaseforumTypes/postTypes';
+import { Comment } from '../../types/DiseaseforumTypes/postTypes';
 
 const postsCollection = collection(db, 'posts');
 

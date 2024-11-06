@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Comment } from '../../../types/postTypes';
+import { Comment } from '../../../types/DiseaseforumTypes/postTypes';
 import { useAuthUser } from '../../../hooks/useAuthUser';
 import './CommentSection.css';
 
@@ -46,7 +46,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ comments, onAddComment,
             <strong className="comment-username">{comment.username}:</strong> {comment.text}
             {authUser?.uid === comment.userId && (
               <button className="Delete-btn" onClick={() => onDeleteComment(comment.id)}>
-                <img src="src/assets/images/trash.svg" alt="" />
+                <img src="src\assets\images\Icons\trash.svg" alt="" />
               </button>
       )}
     </div>
