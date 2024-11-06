@@ -34,19 +34,20 @@
 .animal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
-  gap: 20px;
-  width: 100%;            
-  max-width: 1200px;     
+  gap: 30px;
+  width: 90%;     
   justify-items: center;   
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .animal-card {
   background-color: #f4f4f9;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;           
-  width: 250px;             
+  padding: 30px;         
+  width: 100%;           
+  max-width: 350px;       
   text-align: center;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -99,36 +100,44 @@
 }
 
 .pet-detail-container {
-  max-width: 80%; 
-  height: 700px; 
+  max-width: 60%; 
+  margin-top: 4rem;
+  height: auto; 
   background: linear-gradient(to right, #8BBEB2, #E6F9AF);
   border: #3ca381 2px solid;
   border-radius: 15px;
-  margin: 0 auto; 
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  overflow-y: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; 
+  box-sizing: border-box; 
 }
+
 
 .pet-detail-card {
   display: flex;
+  flex-direction: row;
+  width: 100%; 
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
 
+
 .pet-detail-card h3 {
-font-size: 2em;
+font-size: 1em;
 }
 
 .pet-detail-card p {
   font-size: 18px;
   }
 
-.pet-detail-image {
-  width: 60%;
-  height: auto;
-}
+  .pet-detail-image {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; 
+  }
 
 .pet-detail-info {
   padding: 20px;
@@ -205,9 +214,8 @@ font-size: 2em;
 }
 
 .back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+ margin-top: 4rem;
+ margin-right: 2rem;
   width: 55px;
   height: 55px;
   font-size: 24px;
@@ -257,4 +265,17 @@ font-size: 2em;
 .pet-foot {
   color: #338b6e;
   margin-bottom: 10px;
+}
+
+.category-banner-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; 
+}
+
+.category-banner {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 85%; 
+  height: auto;     
 }

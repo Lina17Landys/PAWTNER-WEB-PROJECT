@@ -20,6 +20,10 @@ const PetsDetail: React.FC<AnimalDetailProps> = ({
   temperament,
   onBack,
 }) => {
+  const handleAdoptClick = () => {
+    alert("You will soon receive information to adopt " + name + "!");
+  };
+
   return (
     <div className="pet-detail">
       <button className="back-button" onClick={onBack}>
@@ -47,11 +51,20 @@ const PetsDetail: React.FC<AnimalDetailProps> = ({
               ))}
             </ul>
             <div className="pet-detail-footer">
-    <hr className="separator" />
-    <h1 className="pet-detail-footer-text">Why it's {name} perfect for you? </h1>
-    <p className="pet-foot">Adopting a pet gives a loving animal a second chance at life and brings joy, companionship, and unconditional love into your home. Save a life, gain a loyal friend, and make a difference by adopting today!</p>
-    <button className="adopt-button">Adopt Now</button>
-</div>
+              <hr className="separator" />
+              <h1 className="pet-detail-footer-text">
+                Why it's {name} perfect for you?{" "}
+              </h1>
+              <p className="pet-foot">
+                Adopting a pet gives a loving animal a second chance at life and
+                brings joy, companionship, and unconditional love into your
+                home. Save a life, gain a loyal friend, and make a difference by
+                adopting today!
+              </p>
+              <button className="adopt-button" onClick={handleAdoptClick}>
+                Adopt Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
