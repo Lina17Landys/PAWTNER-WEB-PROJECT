@@ -129,7 +129,7 @@ section {
   margin-top: -57vh;
 }
 
-.mission{
+.mission {
   background-image: url(./src/img/about\ us\ background.png);
   background-size: cover;
   background-position: center;
@@ -148,18 +148,18 @@ section {
   height: auto;
 }
 
-.mission-text{
+.mission-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.mission h2{
+.mission h2 {
   font-size: 50px;
   color: white;
 }
 
-.white_outline{
+.white_outline {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
   color: transparent;
@@ -169,19 +169,19 @@ section {
   margin-bottom: 5vh;
 }
 
-.mission-text{
+.mission-text {
   color: white;
   width: 36.5vw;
 }
 
-.about-perro{
+.about-perro {
   position: absolute;
   right: 14vw;
   width: 36.5vw;
   top: 215vh;
 }
 
-.about-highlight{
+.about-highlight {
   position: absolute;
   right: 10.5vw;
 }
@@ -234,12 +234,12 @@ section {
   background: var(--Degradado-3, linear-gradient(97deg, rgba(139, 190, 178, 0.80) -15.73%, rgba(24, 49, 79, 0.90) 93.95%));
 }
 
-.adopt-puppy{
+.adopt-puppy {
   height: 49vh;
   width: auto;
 }
 
-.adopt-text{
+.adopt-text {
   color: white;
   height: 100%;
   display: flex;
@@ -303,7 +303,7 @@ section {
   padding: 0 6.5vw;
 }
 
-.frame{
+.frame {
   margin-top: -58vh;
   background: none;
   flex-direction: column;
@@ -317,7 +317,7 @@ section {
   border-radius: 10px 10px 0 0;
 }
 
-.caring-text{
+.caring-text {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -325,14 +325,14 @@ section {
   color: #0D0630;
 }
 
-.caring-puppy{
+.caring-puppy {
   position: absolute;
   top: 475vh;
   left: 6.5vw;
   width: 53vw;
 }
 
-.buy{
+.buy {
   background: var(--Degradado-3, linear-gradient(97deg, rgba(139, 190, 178, 0.80) -15.73%, rgba(24, 49, 79, 0.90) 93.95%));
   width: 100%;
   padding: 0 4vw;
@@ -341,7 +341,7 @@ section {
   border-radius: 0 0 10px 10px;
 }
 
-.buy-text{
+.buy-text {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -349,7 +349,7 @@ section {
   color: white;
 }
 
-.buy-cat{
+.buy-cat {
   position: absolute;
   top: 511vh;
   right: 5.7vw;
@@ -364,17 +364,56 @@ section {
 }
 
 @media (max-width: 429px) {
+  .intro {
+    flex-direction: column;
+    justify-content: start;
+    height: 80vh;
+    padding: 0;
+  }
+
+  .dog-img {
+    order: 0;
+    position: static;
+    width: 92vw;
+    height: auto;
+  }
+
+  .container-1 {
+    order: 1;
+    margin-top: -5.5vh;
+    background: white;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    box-shadow: none;
+    width: 100vw;
+  }
+
+  .log-btn {
+    color: #0D0630;
+    border-color: #0D0630;
+  }
+
+  .logo-img {
+    width: 10vw;
+  }
+
+  .CTA,
+  .paragraph,
+  .bold-text {
+    color: #0D0630;
+  }
 
   .crown-img,
   .stars-img,
-  .dog-img,
-  .cat-yell,
-  .cat-big {
+  .cat-big,
+  .adopt-puppy,
+  .caring-puppy,
+  .buy-cat {
     display: none;
   }
 
-  section {
-    height: 85vh;
+  .cards-111 {
+    height: max-content;
   }
 
   .CTA,
@@ -411,16 +450,43 @@ section {
   }
 
   .section-2 {
-    flex-direction: column-reverse;
-  }
-
-  .cat-yell {
-    position: absolute;
-  }
-
-  .section-2 {
     margin-top: 5vh;
-    margin-left: -0;
+    margin-left: 0;
+  }
+
+  .mission {
+    flex-direction: column-reverse;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .about-perro {
+    position: static;
+    width: 45vw;
+    margin-left: 5vw;
+  }
+
+  .text-mission {
+    width: 100vw;
+    background-color: white;
+
+  }
+
+  .text-mission h2,
+  .text-mission h1 {
+    display: none;
+  }
+
+  .mission-text {
+    width: 85vw;
+    color: #0D0630;
+    margin: auto;
+    padding: 2vh 0 5vh 0;
   }
 
   .text-content {
@@ -433,18 +499,45 @@ section {
     margin-top: 0;
   }
 
+  .mission {
+    margin-top: 0;
+  }
+
   .section-3 {
     margin-top: 0;
-    height: 50vh;
+    height: auto;
+    background: none;
+  }
+
+  .section-3 h1,
+  .section-3 h2 {
+    color: #0D0630;
   }
 
   .animal-img {
-    width: 80vw;
+    width: 85vw;
   }
 
   .animal-cards {
     overflow-x: scroll;
-    margin: 0;
+  }
+
+  .animal-img {
+    margin: 0 -7vw;
+  }
+
+  .adopt {
+    height: auto;
+    background: none;
+    width: 85vw;
+    margin: 7vh auto;
+    padding: 0;
+  }
+
+  .adopt-text,
+  .adopt .title-4 {
+    color: #0D0630;
+    width: 100%;
   }
 
   .section-4 {
@@ -452,9 +545,42 @@ section {
     padding: 6.5vw;
   }
 
+  .cat-yell {
+    position: static;
+    margin: -20vh 0;
+  }
+
+  .frame {
+    margin: 0;
+    padding: 0;
+  }
+
+  .report {
+    flex-direction: column-reverse;
+  }
+
+  .caring,
+  .buy {
+    margin: 0;
+    padding: 0;
+  }
+
+  .caring-text,
+  .buy-text{
+    width: 85vw;
+  }
+
+  .buy-text h1{
+    margin-bottom: 20px;
+  }
+
   .frame-container,
   .f-c {
     margin-top: 0;
     width: 100vw;
+  }
+
+  .footer-img{
+    display: none;
   }
 }
