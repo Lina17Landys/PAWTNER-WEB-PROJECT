@@ -5,7 +5,6 @@
 section {
   background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   padding: 7.5vh 6.5vw;
@@ -18,7 +17,7 @@ section {
   padding: 4.5vh 5vw;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8vw;
+  gap: 3.5vw;
   flex-shrink: 0;
 
   border-radius: 10px;
@@ -78,11 +77,11 @@ section {
 .cards-111 {
   position: relative;
   z-index: 1;
-  top: -8vh;
+  top: 7vh;
 }
 
 .section-2 {
-  margin-top: -35vh;
+  margin-top: -20vh;
   margin-left: -15vw;
   display: flex;
   justify-content: flex-end;
@@ -130,10 +129,61 @@ section {
   margin-top: -57vh;
 }
 
+.mission{
+  background-image: url(./src/img/about\ us\ background.png);
+  background-size: cover;
+  background-position: center;
+  width: 87vw;
+  margin: auto;
+  height: 55vh;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 10px;
+  margin-top: -57vh;
+}
+
 .mission-img {
   width: 100%;
   max-width: 1800px;
   height: auto;
+}
+
+.mission-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mission h2{
+  font-size: 50px;
+  color: white;
+}
+
+.white_outline{
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  font-weight: bold;
+  font-size: 70px;
+  margin: 0;
+  margin-bottom: 5vh;
+}
+
+.mission-text{
+  color: white;
+  width: 36.5vw;
+}
+
+.about-perro{
+  position: absolute;
+  right: 14vw;
+  width: 36.5vw;
+  top: 215vh;
+}
+
+.about-highlight{
+  position: absolute;
+  right: 10.5vw;
 }
 
 .section-3 {
@@ -142,6 +192,7 @@ section {
   height: 65vh;
   padding: 0 6.5vw;
   margin-top: 10vh;
+  padding-top: 6.5vh;
 }
 
 .title-4 {
@@ -149,7 +200,7 @@ section {
   font-weight: bold;
   font-size: 60px;
   width: 420px;
-  padding-top: 6.5vh;
+  margin: 0;
 }
 
 .animal-cards {
@@ -174,8 +225,27 @@ section {
   margin-top: 2vh;
 }
 
-.adopt-img {
-  width: 100vw;
+.adopt {
+  height: 50vh;
+  padding: 0;
+  align-items: flex-end;
+  gap: 10vw;
+  padding: 0 13vw;
+  background: var(--Degradado-3, linear-gradient(97deg, rgba(139, 190, 178, 0.80) -15.73%, rgba(24, 49, 79, 0.90) 93.95%));
+}
+
+.adopt-puppy{
+  height: 49vh;
+  width: auto;
+}
+
+.adopt-text{
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5vh;
 }
 
 .section-4 {
@@ -233,11 +303,61 @@ section {
   padding: 0 6.5vw;
 }
 
+.frame{
+  margin-top: -58vh;
+  background: none;
+  flex-direction: column;
+}
+
 .caring {
   width: 100%;
+  padding: 0 4vw;
+  height: 50vh;
+  padding-left: 42vw;
+  border-radius: 10px 10px 0 0;
+}
+
+.caring-text{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #0D0630;
+}
+
+.caring-puppy{
+  position: absolute;
+  top: 475vh;
+  left: 6.5vw;
+  width: 53vw;
+}
+
+.buy{
+  background: var(--Degradado-3, linear-gradient(97deg, rgba(139, 190, 178, 0.80) -15.73%, rgba(24, 49, 79, 0.90) 93.95%));
+  width: 100%;
+  padding: 0 4vw;
+  height: 50vh;
+  padding-right: 42vw;
+  border-radius: 0 0 10px 10px;
+}
+
+.buy-text{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.buy-cat{
+  position: absolute;
+  top: 511vh;
+  right: 5.7vw;
+  width: 38.5vw;
 }
 
 .footer-img {
+  margin-top: -10vh;
   width: 100%;
   max-width: 1800px;
   height: auto;

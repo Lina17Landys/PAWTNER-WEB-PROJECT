@@ -3,15 +3,12 @@ header {
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: space-between;
-  /* Align logo and menu to the sides */
   align-items: center;
-  box-sizing: border-box;
-  position: relative;
 }
 
 .logo-img {
-  width: 75px;
-  height: 72px;
+  width: 6vw;
+  height: auto;
 }
 
 .menu {

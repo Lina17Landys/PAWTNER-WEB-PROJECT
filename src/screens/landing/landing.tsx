@@ -43,10 +43,10 @@ function LandingPage() {
       </div>
 
       <section className="mission">
-        <div className="text-content">
+        <div className="text-mission">
           <h2>About</h2>
           <h1 className="white_outline">Our mission</h1>
-          <p className="info-text1">
+          <p className="mission-text">
             Our mission is to connect pets in need with loving homes, provide resources for their care and well-being, and facilitate access to services that improve the lives of animals and their families. We are committed to creating a caring community that promotes adoption, rescue and responsible pet care.
           </p>
         </div>
@@ -68,7 +68,7 @@ function LandingPage() {
 
       <section className="adopt">
         <img className="adopt-puppy" src="./src/img/adopt-puppy.png" />
-        <div className="text-content">
+        <div className="adopt-text">
           <h1 className="title-4">Adopt</h1>
           <p className="info-text1">
             Our mission is to connect pets in need with loving homes, provide resources for their care and well-being, and facilitate access to services that improve the lives of animals and their families. We are committed to creating a caring community that promotes adoption, rescue and responsible pet care.
@@ -92,20 +92,20 @@ function LandingPage() {
 
       <section className="frame">
         <section className="caring">
-          <img className="adopt-puppy" src="./src/img/caring-dog.png" />
-          <div className="text-content">
-            <h1 className="title-4">Caring</h1>
+          <img className="caring-puppy" src="./src/img/caring-dog.png" />
+          <div className="caring-text">
+            <h1 className="title-2">Caring</h1>
             <p className="info-text1">
               Pawtner is dedicated to making a meaningful difference in the lives of pets and their families. We connect animals in need with loving homes, provide essential resources for their care and well-being, and offer easy access to veterinary services. Our goal is to create a supportive community that promotes adoption, rescue, and responsible pet ownership.            </p>
           </div>
         </section>
         <section className="buy">
-          <div className="text-content">
+          <div className="buy-text">
             <h1 className="title-4">Buy</h1>
             <p className="info-text1">
               Pawtner is dedicated to making a meaningful difference in the lives of pets and their families. We connect animals in need with loving homes, provide essential resources for their care and well-being, and offer easy access to veterinary services. Our goal is to create a supportive community that promotes adoption, rescue, and responsible pet ownership.            </p>
           </div>
-          <img className="adopt-puppy" src="./src/img/buy-cat.png" />
+          <img className="buy-cat" src="./src/img/buy-cat.png" />
         </section>
       </section>
 
