@@ -1,5 +1,4 @@
 //import { useState } from 'react'
-//import LandingPage from './screens/landing/landing'
 import DashBoard from './screens/dashboard/dashboard'
 import './App.css'
 import DiseaseForum from './screens/DiseaseForum/DiseaseForum'
@@ -8,6 +7,7 @@ import Landing from './screens/landing/landing';
 import Login from './screens/Login/Login';
 import Signup from './screens/Signup/Signup';
 import Quiz from './screens/Quiz/Quiz';
+import Profile from './screens/Profile/Profile';
 import { QuizProvider } from './context/QuizContext/QuizContext';
 
 function App() {
@@ -20,15 +20,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/Dashboard" element={<DashBoard />} />
         <Route path="/DiseaseForum" element={<DiseaseForum />} />
-        <Route
-          path="/quiz/*"
-          element={
-            <QuizProvider>
-              <Quiz />
-            </QuizProvider>
-          }
-        />
-        
+        <Route path="/quiz/*" element={<QuizProvider> <Quiz /></QuizProvider>}/>
+        <Route path="/Profile" element={<Profile />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,60 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.profile-screen {
+    background-color: white;
+}
+
+.profile-title {
+    color: #18314F;
+    font-size: 1.6rem;
+    margin: 1.2rem;
+    margin-top: 1.25rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-align: left;
+}
+
+.profile-box {
+    background: linear-gradient(to right, #8BBEB2, #18314F);
+    border-radius: 0.3rem;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+.username-and-signoutbtn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logout-button {
+    background-color: #800E13;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.posts-title {
+    color: white;
+}
+
+.profile-disease-cards {
+    display: flex;               
+    overflow-x: auto;           
+    gap: 16px;                   
+    padding: 1rem;
+    scroll-behavior: smooth;
+}
+
+
+.profile-disease-cards .disease-card {
+    flex: 0 0 250px;
+    max-width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9f9f9;
+}
