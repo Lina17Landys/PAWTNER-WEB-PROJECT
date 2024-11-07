@@ -11,7 +11,7 @@ import { Point } from 'ol/geom';
 import { Style, Icon } from 'ol/style';
 
 
-// Importar el archivo CSS
+
 import './MapComponent.css';
 
 const MapComponent: React.FC = () => {
@@ -34,7 +34,7 @@ const MapComponent: React.FC = () => {
           }),
         ],
         view: new View({
-          center: fromLonLat([-76.5320, 3.4516]), // Coordenadas de Cali
+          center: fromLonLat([-76.5320, 3.4516]), 
           zoom: 13,
         }),
       });
@@ -62,7 +62,7 @@ const MapComponent: React.FC = () => {
     }
   }, [map]);
 
-  // Aplicar la clase CSS 'map-container'
+  
   return <div ref={mapRef} className="map-container" />;
 };
 

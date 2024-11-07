@@ -1,7 +1,6 @@
 import BarDash from "../../components/BarDashboard/nav-dash";
 import MapComponent from "../../components/MapComponent/MapComponent";
-import './ReportSystem.css'; // Add this line to include custom CSS for layout styling
-
+import './ReportSystem.css'; 
 function ReportSystem() {
   return (
     <>

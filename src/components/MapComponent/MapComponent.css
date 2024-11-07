@@ -1,6 +1,6 @@
 .map-container {
-  width: 600px; /* Ajusta el ancho */
-  height: 400px; /* Ajusta la altura */
-  margin: 0 auto; /* Centrado horizontal */
-  border: 2px solid #ccc; /* Borde opcional */
+  width: 600px; 
+  height: 400px; 
+  margin: 0 auto; 
+  border: 2px solid #ccc; 
 }
