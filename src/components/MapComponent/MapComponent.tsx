@@ -9,8 +9,7 @@ import { Vector as VectorSource } from 'ol/source';
 import { Feature } from 'ol';
 import { Point } from 'ol/geom';
 import { Style, Icon } from 'ol/style';
-import { click } from 'ol/events/condition';
-import Select from 'ol/interaction/Select';
+
 
 // Importar el archivo CSS
 import './MapComponent.css';
