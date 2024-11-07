@@ -25,6 +25,7 @@ const BarDash: React.FC = () => {
           <li><Link to="/report-system">Report System</Link></li>
           <li><Link to="/DiseaseForum">Forum</Link></li>
           <li><Link to="/Shop">Shop</Link></li>
+          
         </ul>
       </div>
 
@@ -36,7 +37,9 @@ const BarDash: React.FC = () => {
           <input type="text" placeholder="Search..." />
         </div>
 
-        <img className="profile-img" src="./src/img/profile.png" alt="Profile" />
+        <Link to="/profile">
+          <img className="profile-img" src="./src/img/profile.png" alt="Profile" />
+        </Link>
       </div>
     </nav>
   );

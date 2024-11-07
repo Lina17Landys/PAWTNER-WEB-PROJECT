@@ -1,0 +1,21 @@
+.progress-bar {
+    display: flex;
+    width: 65%;
+    height: 0.5rem;
+    background-color: transparent; 
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .progress-segment {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff93; 
+    border-radius: 5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .progress-segment.completed {
+    background-color: #E6F9AF; 
+  }
+  

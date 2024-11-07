@@ -1,0 +1,93 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.welcome-screen {
+    padding: 2rem;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(to right, #8BBEB2, #E6F9AF);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.quiz-header-welcome {
+    color: white;
+    font-size: 1.5rem;
+    padding-bottom: 1.2rem;
+    top: -1rem;
+}
+
+.description-container {
+    background: linear-gradient(to right, #8BBEB2, #E6F9AF);
+    border: 2px solid #3CA380;
+    border-radius: 0.3rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    padding: 2.5rem;
+}
+
+.welcome-description {
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+.welcome-image {
+    position: relative;
+    margin-bottom: -3.6rem;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+}
+
+.pets-image {
+    width: 45%;
+    height: auto;
+    margin: 0 1rem;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.title-image {
+    width: 9%;
+    height: auto;
+}
+
+.left-image {
+    margin-right: auto;
+}
+
+.right-image {
+    margin-left: auto;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    flex: 1;
+}
