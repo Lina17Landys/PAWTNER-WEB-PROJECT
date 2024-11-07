@@ -44,11 +44,19 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
     return getRelatedDiseases(post.symptoms);
   }, [post.symptoms]);
 
+  const cleanRecommendationText = (text: string): string => {
+    return text.replace(/\*/g, '').replace(/-/g, '').trim();
+  };
+
+  const recommendationSections = post.iaRecommendation
+    ? cleanRecommendationText(post.iaRecommendation).split('\n\n')
+    : [];
+
   return (
     <div className="detail-modal">
       <div className="detail-modal-content">
         <button className="close-modal" onClick={onClose}>&times;</button>
-        
+
         <div className="detail-header">
           <h2 className="detail-post-title">{post.title}</h2>
           <span className={`priority ${post.priority.toLowerCase()}`}>
@@ -69,10 +77,10 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
             <hr className="divisor" />
             <div className="pet-info-detail">
               <h3 className="pet-name-detail">
-                <img 
-                  src={post.animalType === 'dog' ? dogIcon : catIcon} 
-                  className="pet-icon" 
-                  alt={post.animalType === 'dog' ? 'Dog Icon' : 'Cat Icon'} 
+                <img
+                  src={post.animalType === 'dog' ? dogIcon : catIcon}
+                  className="pet-icon"
+                  alt={post.animalType === 'dog' ? 'Dog Icon' : 'Cat Icon'}
                 />
                 {post.petName}
               </h3>
@@ -109,9 +117,15 @@ const PostDetail: React.FC<PostDetailProps> = ({ post, onClose }) => {
 
             <div className="ia-recommendation">
               <h4 className="recommendation-title-detail">Recommended Treatment</h4>
-              <p className="recommendation-detail">
-                {post.iaRecommendation || 'No recommendation available'}
-              </p>
+              {recommendationSections.length > 0 ? (
+                recommendationSections.map((section, index) => (
+                  <div key={index} className="recommendation-section">
+                    <p>{section}</p>
+                  </div>
+                ))
+              ) : (
+                <p className="recommendation-detail">No recommendation available</p>
+              )}
             </div>
 
             <div className="medication-recommendation">

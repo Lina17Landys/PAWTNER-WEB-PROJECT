@@ -186,6 +186,15 @@
   font-family: "Lexend Deca", sans-serif;
 }
 
+.recommendation-section {
+  background-color: rgba(160, 195, 73, 0.6); 
+  border-radius: 0.3rem; 
+  padding: 0.625rem 0.9375rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
 .medication-recommendation h4 {
   color: #BCB8B1;
   margin-top: 1.875rem;

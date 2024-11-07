@@ -62,4 +62,3 @@ export const symptomMedicationMap: { [key: string]: string[] } = {
     "Behavior Changes": ["Behavioral Therapy", "Anxiety Medication"],
     "Poor Coat Condition": ["Omega-3 Supplements", "Balanced Diet"]
   };
-  
