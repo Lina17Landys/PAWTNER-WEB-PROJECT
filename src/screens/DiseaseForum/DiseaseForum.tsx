@@ -69,7 +69,7 @@ const DiseaseForum: React.FC = () => {
   return (
     <div className="disease-forum">
       <BarDash />
-      <h1>Pet Health Forum</h1>
+      <h5 className='forum-title'>Pet Health Forum</h5>
 
       <button className="addPostButton" onClick={openModal}>
         +

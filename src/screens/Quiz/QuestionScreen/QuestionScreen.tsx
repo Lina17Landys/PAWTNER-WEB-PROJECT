@@ -43,6 +43,7 @@ const QuestionScreen: React.FC = () => {
 
   return (
     <div className="question-screen">
+      <h4 className='quiz-header-question'>Pawtner Quiz</h4>
       <ProgressBar progress={currentQuestionIndex + 1} totalSteps={questions.length} />
       <h2 className="current-question">{currentQuestion.text}</h2>
       

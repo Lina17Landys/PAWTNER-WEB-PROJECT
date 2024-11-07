@@ -9,12 +9,13 @@
   font-family: "Lexend Deca", sans-serif;
 }
 
-h1 {
+h5 {
   font-size: 1.6rem;
   margin: 1.2rem;
   margin-top: 1.25rem;
   color: white;
   font-family: "Lexend Deca", sans-serif;
+  text-align: left;
 }
 
 .skin-and-coat-problems .disease-title {

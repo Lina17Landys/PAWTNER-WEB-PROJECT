@@ -32,14 +32,20 @@ const ResultScreen: React.FC = () => {
 
   return (
     <div className="result-screen">
+      <h4 className='quiz-header'>Pawtner Quiz</h4>
+      <img src={image} alt={result === 'cat' ? 'Cat' : 'Dog'} className="result-image" />
       <h1 className="result-title">{title}</h1>
-      <p className='result-text'>{result === 'cat' ? "Cat" : "Dog"}</p>
-      <p className="result-text">{description}</p>
-      <img src={image} alt={result === 'cat' ? 'Gato' : 'Perro'} className="result-image" />
-
-      <div className="restart-button-container">
-        <Button onClick={handleRestart} label="Retake Quiz" />
+      <p className="animal-text">{result === 'cat' ? "A Cat" : "A Dog"}</p>
+      <div className="result-box">
+        <div className="result-content">
+          <p className="result-text">{description}</p>
+          <div className="result-buttons">
+            <Button onClick={() => navigate('/cats')} label="See more Pets" className="button" />
+            <Button onClick={handleRestart} label="Retake Quiz" className="button" />
+          </div>
+        </div>
       </div>
+      <p className="result-subtext">Explore our available pets and find the one that’s ready to bring warmth and companionship to your home.</p>
     </div>
   );
 };

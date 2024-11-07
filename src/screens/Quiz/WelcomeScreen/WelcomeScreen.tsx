@@ -14,6 +14,7 @@ const WelcomeScreen: React.FC = () => {
 
   return (
     <div className="welcome-screen">
+      <h4 className='quiz-header-welcome'>Pawtner Quiz</h4>
       <div className="welcome-image">
         <img className='pets-image' src="src\assets\images\Quiz-illustration\dog-and-cat.png" alt="dog and cat image" />
       </div>
@@ -26,7 +27,7 @@ const WelcomeScreen: React.FC = () => {
       </div>
       <p className='welcome-description'>This quiz will help you decide if a cat or a dog is the best pet for you.</p>
       <h3 className='welcome-subtitle'>Let’s get started!</h3>
-      <Button onClick={handleStartQuiz} label="Start Quiz" />
+      <Button onClick={handleStartQuiz} label="Start Quiz" className='star-button'/>
       </div>
     </div>
   );
