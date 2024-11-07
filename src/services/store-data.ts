@@ -15,7 +15,7 @@ const products = [
     category: "food",
     emoji: "🐱",
     image: "./src/img/shop2.webp",
-    name: "Go! Sensitivities limited ingredient grain free duck recipe for cats x 3.7 kg",
+    name: "Go! Sensitivities limited ingredient grain free duck",
     stars: "⭐⭐⭐⭐⭐",
     description: "This GO! SENSITIVITIES recipe for all stages is ideal for cats with special nutritional needs such as food allergies and sensitive stomachs. It contains premium duck as its only source of protein and is free of grains, gluten, potato, wheat, corn or soy.",
     price: 25.5,

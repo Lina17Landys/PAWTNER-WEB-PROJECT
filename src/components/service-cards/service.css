@@ -42,3 +42,8 @@ overflow-y: hidden;
   color: #3CA380; 
   margin-bottom: 0; 
 }
+
+a {
+  text-decoration: none; 
+  color: inherit; 
+}

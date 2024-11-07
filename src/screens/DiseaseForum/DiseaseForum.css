@@ -1,5 +1,5 @@
 .disease-forum {
-  padding: 1rem;
+  padding: 2rem; /* Aumentado */
   overflow-x: hidden;
   background: linear-gradient(to right, #8BBEB2, #E6F9AF);
   min-height: 100vh;
@@ -10,9 +10,8 @@
 }
 
 h5 {
-  font-size: 1.6rem;
-  margin: 1.2rem;
-  margin-top: 1.25rem;
+  font-size: 2rem; /* Aumentado */
+  margin: 1.5rem; /* Aumentado */
   color: white;
   font-family: "Lexend Deca", sans-serif;
   text-align: left;
@@ -59,10 +58,10 @@ h5 {
 }
 
 .disease-title {
-  padding: 0.5rem;
-  border-radius: 0.3rem;
-  margin-bottom: 0.5rem;
-  box-shadow:  0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem; /* Aumentado */
+  border-radius: 0.5rem; /* Aumentado */
+  margin-bottom: 1rem; /* Aumentado */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Aumentado */
 }
 
 .columns {
@@ -71,46 +70,47 @@ h5 {
 }
 
 .disease-column {
-  border-radius: 0.3rem;
-  padding: 1rem;
+  border-radius: 0.5rem; /* Aumentado */
+  padding: 1.5rem; /* Aumentado */
   flex: 1;  
-  min-width: 18rem;          
-  max-width: 18rem;           
-  flex-shrink: 0;             
+  min-width: 20rem; /* Aumentado */
+  max-width: 20rem; /* Aumentado */
+  flex-shrink: 0;
 }
 
 .disease-column h2 {
   font-family: "Lexend Deca", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.4rem; /* Aumentado */
   font-weight: 600;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.2rem; /* Aumentado */
   text-align: center;
 }
 
 .post-image {
-  margin: 0.6rem 0;
+  margin: 1rem 0; /* Aumentado */
 }
 
 .post-image img {
   width: 100%;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem; /* Aumentado */
 }
 
 .symptom-tag {
-  padding:  0.3rem 0.6rem;
-  border-radius: 0.3rem;
+  padding: 0.5rem 1rem; /* Aumentado */
+  border-radius: 0.5rem; /* Aumentado */
   color: black;
-  font-size: 0.7rem;
+  font-size: 1rem; /* Aumentado */
   display: inline-block;
   border: none;
   font-family: "Lexend Deca", sans-serif;
 }
 
-.symptom-diarrhea, .symptom-vomiting, .symptom-loss-of-appetite .symptom-abdominal-pain, .symptom-constipation, .symptom-excessive-drooling {
+/* Estilos de color específicos para cada tipo de síntoma */
+.symptom-diarrhea, .symptom-vomiting, .symptom-loss-of-appetite, .symptom-abdominal-pain, .symptom-constipation, .symptom-excessive-drooling {
   background-color: #EE9B00;
 }
 
-.symptom-itching-skin, .symptom-hair-loss .symptom-redness .symptom-dry-skin, .symptom-bumps, .symptom-sores, .symptom-foul-odor, .symptom-flaky-skin {
+.symptom-itching-skin, .symptom-hair-loss, .symptom-redness, .symptom-dry-skin, .symptom-bumps, .symptom-sores, .symptom-foul-odor, .symptom-flaky-skin {
   background-color: #A1C349;
 }
 
@@ -118,7 +118,7 @@ h5 {
   background-color: #A5C4D4;
 }
 
-.symptom-limping, .symptom-stiffness, .sympton-difficulty-standing, .symptom-reluctance-to-move, .symptom-swelling-in-joints, .symptom-loss-of-muscle-mass, .symptom-favoring-one-leg {
+.symptom-limping, .symptom-stiffness, .symptom-difficulty-standing, .symptom-reluctance-to-move, .symptom-swelling-in-joints, .symptom-loss-of-muscle-mass, .symptom-favoring-one-leg {
   background-color: #800E13;
 }
 
@@ -130,26 +130,26 @@ h5 {
   background-color: #404E7C;
 }
 
-.sympton-aggression, .sympton-fearfulness, .sympton-excessive-barking, .sympton-restlessness, .sympton-hiding, .sympton-excessive-licking-or-grooming, .sympton-destructive-behavior, .sympton-Increased-sleeping {
+.symptom-aggression, .symptom-fearfulness, .symptom-excessive-barking, .symptom-restlessness, .symptom-hiding, .symptom-excessive-licking-or-grooming, .symptom-destructive-behavior, .symptom-increased-sleeping {
   background-color: #3CA380;
 }
 
 .addPostButton {
   position: fixed;
-  bottom: 1rem;;      
-  right: 1rem;    
-  width: 3.5rem; 
-  height: 3.5rem; 
+  bottom: 1.5rem; /* Aumentado */
+  right: 1.5rem; /* Aumentado */
+  width: 4.5rem; /* Aumentado */
+  height: 4.5rem; /* Aumentado */
   background-color: #3CA380;
-  color: white;          
-  font-size: 3rem;       
-  border-radius: 0.3rem;    
-  border: none;          
-  cursor: pointer;       
-  display: flex; 
+  color: white;
+  font-size: 3.5rem; /* Aumentado */
+  border-radius: 0.5rem; /* Aumentado */
+  border: none;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.336);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.336); /* Aumentado */
   transition: background-color 0.3s ease;
 }
 
@@ -158,8 +158,8 @@ h5 {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.8rem; /* Aumentado */
+  height: 0.8rem; /* Aumentado */
 }
 
 ::-webkit-scrollbar-track {
@@ -168,12 +168,13 @@ h5 {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 0.625rem;
+  border-radius: 0.75rem; /* Aumentado */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 @media (max-width: 768px) {
   h1 {

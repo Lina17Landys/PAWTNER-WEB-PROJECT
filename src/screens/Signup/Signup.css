@@ -19,29 +19,29 @@ body, html {
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(135deg, #578482 0%, #0E1D39 100%);
-  border-radius: 15px;
-  border: 1px solid #0D0630;
-  padding: 2rem;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
-  width: 90%;
+  border-radius: 20px; 
+  border: 2px solid #0D0630; 
+  padding: 3rem; 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); 
+  max-width: 1200px; 
+  width: 95%; 
   height: auto;
   overflow: hidden;
 }
 
 .signup-form {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  padding: 2.5rem; 
 }
 
 .signup-logo img {
-  width: 50px;
+  width: 70px; 
   height: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; 
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -49,27 +49,27 @@ body, html {
 
 .signup-form h1 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem; 
   font-weight: bold;
-    font-size: 30px;
 }
 
 .signup-form p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; 
   color: white;
+  font-size: 1.1rem; 
 }
 
 .signup-form input {
   width: 100%;
-  padding: 0.75rem;
+  padding: 1rem; 
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border: 1px solid #0D0630;
-  border-radius: 6px;
+  border-radius: 8px; 
   color: white;
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem; 
+  margin-bottom: 15px; 
   outline: none;
 }
 
@@ -78,25 +78,16 @@ body, html {
   opacity: 1;
 }
 
-.signup-form input:-moz-placeholder {
-  color: white;
-  opacity: 1;
-}
-
-.signup-form input:-ms-input-placeholder {
-  color: white;
-  opacity: 1;
-}
-
 .signup-form .submit-signup-btn {
   width: 100%;
-  padding: 12px;
+  padding: 1rem;
   background-color: #1a2b4c;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; 
   cursor: pointer;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 15px; 
 }
 
 .signup-form .submit-signup-btn:hover {
@@ -106,7 +97,7 @@ body, html {
 .terms {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; 
 }
 
 .terms input[type="checkbox"] {
@@ -117,9 +108,10 @@ body, html {
 .terms label {
   position: relative;
   cursor: pointer;
-  padding-left: 35px;
+  padding-left: 40px; 
   user-select: none; 
   color: white;
+  font-size: 1rem; 
 }
 
 .terms label:before {
@@ -127,8 +119,8 @@ body, html {
   position: absolute;
   left: 0;
   top: 0;
-  width: 20px;
-  height: 20px;
+  width: 25px; 
+  height: 25px;
   border-radius: 50%;
   background-color: white;
   border: 2px solid #1a2b4c;
@@ -143,10 +135,10 @@ body, html {
 .terms label:after {
   content: '';
   position: absolute;
-  left: 6px;
+  left: 7px;
   top: 10px;
-  width: 8px;
-  height: 4px;
+  width: 10px;
+  height: 6px; 
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -174,11 +166,13 @@ body, html {
 .signup-form p a {
   text-decoration: none;
   color: #0E1D39;
+  font-size: 1.1rem; 
 }
 
 .signup-form p a:hover {
   color: #0D0630;
 }
+
 
 @media (max-width: 768px) {
   .signup-content {

@@ -1,6 +1,5 @@
 * {
   font-family: "Lexend Deca", sans-serif;
-  overflow-x: hidden;
   padding: 1rem;
 }
 
@@ -21,13 +20,14 @@
 
 .welcome-title {
   position: absolute;
-  left: 200px;
+  left: 250px;
   top: 200px;
   color: white;
-  font-size: 68px;
-  width: 380px;
+  font-size: 6rem;
+  width: 500px;
   font-weight: bold;
   z-index: 1;
+  text-align: left; 
 }
 
 .pets-banner {
@@ -57,13 +57,6 @@
   margin-left: calc(-50vw + 50%); 
   padding: 20px 0;     
   box-sizing: border-box;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;  
 }
 
 .recomendation {

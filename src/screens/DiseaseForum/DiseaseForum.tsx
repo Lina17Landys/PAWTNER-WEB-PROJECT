@@ -12,13 +12,14 @@ import './DiseaseForum.css';
 const diseases = Object.keys(diseaseSymptomMap);
 
 const getPrimaryDisease = (symptoms: string[]): string | null => {
-  for (let disease of diseases) {
+  for (const disease of diseases) { // Cambia 'let' por 'const'
     if (symptoms.some(symptom => diseaseSymptomMap[disease]?.includes(symptom))) {
       return disease;
     }
   }
   return null;
 };
+
 
 const DiseaseForum: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

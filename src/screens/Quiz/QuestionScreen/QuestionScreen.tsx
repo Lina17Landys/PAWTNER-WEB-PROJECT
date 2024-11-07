@@ -29,9 +29,11 @@ const QuestionScreen: React.FC = () => {
   };
 
   const handleBack = () => {
-    if (currentQuestionIndex > 0) {
+    if (currentQuestionIndex > 0) {  
       setSelectedOptionIndex(null);
       navigate(`/quiz/${currentQuestionIndex}`);
+    } else {
+      navigate('/quiz'); 
     }
   };
 
@@ -62,7 +64,7 @@ const QuestionScreen: React.FC = () => {
 
       <div className="navigation-buttons">
         <div className="button-back-container">
-          <Button onClick={handleBack} label="Back" />
+          <Button onClick={handleBack} label="Back" /> 
         </div>
         <div className="button-next-container">
           <Button onClick={handleNext} label="Next" />

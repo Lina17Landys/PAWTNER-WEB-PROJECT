@@ -3,14 +3,14 @@
   justify-content: space-between;
   font-family: "Lexend Deca", sans-serif;
   align-items: center;
-  padding: 0.625rem 1.25rem;
-  margin-top: 1.25rem;
+  padding: 1.5rem 3rem; 
+  margin: 2rem;
   z-index: 10;
   position: relative;
   overflow-y: hidden;
   background-color: #3ca38160;
-  border-radius: 0.3rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
 }
 
 .navbar-left {
@@ -20,39 +20,36 @@
 }
 
 .logo-img2 {
-  max-width: 2.5rem;
-  margin-right: 1.25rem;
+  max-width: 3rem; 
+  margin-right: 1.5rem;
 }
 
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 1.25rem;
-}
-
-.navbar-menu li {
-  display: inline;
+  gap: 2rem; 
 }
 
 .navbar-menu li a {
-  font-size: 1rem;
+  font-size: 1.75rem; 
   font-family: "Lexend Deca", sans-serif;
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  margin-left: 1.875rem;
+  font-weight: 600; 
+  margin-left: 2.5rem; 
   transition: color 0.3s ease;
   z-index: 15;
 }
 
 .navbar-menu li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #246a5387;
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .search-bar {
@@ -60,10 +57,10 @@
   display: flex;
   align-items: center;
   background-color: #F1F1F1;
-  border-radius: 0.625rem;
-  width: 29.375rem;
-  height: 2.5rem;
-  padding: 0.3125rem 0.625rem;
+  border-radius: 0.75rem; 
+  width: 35rem; 
+  height: 3.5rem;
+  padding: 0.5rem 1rem; 
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -71,9 +68,8 @@
   background-color: #F1F1F1;
   border: none;
   outline: none;
-  padding: 0.3125rem;
-  font-size: 1rem;
-  overflow-y: hidden;
+  padding: 1rem;
+  font-size: 1.25rem; 
   flex: 1;
 }
 
@@ -90,19 +86,14 @@
 .search-btn i {
   font-size: 1rem;
   color: #85827e;
-  overflow-y: hidden;
-}
-
-.profile-img {
-  max-width: 2.5rem;
-  border-radius: 50%;
 }
 
 .hamburger-menu {
   display: none;
-  font-size: 1.75rem;
+  font-size: 2rem; 
   cursor: pointer;
 }
+
 
 @media (max-width: 768px) {
   .navbar-menu {

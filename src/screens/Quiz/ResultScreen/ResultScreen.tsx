@@ -40,7 +40,7 @@ const ResultScreen: React.FC = () => {
         <div className="result-content">
           <p className="result-text">{description}</p>
           <div className="result-buttons">
-            <Button onClick={() => navigate('/cats')} label="See more Pets" className="button" />
+            <Button onClick={() => navigate('/PetsAdoption')} label="See more Pets" className="button" />
             <Button onClick={handleRestart} label="Retake Quiz" className="button" />
           </div>
         </div>
