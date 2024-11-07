@@ -12,6 +12,9 @@ import { Style, Icon } from 'ol/style';
 import { click } from 'ol/events/condition';
 import Select from 'ol/interaction/Select';
 
+// Importar el archivo CSS
+import './MapComponent.css';
+
 const MapComponent: React.FC = () => {
   const mapRef = useRef<HTMLDivElement | null>(null);
   const [map, setMap] = useState<Map | null>(null);
@@ -32,7 +35,7 @@ const MapComponent: React.FC = () => {
           }),
         ],
         view: new View({
-          center: fromLonLat([-76.5320, 3.4516]),
+          center: fromLonLat([-76.5320, 3.4516]), // Coordenadas de Cali
           zoom: 13,
         }),
       });
@@ -60,7 +63,8 @@ const MapComponent: React.FC = () => {
     }
   }, [map]);
 
-  return <div ref={mapRef} style={{ width: '100%', height: '500px' }} />;
+  // Aplicar la clase CSS 'map-container'
+  return <div ref={mapRef} className="map-container" />;
 };
 
 export default MapComponent;

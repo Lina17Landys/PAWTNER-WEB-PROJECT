@@ -1,6 +1,6 @@
-/* src/components/MapComponent/MapComponent.css */
 .map-container {
-    height: 500vh; /* O una altura fija como 500px */
-  width: 100%; /* Ajusta esta altura según tus necesidades */
-  }
-  
+  width: 600px; /* Ajusta el ancho */
+  height: 400px; /* Ajusta la altura */
+  margin: 0 auto; /* Centrado horizontal */
+  border: 2px solid #ccc; /* Borde opcional */
+}
