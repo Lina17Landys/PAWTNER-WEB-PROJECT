@@ -48,9 +48,9 @@ export const dogs = [
         temperament: ["calm", "friendly", "shy"],
     },
     {
-        name: "Mimi",
-        size: "Large",
-        age: "4 years old",
+        name: "Kuromi",
+        size: "Small",
+        age: "2 years old",
         image: "./src/img/p3.jpeg",
         personality: "She is bright, curious, and loves learning new tricks. She’s eager to please and quick to pick up commands, making her ideal for someone who enjoys teaching and training. Mimi’s bound to impress with her smarts!",
         temperament: ["smart", "curious", "energetic"],
