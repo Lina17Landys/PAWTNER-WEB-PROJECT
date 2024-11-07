@@ -11,6 +11,7 @@ import PetsAdoption from './screens/adoption/Pets';
 import Quiz from './screens/Quiz/Quiz';
 import Profile from './screens/Profile/Profile';
 import { QuizProvider } from './context/QuizContext/QuizContext';
+import ReportSystem from './screens/ReportSystem/ReportSystem';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Shop" element={<Shop/>} />
         <Route path="/PetsAdoption" element={<PetsAdoption/>} />
-
+        <Route path="/ReportSystem" element={<ReportSystem />} />
       </Routes>
     </Router>
   );
