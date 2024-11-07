@@ -5,6 +5,7 @@ import { useFetchUserPosts } from '../../hooks/useFetchUserPosts';
 import { auth } from '../../../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import DiseaseCard from '../../components/DiseaseForum/DiseaseCard/DiseaseCard';
+import ProfileImg from '../../img/profile.png';
 import './Profile.css';
 
 const Profile: React.FC = () => {
@@ -31,8 +32,11 @@ const Profile: React.FC = () => {
         <BarDash />
         <h1 className='profile-title'>Your Profile</h1>
         <div className='profile-box'>
-            <div className='username-and-signoutbtn'>
-                <h2>{authUser.username}</h2>
+            <div className='userinfo-and-signout'>
+                <div className='user-info'>
+                    <img src={ProfileImg} alt="Profile-Picture" />
+                    <h2>{authUser.username}</h2>
+                </div>
                 <button className="logout-button" onClick={handleLogout}>
                     Sign Out
                 </button>
