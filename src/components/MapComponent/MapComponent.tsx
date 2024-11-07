@@ -19,46 +19,40 @@ const MapComponent: React.FC = () => {
 
   useEffect(() => {
     if (mapRef.current && !map) {
-      // Crear la fuente vectorial para los pines (marcadores)
       const source = new VectorSource();
 
-      // Crear el mapa
       const mapObject = new Map({
         target: mapRef.current,
         layers: [
-          // Capa base de OpenStreetMap
           new TileLayer({
             source: new OSM(),
           }),
-          // Capa para los pines
           new VectorLayer({
             source: source,
           }),
         ],
         view: new View({
-          center: fromLonLat([-76.5320, 3.4516]), // Coordenadas de Cali, Colombia
+          center: fromLonLat([-76.5320, 3.4516]),
           zoom: 13,
         }),
       });
 
-      // Agregar interacción de clic para agregar pines
       mapObject.on('click', (event) => {
-        const coordinate = event.coordinate; // Obtener coordenadas del clic
+        const coordinate = event.coordinate; 
         const feature = new Feature({
           geometry: new Point(coordinate),
         });
 
-        // Estilo personalizado del pin (marcador)
         feature.setStyle(
           new Style({
             image: new Icon({
               anchor: [0.5, 1],
-              src: 'https://openlayers.org/en/latest/examples/data/icon.png', // URL de ícono personalizado
+              src: 'https://openlayers.org/en/latest/examples/data/icon.png', 
             }),
           })
         );
 
-        source.addFeature(feature); // Añadir el pin a la capa
+        source.addFeature(feature); 
       });
 
       setMap(mapObject);
