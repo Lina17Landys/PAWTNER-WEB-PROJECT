@@ -5,10 +5,11 @@
   box-sizing: border-box;
 }
 
-section {
+.main-section {
   background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
   width: 100vw;
   height: 100vh;
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +23,7 @@ section {
   border: solid #3ca380 2px;
   margin-top: -200px;
 }
+
 
 .texts-div {
   margin-left: 80px;
@@ -141,6 +143,7 @@ section {
   background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
   width: 100vw;
   height: 60vh;
+  overflow-y: hidden;
 }
 
 .title-4 {
@@ -149,7 +152,7 @@ section {
   font-size: 64px;
   width: 420px;
   margin-left: 150px;
-  margin-top: 90px;
+  margin-top: 30px;
 }
 .animal-cards {
   display: flex;
