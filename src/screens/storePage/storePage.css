@@ -1,0 +1,23 @@
+.shop-banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .shop-banner {
+    margin: 10px 30px 30px;
+    width: 90%;
+    max-width: 90%;
+  }
+  
+  h1 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.products-section {
+  background: linear-gradient(to bottom right, #8bbeb287, #18314faf);
+}
+  

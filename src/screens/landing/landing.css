@@ -1,0 +1,245 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-section {
+  background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
+  width: 100vw;
+  height: 100vh;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-1 {
+  background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
+  width: 1800px;
+  height: 610px;
+  border-radius: 10px;
+  border: solid #3ca380 2px;
+  margin-top: -200px;
+}
+
+
+.texts-div {
+  margin-left: 80px;
+}
+
+.CTA {
+  margin-top: 20px;
+  font-weight: bolder;
+  color: white;
+  font-size: 65px;
+  width: 500px;
+}
+
+.paragraph {
+  color: white;
+  font-weight: normal;
+  font-size: 20px;
+  width: 590px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.bold-text {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.dog-img {
+  display: flexbox;
+  position: absolute;
+  z-index: 2;
+  width: 906px;
+  height: 770px;
+  right: 320px;
+  top: 133px;
+}
+
+.crown-img {
+  display: flexbox;
+  position: absolute;
+  max-width: 200px;
+  top: 70px;
+  left: 1200px;
+}
+
+.stars-img {
+  display: flexbox;
+  position: absolute;
+  max-width: 170px;
+  top: 200px;
+  left: 600px;
+}
+
+.cards-111 {
+  position: relative;
+  z-index: 1;
+  top: -195px;
+}
+
+.section-2 {
+  margin-top: -360px;
+  margin-left: -290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.about-pawtner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.cat-big {
+  width: 1300px;
+  height: auto;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -200px;
+  margin-top: -200px;
+}
+
+.title-2 {
+  font-size: 56px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.info-text1 {
+  font-size: 22px;
+  max-width: 800px;
+}
+
+.img-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -620px;
+}
+
+.mission-img {
+  width: 100%;
+  max-width: 1800px;
+  height: auto;
+}
+
+.section-3 {
+  background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
+  width: 100vw;
+  height: 60vh;
+  overflow-y: hidden;
+}
+
+.title-4 {
+  color: white;
+  font-weight: bold;
+  font-size: 64px;
+  width: 420px;
+  margin-left: 150px;
+  margin-top: 30px;
+}
+.animal-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.animal-img {
+  width: 600px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.star2-img {
+  display: flexbox;
+  position: absolute;
+  max-width: 190px;
+  left: 600px;
+  margin-top: -190px;
+}
+
+.section-4 {
+  margin-top: -400px;
+  padding: 40px;
+}
+
+.report {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.r-texts {
+  margin-left: 150px;
+}
+
+.title-6 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.r-text {
+  font-size: 22px;
+  width: 800px;
+}
+
+.cat-yell {
+  z-index: 3;
+  width: 1400px;
+  height: auto;
+  margin-left: -380px;
+}
+
+.frame-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -300px;
+}
+
+.frame-info {
+  width: 100%;
+  max-width: 1800px;
+  height: auto;
+}
+
+.f-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -200px;
+}
+
+.footer-img {
+  width: 100%;
+  max-width: 1800px;
+  height: auto;
+}
+
+@media (max-width: 429px) {
+  .crown-img {
+    display: none;
+  }
+
+  .stars-img {
+    display: none;
+  }
+}

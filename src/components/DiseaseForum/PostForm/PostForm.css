@@ -1,0 +1,267 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(60, 163, 128, 0.5);
+  backdrop-filter: blur(0.625rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  width: 95%;
+  max-width: 100rem;
+  height: 85%;
+  position: relative;
+  gap: 1.875rem;
+  overflow-y: auto;
+}
+
+.inputs-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-layout {
+  display: flex;
+  width: 100%;
+  gap: 1.25rem;
+}
+
+.upload-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.Post-title-form {
+  color: #BCB8B1;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2rem; 
+  font-weight: 700;
+  line-height: 1.5;
+  border: none;
+  width: 90%;
+  margin-bottom: 1.875rem;
+  margin-left: 3rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-box {
+  width: 100%;
+  height: 100%;
+  max-width: 20rem;
+  max-height: 25rem;
+  background-color: #f0f0f0;
+  border: 0.125rem dashed #ccc;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.upload-box::before {
+  font-family: "Lexend Deca", sans-serif;
+  content: 'Upload an Image';
+  font-size: 1.25rem;
+  color: #BCB8B1;
+  position: absolute;
+}
+
+.upload-box.image-uploaded::before {
+  display: none;
+}
+
+.pet-description {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Lexend Deca", sans-serif;
+  width: 95%;
+}
+
+.pet-name {
+  width: calc(50% - 0.5rem);
+  background-color: #EEE;
+  color: #5e636e;
+  padding: 1.25rem;
+  border-radius: 0.3rem; 
+  border: none;
+  font-size: 1.1rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.animal-type, .priority-level {
+  color: #5e636e;
+  background-color: #EEE;
+  width: calc(50% - 0.5rem); 
+  padding: 1.25rem; 
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 1.1rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+textarea {
+  resize: none;
+  width: 95%;
+  padding: 1.25rem; 
+  border-radius: 0.3rem;
+  border: none;
+  background-color: #EEE;
+  color: #5e636e;
+  font-size: 1.1rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.symptom-tags-form {
+  max-height: 10rem;
+  overflow-y: auto;
+  display: flex;
+  background-color: #EEE;
+  border-radius: 0.3rem;
+  gap: 0.9375rem;
+  flex-wrap: wrap;
+  width: 95%;
+  padding: 0.9375rem;
+  border: none;
+  font-size: 1rem;
+  color: #276749;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.symptom-tag {
+  background-color: #f0f0f0;
+  color: #999;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  padding: 0.9375rem 1.875rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.symptom-tag:hover {
+  background-color: #e0e0e0;
+}
+
+.symptom-tag.selected {
+  background-color: #2F855A;
+  color: white;
+}
+
+button[type="submit"] {
+  background-color: #2F855A;
+  color: white;
+  padding: 0.9375rem 1.875rem; 
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 3.125rem;
+  transition: background-color 0.3s ease;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+button[type="submit"]:hover {
+  background-color: #276749;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #EEEEEE;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999;
+  border-radius: 0.3rem;
+  padding: 0.9375rem;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    height: auto;
+    padding: 1.25rem; 
+  }
+
+  .form-layout {
+    flex-direction: column;
+  }
+
+  .upload-box {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border: 0.125rem dashed #ccc;
+  }
+
+  .pet-name, .animal-type, .priority-level {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin: 1.25rem 0; 
+  }
+
+  .close-modal {
+    top: 0.625rem;
+    right: 0.625rem; 
+    padding: 0.625rem; 
+    font-size: 1.5rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    height: auto;
+    padding: 0.625rem;
+  }
+
+  .Post-title-form {
+    font-size: 2rem; 
+    margin: 1.25rem 0; 
+  }
+
+  .form-section {
+    margin-bottom: 0.625rem; 
+  }
+
+  .upload-box {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .pet-description {
+    flex-direction: column;
+  }
+}
