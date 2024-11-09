@@ -1,108 +1,108 @@
 .disease-card {
   background-color: white;
   border: none;
-  border-radius: 0.5rem; 
-  padding: 1.5rem;
-  margin-bottom: 1.5rem; 
+  border-radius: 0.3rem;
+  padding: 0.9rem;
+  margin-bottom: 0.9rem;
   font-family: "Lexend Deca", sans-serif;
 }
 
 .disease-card h3 {
-  font-size: 1.8rem; 
-  margin-bottom: 0.8rem; 
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   font-family: "Lexend Deca", sans-serif;
   color: black;
 }
 
 .divisor {
-  margin: 1rem 0; 
+  margin: 0.6rem 0;
   border: none;
-  border-bottom: 0.15rem solid #ccc; 
+  border-bottom: 0.12rem solid #ccc
 }
 
 .pet-info {
   color: black;
   font-weight: 600;
-  gap: 0.8rem; 
+  gap: 0.5rem;
   display: flex;
   align-items: center;
-  font-size: 1.2rem; 
+  font-size: 1rem;
   font-family: "Lexend Deca", sans-serif;
 }
 
 .priority {
-  padding: 0.5rem 1rem; 
-  border-radius: 0.5rem; 
-  font-size: 0.8rem;
-  margin-left: 3.5rem; 
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3rem;
+  font-size: 0.5rem;
+  margin-left: 3rem;
   font-family: "Lexend Deca", sans-serif;
 }
 
 .priority.low {
   background-color: #A1C349;
   color: #6B900A;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .priority.medium {
   background-color: #FFAF03;
   color: #D28A02;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .priority.high {
   background-color: #E21E27;
   color: #9A0209;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .priority.emergency {
   background-color: #800E13;
   color: #360002;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .symptoms-list {
-  margin-top: 1rem; 
-  margin-bottom: 1rem; 
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
   display: flex;
-  gap: 0.8rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   font-family: "Lexend Deca", sans-serif;
-  border-radius: 0.5rem; 
+  border-radius: 0.3rem;
 }
 
 .disease-card .symptoms-list .symptom-tag {
   color: white;
   font-family: "Lexend Deca", sans-serif;
   border: none;
-  border-radius: 0.5rem; 
-  padding: 0.5rem 1rem; 
-  font-size: 1rem; 
+  border-radius: 0.3rem;
+  padding: 0.3125rem 0.625rem;
+  font-size: 0.8rem;
   cursor: default;
   transition: none;
 }
 
 .description-section-card {
-  margin-bottom: 1rem; 
-  margin-top: 1rem; 
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
   font-weight: light;
   font-family: "Lexend Deca", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .details-button {
   background-color: #3CA380;
-  width: 80%; 
+  width: 70%;
   color: white;
   border: none;
-  border-radius: 0.5rem; 
-  padding: 1rem; 
-  margin: 1rem; 
+  border-radius: 0.3rem;
+  padding: 0.7rem;
+  margin: 0.6rem;
   margin-left: 0;
   cursor: pointer;
   font-family: "Lexend Deca", sans-serif;
@@ -112,9 +112,9 @@
   background-color: #E21E27;
   color: white;
   border: none;
-  border-radius: 0.5rem; 
-  padding: 0.8rem; 
-  margin: 0.8rem; 
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
   cursor: pointer;
 }
 
