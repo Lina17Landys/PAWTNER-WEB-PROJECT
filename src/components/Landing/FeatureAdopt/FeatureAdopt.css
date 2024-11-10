@@ -1,0 +1,43 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.adopt-section {
+    padding: 2rem;
+    background: linear-gradient(104deg, #8BBEB2, #18314F);
+    display: flex;
+    margin-top: 0;
+}
+
+.adopt-container {
+    width: 95%;
+    height: fit-content;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.adopt-description {
+    width: 50%;
+}
+
+.adopt-heading {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.adopt-text {
+    color: white;
+    font-weight: 300;
+    margin-top: 3rem;
+}
+
+.Adopt-Puppy-img {
+    width: 30%;
+    height: auto;
+}

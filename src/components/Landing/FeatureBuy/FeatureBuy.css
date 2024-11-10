@@ -1,0 +1,45 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feature-buy-section {
+    background-color: white;
+    display: flex;
+    margin-top: 0;
+}
+
+.feature-buy-container {
+    background: linear-gradient(104deg, #8BBEB2, #18314F);
+    border-radius: 0.3rem;
+    width: 95%;
+    height: fit-content;
+    padding: 2rem;
+    margin: 3rem;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-buy-description {
+    width: 50%;
+}
+
+.feature-buy-heading {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.feature-buy-text {
+    color: white;
+    font-weight: 300;
+    margin-top: 3rem;
+}
+
+.Buy-Cat-img {
+    width: 30%;
+    height: auto;
+}

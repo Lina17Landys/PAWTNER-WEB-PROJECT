@@ -1,0 +1,43 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feature-report-section {
+    padding: 2rem;
+    background-color: white;
+    display: flex;
+    margin-top: 0;
+}
+
+.feature-report-container {
+    width: 95%;
+    height: fit-content;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.feature-report-description {
+    width: 50%;
+}
+
+.feature-report-heading {
+    color: #0D0630;
+    font-size: 2.5rem;
+}
+
+.feature-report-text {
+    color: #0D0630;
+    font-weight: 300;
+    margin-top: 3rem;
+}
+
+.Report-Cat-img {
+    width: 30%;
+    height: auto;
+}
