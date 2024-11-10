@@ -38,13 +38,14 @@
     text-align: left;
     font-weight: bold;
     color: #ffffff;
+    animation: glow 2s infinite alternate;
 }
 
 .title-star {
     position: absolute;
     top: 20%;
-    left: 30%;
-    width: 10%;
+    left: 28%;
+    width: 8%;
     height: auto;
     z-index: 2;
 }
@@ -67,9 +68,46 @@
 
 .dog-crown {
     position: absolute;
-    top: -13%;
-    right: 20%;
-    width: 15%;
+    top: -12%;
+    right: 21%;
+    width: 13%;
     height: auto;
     z-index: 2;
 }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #3CA380, 0 0 20px #3CA380, 0 0 30px #3CA380;
+    }
+    to {
+      text-shadow: 0 0 20px #8BBEB2, 0 0 30px #8BBEB2, 0 0 40px #8BBEB2;
+    }
+  }
+  
+  .title-star,
+  .dog-crown {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .title-star {
+    animation: blink 1.5s infinite alternate;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 2;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  

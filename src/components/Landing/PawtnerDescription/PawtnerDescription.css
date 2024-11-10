@@ -27,11 +27,16 @@
 .pawtner-description-description {
     width: 40%;
     margin-left: 2.5rem;
+    overflow: visible;
 }
 
 .pawtner-description-heading {
     color: #0D0630;
     font-size: 2.5rem;
+}
+
+.pawtner-description-heading:hover {
+    filter: drop-shadow(0 0 15px rgba(24, 49, 79, 0.5)) drop-shadow(0 0 40px rgba(60, 163, 128, 0.8));   
 }
 
 .pawtner-description-text {
