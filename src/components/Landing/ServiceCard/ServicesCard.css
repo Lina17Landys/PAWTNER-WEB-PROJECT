@@ -13,6 +13,9 @@
   text-align: center;
   align-items: center;
   font-family: "Lexend Deca", sans-serif;
+  transition: transform 0.05s, box-shadow 0.05s;
+  will-change: transform, box-shadow;
+  perspective: 1000px;
 }
 
 .services-card:hover {
