@@ -7,7 +7,7 @@ import Footer from '../../components/Landing/Footer/Footer';
 const ServicesSection = React.lazy(() => import('../../components/Landing/ServicesSection/ServicesSection'));
 const PawtnerDescription = React.lazy(() => import ('../../components/Landing/PawtnerDescription/PawtnerDescription'))
 const AboutSection = React.lazy(() => import('../../components/Landing/AboutSection/AboutSection'));
-const PetsSection = React.lazy(() => import('../../components/Landing/PetsSection/PetsSection'));
+const LandingPetsSection = React.lazy(() => import('../../components/Landing/LandingPetsSection/LandingPetsSection'));
 const FeaturesSection = React.lazy(() => import('../../components/Landing/FeaturesSection/FeaturesSection'));
 
 const Landing: React.FC = () => {
@@ -20,7 +20,7 @@ const Landing: React.FC = () => {
           <ServicesSection />
           <PawtnerDescription />
           <AboutSection />
-          <PetsSection />
+          <LandingPetsSection />
           <FeaturesSection />
         </Suspense>
       </main>
