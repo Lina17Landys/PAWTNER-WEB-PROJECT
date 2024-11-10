@@ -1,7 +1,7 @@
 import React from 'react';
 import { Post } from '../../../types/DiseaseforumTypes/postTypes';
-import dogIcon from '../../../assets/images/Icons/Dog-Icon.png';
-import catIcon from '../../../assets/images/Icons/Cat-Icon.png';
+import dogIcon from '../../../assets/Icons/Dog-Icon.png';
+import catIcon from '../../../assets/Icons/Cat-Icon.png';
 import './DiseaseCard.css';
 import CommentSection from '../CommentSection/CommentSection';
 import { useAuthUser } from '../../../hooks/useAuthUser';

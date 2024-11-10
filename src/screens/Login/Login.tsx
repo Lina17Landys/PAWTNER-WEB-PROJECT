@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebaseConfig';
-import logo from '../../img/logo.png';
+import logo from '../../assets/Logo/logo.png';
 import './Login.css';
 
 const Login: React.FC = () => {

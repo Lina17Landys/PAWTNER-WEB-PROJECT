@@ -1,0 +1,28 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pawtner-description {
+    padding: 2rem;
+    background-color: #f8f8f8;
+    text-align: left;
+    padding-left: 700px;
+    height: 64vh;
+    display: flex;
+}
+
+.pawtner-description .section-header-title {
+    color: #0D0630;
+}
+
+.pawtner-description .section-header-image {
+    width: 65%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    left: -4%;
+    bottom: -149%;
+}
