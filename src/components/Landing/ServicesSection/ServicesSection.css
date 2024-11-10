@@ -2,6 +2,7 @@
     padding: 2rem;
     background-color: #f8f8f8;
     text-align: center;
+    overflow: visible;
   }
   
   .services-title {
@@ -15,5 +16,5 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
+    overflow: visible;
   }
-  
