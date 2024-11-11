@@ -8,12 +8,14 @@
 .about-section {
     padding: 2rem;
     padding-top: 0;
+    padding-bottom: 0;
     background-color: #f8f8f8;
     display: flex;
     margin-top: 0;
 }
 
 .about-container {
+    position: relative;
     background: linear-gradient(104deg, #8BBEB2, #18314F);
     border-radius: 0.3rem;
     width: 95%;
@@ -24,15 +26,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
+.about-container::before,
+.about-container::after {
+    content: 'ABOUT US';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14rem;
+    font-weight: bold;
+    color: rgba(13, 6, 48, 0.08);
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transform: translate(0%, -21%);
+}
+
+.about-container::after {
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -20%);
+}
 .about-description {
     width: 50%;
+    overflow: visible;
 }
 
 .about-heading-1 {
     color: white;
     font-size: 2.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-heading-1:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    transform: scale(1.05);
 }
 
 .about-heading-2 {
@@ -40,22 +71,41 @@
     font-weight: bold;
     color: transparent;
     -webkit-text-stroke: 1px white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-heading-2:hover {
+    color: white;
+    transform: scale(1.05);
 }
 
 .about-text {
     color: white;
     font-weight: 300;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .Happy-Dog-img {
     width: 30%;
     height: auto;
+    bottom: 0;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .Highlight-Illustration {
     height: auto;
     position: absolute;
     z-index: 1;
-    right: 10vw;
+    bottom: 60%;
+    right: 8%;
+    width: 10%;
+    animation: float 3s ease-in-out infinite;
 }

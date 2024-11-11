@@ -1,3 +1,5 @@
 .landing-page {
     background: linear-gradient(104deg, #8BBEB2, #E6F9AF);
+    overflow: hidden;
+    overflow-y: hidden;
 }
