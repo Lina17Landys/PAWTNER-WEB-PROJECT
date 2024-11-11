@@ -6,9 +6,31 @@
 }
 
 .landing-pets-section {
-    padding: 2rem;
+    padding: 5rem;
+    padding-top: 2rem;
     background: linear-gradient(104deg, #8BBEB2, #E6F9AF);
-  }
+}
+
+.landing-pets-titleSection {
+    display: flex;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.landing-shootingStar {
+    width: 5%;
+    left: 15%;
+    z-index: 1;
+    position: absolute;
+    animation: float 3s ease-in-out infinite;
+}
   
 .landing-pets-title-1 {
     font-size: 2rem;
@@ -25,8 +47,8 @@
   
 .landing-pets-cards-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    padding: 2rem;
+    gap: 2rem;
     justify-content: center;
 }
   
