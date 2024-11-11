@@ -7,7 +7,7 @@ const FeatureAdopt: React.FC = () => {
     <section className="adopt-section" aria-labelledby="adopt-heading">
       <div className='adopt-container'>
       <img className='Adopt-Puppy-img' src={AdoptPuppy} alt="Men with a Puppy" />
-        <div className='about-description'>
+        <div className='adopt-description'>
           <h2 className="adopt-heading">Adopt</h2>
           <article>
             <p className='adopt-text'>

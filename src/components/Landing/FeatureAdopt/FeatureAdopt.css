@@ -7,6 +7,7 @@
 
 .adopt-section {
     padding: 2rem;
+    padding-bottom: 0;
     background: linear-gradient(104deg, #8BBEB2, #18314F);
     display: flex;
     margin-top: 0;
@@ -23,7 +24,8 @@
 }
 
 .adopt-description {
-    width: 50%;
+    width: 40%;
+    margin-left: 2.5rem;
 }
 
 .adopt-heading {
@@ -34,7 +36,7 @@
 .adopt-text {
     color: white;
     font-weight: 300;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .Adopt-Puppy-img {
