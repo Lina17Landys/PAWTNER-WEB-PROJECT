@@ -1,0 +1,69 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #f8f8f8;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.footer-section {
+    display: block;
+    background: linear-gradient(104deg, #8BBEB2, #E6F9AF);
+    border: 1px solid #3CA380;
+    border-radius: 0.3rem;
+    width: 40%;
+    height: fit-content;
+    padding: 5rem;
+    padding-top: 2rem;
+    margin: 3rem;
+    margin-right: 0;
+    margin-left: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-pawtner-brand-section {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5%;
+    margin-bottom: 1rem;
+}
+
+.footer-pawtner-brand-section .footer-pawtner-logo {
+    width: 20%;
+}
+
+.footer-pawtner-brand-section p {
+    font-size: 2rem;
+}
+
+.footer-terms-section {
+    color: white;
+}
+
+.footer-right-section {
+    background: linear-gradient(104deg, #8BBEB2, #18314F);
+    border-radius: 0.3rem;
+    color: white;
+    width: 48%;
+    height: 50%;
+    padding: 5rem;
+    padding-bottom: 4rem;
+    margin: 3rem;
+    margin-left: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-right-section p {
+    padding-bottom: 1rem;
+}
