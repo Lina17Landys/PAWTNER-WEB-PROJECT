@@ -15,7 +15,7 @@ function NavBar() {
       </div>
       <div className="btn-line">
         <Link to="/login" className="log-btn">Log In</Link>
-        <Link to='/Signup' className="sign-btn">Sign U</Link>
+        <Link to='/Signup' className="sign-btn">Sign Up</Link>
       </div>
     </header>
   );
