@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -31,11 +32,11 @@ body, html {
 
 .signup-form {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 2rem;
 }
 
 .signup-logo img {
@@ -52,7 +53,7 @@ body, html {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .signup-form p {
@@ -118,7 +119,7 @@ body, html {
   position: relative;
   cursor: pointer;
   padding-left: 35px;
-  user-select: none; 
+  user-select: none;
   color: white;
 }
 
@@ -135,7 +136,7 @@ body, html {
   transition: background-color 0.3s ease;
 }
 
-.terms input[type="checkbox"]:checked + label:before {
+.terms input[type="checkbox"]:checked+label:before {
   background-color: #0D0630;
   border-color: #578482;
 }
@@ -153,7 +154,7 @@ body, html {
   display: none;
 }
 
-.terms input[type="checkbox"]:checked + label:after {
+.terms input[type="checkbox"]:checked+label:after {
   display: block;
 }
 
@@ -185,6 +186,11 @@ body, html {
     flex-direction: column;
   }
 
+  .signup-form {
+    width: 100%;
+    padding: 1rem;
+  }
+
   .signup-cat {
     display: none;
   }
@@ -202,10 +208,15 @@ body, html {
   }
 
   .signup-form button {
-    font-size: 1rem;
+    font-size: 1rem; 
+    background-color: #578482 !important;
   }
 
   .signup-form button.google-btn img {
     width: 16px;
+  }
+
+  .signup-form p a {
+    color: #578482;
   }
 }
