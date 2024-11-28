@@ -25,8 +25,8 @@
 }
 
 .landing-shootingStar {
-    width: 5%;
-    left: 15%;
+    width: 10%;
+    left: 25%;
     z-index: 1;
     position: absolute;
     animation: float 3s ease-in-out infinite;
@@ -51,4 +51,3 @@
     gap: 2rem;
     justify-content: center;
 }
-  
