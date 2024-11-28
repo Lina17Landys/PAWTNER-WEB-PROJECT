@@ -9,10 +9,11 @@
     padding: 2rem;
     background-color: #ffff;
     display: flex;
-    margin-top: 0;
+    margin: 0;
     padding-top: 1rem;
     padding-bottom: 0;
     overflow: visible;
+    width: 100%;
 }
 
 .feature-report-container {

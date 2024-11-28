@@ -10,7 +10,8 @@
     padding-bottom: 0;
     background: linear-gradient(104deg, #8BBEB2, #18314F);
     display: flex;
-    margin-top: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .adopt-container {

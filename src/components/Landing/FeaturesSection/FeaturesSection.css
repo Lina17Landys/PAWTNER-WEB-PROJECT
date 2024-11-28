@@ -1,5 +1,9 @@
 .caring-section {
     background-color: linear-gradient(104deg, #8BBEB2, #E6F9AF);
     background: linear-gradient(104deg, #8BBEB2, #E6F9AF);
-margin: 0;
+    margin: 0;
+}
+
+#features {
+    padding: 0;
 }

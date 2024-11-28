@@ -8,8 +8,10 @@
 .feature-buy-section {
   background-color: #f8f8f8;
   display: flex;
-  margin-top: 0;
+  margin: 0;
   overflow: visible;
+  width: 100%;
+  
 }
 
 .feature-buy-container {
