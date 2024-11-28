@@ -6,7 +6,7 @@ import StarImage from '../../../assets/Illustrations-details/stars.png'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="hero">
+    <section className="hero-section">
       <div className='container-hero'>
         <div className='hero-info'>
           <h1 className='hero-title'>Make the Difference</h1>
