@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { auth, db } from "../../../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
-import "./dash.css";
+import "./dashboard.css";
 import BarDash from "../../components/BarDashboard/nav-dash";
 import BannersPets from "../../components/banners/banners";
 import ServiceCards from "../../components/service-cards/serviceCard";
