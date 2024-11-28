@@ -29,7 +29,7 @@ const Profile: React.FC = () => {
 
   return (
     <div className="profile-screen">
-        <BarDash />
+        <div className="NavBar"><BarDash /></div>
         <h1 className='profile-title'>Your Profile</h1>
         <div className='profile-box'>
             <div className='userinfo-and-signout'>

@@ -11,7 +11,7 @@ function Shop() {
   <img className="shop-banner" src="./src/img/shopBanner.png" />
 </div>
 
-<h1>Top Categories</h1>
+<h1 className='title-StorePage'>Top Categories</h1>
 
 <ShopCards/>
 <InfoCardShop/>
