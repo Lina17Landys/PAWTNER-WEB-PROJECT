@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './nv.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Logo from '../../assets/Logo/logo.png'
 import { Link } from 'react-router-dom';
 
 const BarDash: React.FC = () => {
@@ -13,7 +14,7 @@ const BarDash: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <img className="logo-img2" src="./src/img/logo.png" alt="Logo" />
+        <img className="logo-img2" src={Logo} alt="Logo" />
         
         <div className="hamburger-menu" onClick={toggleMenu}>
           <i className="fa fa-bars"></i>
@@ -38,7 +39,7 @@ const BarDash: React.FC = () => {
         </div>
 
         <Link to="/profile">
-          <img className="profile-img" src="./src/img/profile.png" alt="Profile" />
+          <img className="profile-img" src={"./src/img/profile.png"} alt="Profile" />
         </Link>
       </div>
     </nav>

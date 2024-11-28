@@ -1,7 +1,7 @@
-import FirstCardIcon from '../../assets/Illustrations-details/award.png';
-import SecondCardIcon from '../../assets/Illustrations-details/search.png';
-import ThirdCardIcon from '../../assets/Illustrations-details/cloud.png';
-import FourthCardIcon from '../../assets/Illustrations-details/termometer.png';
+import FirstCardIcon from '../../../assets/Illustrations-details/award.png';
+import SecondCardIcon from '../../../assets/Illustrations-details/search.png';
+import ThirdCardIcon from '../../../assets/Illustrations-details/cloud.png';
+import FourthCardIcon from '../../../assets/Illustrations-details/termometer.png';
 import "./serviceCard.css";
 import { Link } from "react-router-dom";
 
@@ -26,9 +26,11 @@ function ServiceCards() {
     </div>
 
     <div className='cardServ'>
-        <img className='i-Line' src={ThirdCardIcon}></img>
-        <h1 className='title-s'>Help a Friend</h1>
-        <p className='description-s'>Report lost or stray animals in your area.</p>
+        <Link to="/ReportSystem">
+          <img className='i-Line' src={ThirdCardIcon}></img>
+          <h1 className='title-s'>Help a Friend</h1>
+          <p className='description-s'>Report lost or stray animals in your area.</p>
+        </Link>
     </div>
 
     <div className='cardServ'>

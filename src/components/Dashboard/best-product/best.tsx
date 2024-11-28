@@ -1,4 +1,4 @@
-import products from "../../services/store-data";
+import products from "../../../services/store-data";
 import "./best.css";
 
 function BestProducts() {
@@ -10,7 +10,7 @@ function BestProducts() {
         <div key={product.id} className="product-card">
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
-            <h3>
+            <h3 className="product-category">
               {product.category} {product.emoji}
             </h3>
             <h1 className="product-name">{product.name}</h1>

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { auth, db } from "../../../firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
 import "./dashboard.css";
 import BarDash from "../../components/BarDashboard/nav-dash";
-import BannersPets from "../../components/banners/banners";
-import ServiceCards from "../../components/service-cards/serviceCard";
-import BestProducts from "../../components/best-product/best";
+import BannersPets from "../../components/Dashboard/banners/banners";
+import ServiceCards from "../../components/Dashboard/service-cards/serviceCard";
+import BestProducts from "../../components/Dashboard/best-product/best";
 
 function DashBoard() {
   const [username, setUsername] = useState<string | null>(null);
@@ -42,7 +43,9 @@ function DashBoard() {
 
   return (
     <>
-      <BarDash />
+      <div className="NavBar">
+        <BarDash />
+      </div>
       <BannersPets username={username || "User"} />
      
 
@@ -68,8 +71,8 @@ function DashBoard() {
         </p>
 
         <div className="buttons-line">
-          <button className="stray-animal">Report a stray Animal</button>
-          <button className="stray-animal">Report a lost Animal</button>
+          <Link to ="/ReportSystem"><button className="stray-animal">Report a stray Animal</button></Link>
+          <Link to = "/ReportSystem"><button className="stray-animal">Report a lost Animal</button></Link>
         </div>
         <img className="map-img" src="./src/img/mapa-img.png" alt="Map" />
       </div>

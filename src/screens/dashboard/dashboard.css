@@ -12,6 +12,13 @@ body, html {
   overflow-x: hidden;
 }
 
+.NavBar {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 0;
+  padding: 2rem;
+}
+
 .welcome-banner {
   position: relative;
   display: flex;
@@ -20,11 +27,12 @@ body, html {
   margin: 2rem auto;
   padding: 2rem;
   margin-top: 5rem;
-  width: 100%;
+  width: 90%;
   max-width: 1300px;
   height: 15rem;
   border-radius: 0.5rem;
   background: linear-gradient(to right, #8BBEB2, #E6F9AF);
+  border: 1px solid #3CA380;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: visible;
 }
@@ -47,56 +55,64 @@ body, html {
 
 .pets-banner-section {
   display: flex;
-}
-
-.cats-banner {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem auto;
+  gap: 2rem;
+  margin: auto;
   padding: 2rem;
-  margin-top: 5rem;
-  width: 50%;
-  max-width: 1300px;
-  height: 15rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(to right, #18314fb4, #3ca3818a);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  width: 95%;
   overflow: visible;
 }
 
-.cat-b {
-  max-width: 100%;
-  width: 30%;
-  height: auto;
-  margin-top: 20%;
-  right: -2rem;
-  transform: translateY(-50%);
-}
-
+.cats-banner,
 .dogs-banner {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem auto;
   padding: 2rem;
-  margin-top: 5rem;
   width: 50%;
   max-width: 1300px;
   height: 15rem;
   border-radius: 0.5rem;
   background: linear-gradient(to right, #18314fb4, #3ca3818a);
+  border: 1px solid #18314F;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
   overflow: visible;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.cats-banner:hover,
+.dogs-banner:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px 3px rgba(8, 59, 130, 0.3);
+  filter: drop-shadow(0 0 10px rgba(60, 163, 128, 0.5)) drop-shadow(0 0 15px rgba(8, 59, 130, 0.3));
+}
+
+.dogs-banner-description,
+.cats-banner-description {
+  color: white;
+  text-align: left;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+.cat-b {
+  max-width: 100%;
+  width: 45%;
+  height: auto;
+  margin-top: 42%;
+  right: -2rem;
+  transform: translateY(-50%);
 }
 
 .dog-b {
   max-width: 100%;
-  width: 70%;
+  width: 100%;
   height: auto;
-  margin-top: 20%;
+  margin-top: 42%;
   right: -2rem;
   transform: translateY(-50%);
 }
@@ -134,7 +150,7 @@ body, html {
 
 .map-info {
   background: linear-gradient(to bottom right, #8BBEB2, #E6F9AF);
-  border: solid 3px #3CA380;
+  border: solid 1px #3CA380;
   padding: 2rem;
   border-radius: 1rem;
   text-align: center;
@@ -163,6 +179,7 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 

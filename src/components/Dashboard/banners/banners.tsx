@@ -1,6 +1,6 @@
-import BannerImg from '../../assets/images/Dashboard/Banner-img.png'
-import CatsBanner from '../../assets/images/Dashboard/CatBanner.png'
-import DogsBanner from '../../assets/images/Dashboard/DogBanner.png'
+import BannerImg from '../../../assets/images/Dashboard/Banner-img.png'
+import CatsBanner from '../../../assets/images/Dashboard/CatBanner.png'
+import DogsBanner from '../../../assets/images/Dashboard/DogBanner.png'
 interface BannersPetsProps {
   username: string;
 }
@@ -23,8 +23,10 @@ function BannersPets({ username }: BannersPetsProps) {
         </div>
         <div className='dogs-banner'>
         <img className='dog-b' src={DogsBanner} alt='dogBanner' />
-          <h1 className='dogs-banner-title'>Dogs</h1>
-          <p className='dogs-banner-description'>Explore our selection of loyal and loving dogs ready for adoption.</p>
+          <div className='dogs-container'>
+            <h1 className='dogs-banner-title'>Dogs</h1>
+            <p className='dogs-banner-description'>Explore our selection of loyal and loving dogs ready for adoption.</p>
+          </div>
         </div>
       </div>
     </>
