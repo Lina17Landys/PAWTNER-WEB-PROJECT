@@ -92,98 +92,108 @@
   border-color: #18314F;
 }
 
+/*DETALLE DEL ANIMAL*/ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px; 
+  margin: 0;
+  padding: 0;
+}
+
 .pet-detail {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  align-items: center; 
+  padding: 1rem; 
   position: relative;
+  flex-wrap: wrap; 
 }
 
 .pet-detail-container {
-  max-width: 60%; 
-  margin-top: 4rem;
-  height: auto; 
+  max-width: 80%; 
+  margin-top: 2rem;
+  height: auto;
   background: linear-gradient(to right, #8BBEB2, #E6F9AF);
   border: #3ca381 2px solid;
-  border-radius: 15px;
+  border-radius: 10px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; 
-  box-sizing: border-box; 
+  padding: 1rem; 
 }
-
 
 .pet-detail-card {
   display: flex;
   flex-direction: row;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 8px; 
   overflow: hidden;
 }
 
-
 .pet-detail-card h3 {
-font-size: 1em;
+  font-size: 0.9rem;
 }
 
 .pet-detail-card p {
-  font-size: 18px;
-  }
+  font-size: 1rem; 
+}
 
-  .pet-detail-image {
-    width: 100%; 
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 10px; 
-  }
+.pet-detail-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 .pet-detail-info {
-  padding: 20px;
+  padding: 1rem; 
   flex-grow: 1;
   color: #338b6e;
 }
 
 .pet-detail-name {
-  font-size: 4em;
-  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
   color: #338b6e;
 }
 
 .pet-detail-age-size {
   display: flex;
   align-items: center;
-  gap: 30px; 
+  gap: 1rem; 
   color: #338b6e;
 }
 
 .pet-detail-age,
 .pet-detail-size {
   margin: 0;
-  font-size: 16px;
+  font-size: 0.9rem; 
 }
 
 .pet-detail-personality {
-  display: block; 
-  margin: 10px 0;
+  display: block;
+  margin: 1rem 0;
 }
 
 .pet-detail-personality h3 {
-  margin-top: 10px;
-  margin: 0 0 5px 0; 
-  font-size: 2em; 
+  margin-top: 0.5rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem; 
 }
 
 .pet-detail-personality p {
-  margin: 0; 
-  font-size: 1em; 
+  margin: 0;
+  font-size: 0.9rem; 
 }
 
 .pet-detail-temperament {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 1rem 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -191,14 +201,14 @@ font-size: 1em;
 }
 
 .pet-detail-temperament li {
-  padding: 10px 20px;
-  margin: 0 5px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
   border-radius: 5px;
-  color: #ffff;
+  color: #fff;
   font-weight: bold;
   flex-grow: 1;
   text-align: center;
-  min-width: 100px;
+  min-width: 80px; 
 }
 
 .temperament-1 {
@@ -214,11 +224,14 @@ font-size: 1em;
 }
 
 .back-button {
- margin-top: 4rem;
- margin-right: 2rem;
-  width: 55px;
-  height: 55px;
-  font-size: 24px;
+  position: absolute;  
+  top: 3.5rem; 
+  left: 2.5rem; 
+  width: 8vw;
+  height: 8vw;
+  max-width: 45px;
+  max-height: 45px;
+  font-size: 1.5rem;
   background-color: #3CA380;
   border-radius: 5px;
   border-color: transparent;
@@ -227,30 +240,31 @@ font-size: 1em;
   color: white;
 }
 
+
 .pet-detail-footer {
   text-align: center;
-  margin-top: 40px; 
+  margin-top: 2rem;
 }
 
 .separator {
   border: none;
-  border-top: 2px solid #3CA380; 
-  margin: 20px 0;
+  border-top: 2px solid #3CA380;
+  margin: 1rem 0;
   width: 100%;
 }
 
 .pet-detail-footer-text {
-  font-size: 1.9em;
-  margin-bottom: 15px;
+  font-size: 1.2rem; 
+  margin-bottom: 1rem;
   color: #338b6e;
-
 }
 
 .adopt-button {
-  width: 360px;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  background-color: #3CA380; 
+  width: 100%; 
+  max-width: 300px; 
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #3CA380;
   color: white;
   border: none;
   border-radius: 5px;
@@ -259,23 +273,23 @@ font-size: 1em;
 }
 
 .adopt-button:hover {
-  background-color: #2c715a; 
+  background-color: #2c715a;
 }
 
 .pet-foot {
   color: #338b6e;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .category-banner-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; 
+  margin-bottom: 1rem; 
 }
 
 .category-banner {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  max-width: 85%; 
-  height: auto;     
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 80%;
+  height: auto;
 }

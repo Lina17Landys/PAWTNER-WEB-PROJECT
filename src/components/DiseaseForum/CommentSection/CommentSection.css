@@ -8,7 +8,7 @@ input {
     font-size: 1rem;
     color: #a7a39e;
 }
-
+  
 .Submit-btn {
     background-color: #3CA380;
     color: white;
@@ -17,6 +17,7 @@ input {
     padding: 0.7rem;
     margin: 0.6rem;
     cursor: pointer;
+    width: 150px;
     font-family: "Lexend Deca", sans-serif;
     text-align: center;
 }
