@@ -13,9 +13,9 @@
   text-align: center;
   align-items: center;
   font-family: "Lexend Deca", sans-serif;
-  transition: transform 0.05s, box-shadow 0.05s;
   will-change: transform, box-shadow;
   perspective: 1000px;
+  padding: 1rem; 
 }
 
 .services-card:hover {
@@ -25,10 +25,10 @@
 }
 
 .services-card-image {
-  width: 30%;
-  height: auto;
-  object-fit: cover;
-  align-items: center;
+  width: 40%; 
+  max-height: 150px; 
+  object-fit: contain; 
+  margin: 1rem 0;
 }
 
 .services-card-content {
@@ -36,13 +36,13 @@
 }
 
 .services-card-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #0D0630;
 }
 
 .services-card-description {
-  font-size: 1rem;
+  font-size: 0.9rem; 
   color: #0D0630;
   margin-top: 0.5rem;
 }
