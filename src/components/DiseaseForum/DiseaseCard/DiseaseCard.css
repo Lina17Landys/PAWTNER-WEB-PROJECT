@@ -121,3 +121,12 @@
 .delete-button .delete-icon {
   color: white;
 }
+
+.pet-name-card {
+  white-space: nowrap; 
+  overflow: hidden;  
+  text-overflow: ellipsis; 
+  font-size: 1rem; 
+  display: inline-block; 
+  max-width: 100%; 
+}
