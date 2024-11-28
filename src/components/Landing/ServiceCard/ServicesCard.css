@@ -46,3 +46,22 @@
   color: #0D0630;
   margin-top: 0.5rem;
 }
+
+@media (max-width: 430px) {
+  .services-card {
+    width: 80%; 
+    margin: 1rem auto; 
+  }
+
+  .services-card-image {
+    width: 40%; 
+  }
+
+  .services-card-title {
+    font-size: 1.5rem; 
+  }
+
+  .services-card-description {
+    font-size: 1rem;
+  }
+}

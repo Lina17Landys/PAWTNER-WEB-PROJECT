@@ -4,6 +4,7 @@ import catImage from '../../img/Cat-Signup.png';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '../../../firebaseConfig';
 import { doc, setDoc } from 'firebase/firestore';
+import { FirebaseError } from 'firebase/app';  
 import './Signup.css';
 
 const Signup: React.FC = () => {
@@ -12,7 +13,7 @@ const Signup: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [username, setUsername] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState<string>('');
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,15 +44,19 @@ const Signup: React.FC = () => {
       });
 
       alert('Account created successfully!');
-    } catch (error: any) {
-      if (error.code === 'auth/email-already-in-use') {
-        setError('This email is already in use');
-      } else if (error.code === 'auth/invalid-email') {
-        setError('Invalid email address');
-      } else if (error.code === 'auth/weak-password') {
-        setError('The password is too weak');
+    } catch (error: unknown) {
+      if (error instanceof FirebaseError) {  // Comprobamos que el error sea de tipo FirebaseError
+        if (error.code === 'auth/email-already-in-use') {
+          setError('This email is already in use');
+        } else if (error.code === 'auth/invalid-email') {
+          setError('Invalid email address');
+        } else if (error.code === 'auth/weak-password') {
+          setError('The password is too weak');
+        } else {
+          setError('Failed to create account');
+        }
       } else {
-        setError('Failed to create account');
+        setError('An unknown error occurred');
       }
     }
   };

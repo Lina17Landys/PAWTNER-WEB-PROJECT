@@ -9,6 +9,7 @@ body, html {
   align-items: center;
   background-color: #4a586e;
   min-height: 100vh;
+  padding: 3rem 0;  
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -31,11 +32,11 @@ body, html {
 
 .signup-form {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 2rem;
 }
 
 .signup-logo img {
@@ -52,7 +53,7 @@ body, html {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .signup-form p {
@@ -107,11 +108,13 @@ body, html {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  overflow-y: hidden;
 }
 
 .terms input[type="checkbox"] {
   opacity: 0;
   position: absolute;
+  overflow-y: hidden;
 }
 
 .terms label {
@@ -120,6 +123,7 @@ body, html {
   padding-left: 35px;
   user-select: none; 
   color: white;
+  overflow-y: hidden;
 }
 
 .terms label:before {
@@ -179,6 +183,7 @@ body, html {
 .signup-form p a:hover {
   color: #0D0630;
 }
+
 
 @media (max-width: 768px) {
   .signup-content {

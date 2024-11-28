@@ -3,14 +3,15 @@
   width: 400px;
   height: 170px;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: flex-start;
   background-color: #3ca381a4;
   border-radius: 16px;
-  overflow: visible; 
+  overflow: visible;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 16px;
+  margin-bottom: 16px; 
 }
 
 .landing-pets-card:hover {
@@ -19,11 +20,11 @@
 }
 
 .landing-pets-card-img {
-  position: absolute; 
-  top: 17px; 
-  left: 16px; 
-  width: 40%; 
-  height: 90%; 
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  width: 40%;
+  height: 90%;
   z-index: 2;
 }
 
@@ -35,7 +36,37 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
-  margin-left: 140px; 
-margin-top: 80px;  
-z-index: 1; 
+  margin-left: 140px;
+  margin-top: 80px;
+  z-index: 1;
+}
+
+@media (max-width: 430px) {
+  .landing-pets-card {
+    width: 100%; 
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0; 
+  }
+
+  .landing-pets-card-img {
+    width: 60%; 
+    height: auto;
+    position: relative; 
+    margin-bottom: 10px; 
+  }
+
+  .landing-pets-card-info {
+    font-size: 2rem; 
+    margin-left: 0; 
+    margin-top: 10px; 
+    text-align: center; 
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
 }

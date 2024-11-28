@@ -76,3 +76,39 @@
 .Caring-Dog-img:hover {
     filter: drop-shadow(0 0 20px rgba(24, 49, 79, 0.5)) drop-shadow(0 0 40px rgba(60, 163, 128, 0.8));
 }
+
+@media (max-width: 430px) {
+    .feature-caring-container {
+        width: 100%; 
+        margin: 0; 
+        padding: 2rem; 
+        border: none;
+        background: none; 
+        box-shadow: none;
+    }
+  
+    .feature-caring-section {
+    background: linear-gradient(104deg, #8BBEB2, #E6F9AF);
+
+}
+
+    .feature-caring-description {
+      width: 100%;
+      margin-left: 0; 
+    }
+  
+    .feature-caring-heading {
+      font-size: 2rem; 
+    }
+  
+    .Caring-Dog-img {
+     display: none;
+    }
+
+    .feature-caring-container::before {
+        border: none;
+        background: none; 
+        box-shadow: none;
+    }
+  }
+  

@@ -10,7 +10,9 @@ const FeaturesSection: React.FC = () => {
     <section id="features" aria-labelledby="features-heading">
       <FeatureAdopt></FeatureAdopt>
       <FeatureReport></FeatureReport>
-      <FeatureCaring></FeatureCaring>
+      <div className='caring-section'>
+             <FeatureCaring></FeatureCaring>
+      </div>
       <FeatureBuy></FeatureBuy>
     </section>
   );
