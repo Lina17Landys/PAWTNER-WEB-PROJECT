@@ -1,68 +1,83 @@
 .product-card {
-    overflow-y: hidden;
-    margin-bottom: 30px;
+  overflow-y: hidden;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
 .product-title {
   font-size: 22px;
+  font-weight: bold;
+  color: #333;
 }
 
-  
 .filter-container {
   display: flex;
   justify-content: center; 
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin: 20px 0;
 }
 
 .filter-select,
 .clear-filters {
-  padding: 8px;
+  padding: 8px 15px;
   font-size: 1rem;
   border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.filter-select {
+  width: 200px;
 }
 
 .clear-filters {
   color: white;
+  background-color: #E6E6E6;
   border: none;
   cursor: pointer;
 }
 
-  
-  .btn {
-    background-color: #E6E6E6;
-    color: black; 
-    border: none; 
-    padding: 10px 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    border-radius: 5px; 
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-  }
-  
-  .btn:hover {
-    background-color: #18314F; 
-    color: white;
-  }
-  
-  .show-more {
-    display: flex;
-    justify-content: center;  
-    margin-top: 20px;  
-    margin-bottom: 30px;
-  }
-  
-  .show-more .btn {
-    padding: 10px 20px;  
-    font-size: 20px;
-    width: 250px;
-  }
-  
+.clear-filters:hover {
+  background-color: #18314F;
+}
 
+.btn {
+  background-color: #18314F;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #18314F;
+  color: white;
+}
+
+.show-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.show-more .btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  width: 250px;
+}
 
 .modal-background {
   position: fixed;
@@ -110,12 +125,12 @@
 }
 
 .close-button:hover {
-  background-color: rgb(200, 41, 41); 
+  background-color: rgb(200, 41, 41);
   transform: scale(1.1);
 }
 
 .close-button:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 .detail-image {
@@ -125,17 +140,6 @@
   object-fit: cover;
 }
 
-.category {
-  background-color: #3ca381e4;
-  width: 100px;
-  height: 45px;
-  border-radius: 10px;
-  color: #ffff;
-  display: flex;         
-  justify-content: center; 
-  align-items: center;  
-  font-size: 20px; 
-}
 .product-details {
   flex: 2;
   display: flex;

@@ -6,7 +6,7 @@ import ShopItems from '../../components/shop-items/shopItems';
 function Shop() {
   return (
     <>
-   <BarDash/>
+   <div className="NavBar-pets"><BarDash/></div>
    <div className="shop-banner-container">
   <img className="shop-banner" src="./src/img/shopBanner.png" />
 </div>
@@ -17,7 +17,7 @@ function Shop() {
 <InfoCardShop/>
 
 <section className='products-section'>
-<h1>Trending Products</h1>
+<h1 className='title-products-section'>Trending Products</h1>
 <ShopItems/>
 </section>
    </>
