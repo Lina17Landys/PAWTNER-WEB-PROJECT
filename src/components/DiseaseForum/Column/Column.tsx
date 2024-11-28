@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import DiseaseCard from '../DiseaseCard/DiseaseCard';
-import { Post } from '../../../types/postTypes';
+import { Post } from '../../../types/DiseaseforumTypes/postTypes';
 import PostDetail from '../PostDetail/PostDetail';
 
 interface ColumnProps {
   diseaseName: string;
   posts: Post[];
+  onDelete: (postId: string) => void;
 }
 
-const Column: React.FC<ColumnProps> = ({ diseaseName, posts }) => {
+const Column: React.FC<ColumnProps> = ({ diseaseName, posts, onDelete }) => {
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
 
   const closeModal = () => setSelectedPost(null);
@@ -22,7 +23,12 @@ const Column: React.FC<ColumnProps> = ({ diseaseName, posts }) => {
         <p>No posts for this disease yet.</p>
       ) : (
         posts.map(post => (
-          <DiseaseCard key={post.id} post={post} onViewDetails={() => setSelectedPost(post)} />
+          <DiseaseCard
+            key={post.id}
+            post={post}
+            onViewDetails={() => setSelectedPost(post)}
+            onDelete={onDelete}
+          />
         ))
       )}
 

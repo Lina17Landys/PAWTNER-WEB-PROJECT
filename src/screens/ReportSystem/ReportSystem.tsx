@@ -29,4 +29,8 @@ function ReportSystem() {
   );
 }
 
+<<<<<<< HEAD
 export default ReportSystem;
+=======
+export default ReportSystem;
+>>>>>>> develop

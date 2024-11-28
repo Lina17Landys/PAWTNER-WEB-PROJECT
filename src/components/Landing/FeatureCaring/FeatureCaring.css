@@ -1,0 +1,78 @@
+* {
+    font-family: "Lexend Deca", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feature-caring-section {
+    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: visible;
+}
+
+.feature-caring-container {
+    position: relative;
+    background: linear-gradient(104deg, #8BBEB2, #E6F9AF);
+    border: 1px solid #3CA380;
+    border-radius: 0.3rem;
+    width: 95%;
+    height: fit-content;
+    padding: 5rem;
+    padding-left: 0;
+    margin: 3rem;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.feature-caring-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('src/assets/images/granulado-texure.png');
+    background-size: cover;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 0.3rem;
+}
+
+.feature-caring-description {
+    width: 40%;
+    margin-left: 50%;
+}
+
+.feature-caring-heading {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.feature-caring-text {
+    color: white;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.Caring-Dog-img {
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+}
+
+.Caring-Dog-img:hover {
+    filter: drop-shadow(0 0 20px rgba(24, 49, 79, 0.5)) drop-shadow(0 0 40px rgba(60, 163, 128, 0.8));
+}

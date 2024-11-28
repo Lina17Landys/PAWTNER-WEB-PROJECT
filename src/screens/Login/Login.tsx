@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../../firebaseConfig';
-import logo from '../../img/logo.png';
+import logo from '../../assets/Logo/logo.png';
 import './Login.css';
 
 const Login: React.FC = () => {
@@ -18,7 +18,7 @@ const Login: React.FC = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/Dashboard'); 
-    } catch (error) {
+    } catch {
       setError('Invalid login credentials');
     }
   };
@@ -27,7 +27,7 @@ const Login: React.FC = () => {
     <div className="login-container">
       <div className="login-wrapper">
         <div className="login-image">
-          <img src="src/assets/images/LogIn-img.png" alt="background-login" />
+          <img src="src\assets\images\LoginImg\LogIn-img.png" alt="background-login" />
         </div>
         
         <form onSubmit={handleLogin} className="login-form">

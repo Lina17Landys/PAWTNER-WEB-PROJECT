@@ -10,18 +10,28 @@ import { Feature } from 'ol';
 import { Point } from 'ol/geom';
 import { Style, Icon } from 'ol/style';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> develop
 import './MapComponent.css';
 
 const MapComponent: React.FC = () => {
   const mapRef = useRef<HTMLDivElement | null>(null);
   const [map, setMap] = useState<Map | null>(null);
+<<<<<<< HEAD
   const [vectorSource, setVectorSource] = useState<VectorSource | null>(null);
 
   useEffect(() => {
     if (mapRef.current && !map) {
       const source = new VectorSource();
+=======
+
+  useEffect(() => {
+    if (mapRef.current && !map) {
+      const vectorSource = new VectorSource(); 
+>>>>>>> develop
 
       const mapObject = new Map({
         target: mapRef.current,
@@ -30,7 +40,11 @@ const MapComponent: React.FC = () => {
             source: new OSM(),
           }),
           new VectorLayer({
+<<<<<<< HEAD
             source: source,
+=======
+            source: vectorSource,
+>>>>>>> develop
           }),
         ],
         view: new View({
@@ -54,6 +68,7 @@ const MapComponent: React.FC = () => {
           })
         );
 
+<<<<<<< HEAD
         source.addFeature(feature); 
       });
 
@@ -63,6 +78,15 @@ const MapComponent: React.FC = () => {
   }, [map]);
 
   
+=======
+        vectorSource.addFeature(feature); 
+      });
+
+      setMap(mapObject);
+    }
+  }, [map]);
+
+>>>>>>> develop
   return <div ref={mapRef} className="map-container" />;
 };
 
