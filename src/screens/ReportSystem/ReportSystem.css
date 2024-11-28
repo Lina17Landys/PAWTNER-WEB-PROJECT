@@ -1,59 +1,131 @@
 .report-system-wrapper {
-    padding: 20px;
-    background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
-    border-radius: 15px;
-    margin: 20px;
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #3c6e47; /* Dark green text */
-  }
-  
-  .report-container {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  .form-container {
-     flex: 1;
-    background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
-    padding: 20px;
-    border-radius: 10px #0000001a; 
-  }
+  padding: 20px;
+  background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
+  border-radius: 15px;
+  margin: 20px;
+}
 
+.title-Map {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
 
-  .report-form .form-input, .report-form .form-textarea, .report-form .form-button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
-    border: 1px solid #d4e7d5;
-    border-radius: 5px;
+.subtitle-map{
+  color: white;
+}
+
+.report-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.form-container {
+  flex: 1;
+  background: linear-gradient(to bottom right, #8bbeb2, #e6f9af);
+  padding: 20px;
+  border-radius: 10px #0000001a;
+}
+
+.report-form .form-input, .report-form .form-textarea, .report-form .form-button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #d4e7d5;
+  border-radius: 5px;
+}
+
+.report-form .form-button {
+  background-color: #3CA380;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.report-form .form-button:hover {
+  background-color: #3CA380;
+}
+
+.map-wrapper {
+  flex: 2;
+  background-color: #f3f9f4;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-wrapper > * {
+  width: 100%;
+  height: 100%;
+}
+
+.pin-details-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pin-card {
+  flex: 1 1 calc(33% - 20px);
+  max-width: calc(33% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #d4e7d5;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pin-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+.pin-info {
+  flex: 1;
+  color: #3c6e47;
+}
+
+.pin-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.pin-info strong {
+  font-weight: bold;
+}
+
+.no-pin-selected {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .pin-card {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: calc(50% - 20px);
   }
-  
-  .report-form .form-button {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    border: none;
+}
+
+@media (max-width: 480px) {
+  .pin-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
-  
-  .report-form .form-button:hover {
-    background-color: #45a049;
-  }
-  
-  .map-wrapper {
-    flex: 2;
-    background-color: #f3f9f4; /* Match form container */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .map-wrapper > * {
-    width: 100%;
-    height: 100%;
-  }
+}

@@ -10,16 +10,29 @@ import { Feature } from 'ol';
 import { Point } from 'ol/geom';
 import { Style, Icon } from 'ol/style';
 
-import './MapComponent.css';
+interface PinData {
+  coordinates: [number, number];
+  petName: string;
+  species: string;
+  lastSeen: string;
+  address: string;
+  notes: string;
+}
 
-const MapComponent: React.FC = () => {
+interface MapComponentProps {
+  selectedPin: PinData | null;
+  setSelectedPin: React.Dispatch<React.SetStateAction<PinData | null>>;
+  pins: PinData[];
+  setPins: React.Dispatch<React.SetStateAction<PinData[]>>;
+}
+
+const MapComponent: React.FC<MapComponentProps> = ({ selectedPin, setSelectedPin, pins, setPins }) => {
   const mapRef = useRef<HTMLDivElement | null>(null);
   const [map, setMap] = useState<Map | null>(null);
+  const [vectorSource] = useState(new VectorSource());
 
   useEffect(() => {
     if (mapRef.current && !map) {
-      const vectorSource = new VectorSource(); 
-
       const mapObject = new Map({
         target: mapRef.current,
         layers: [
@@ -31,32 +44,68 @@ const MapComponent: React.FC = () => {
           }),
         ],
         view: new View({
-          center: fromLonLat([-76.5320, 3.4516]), 
+          center: fromLonLat([-76.5320, 3.4516]),
           zoom: 13,
         }),
       });
 
       mapObject.on('click', (event) => {
-        const coordinate = event.coordinate; 
-        const feature = new Feature({
-          geometry: new Point(coordinate),
+        let clickedOnFeature = false;
+
+        mapObject.forEachFeatureAtPixel(event.pixel, (feature) => {
+          const pinCoordinates = feature.getGeometry()?.getCoordinates();
+          const existingPin = pins.find(
+            (pin) =>
+              pin.coordinates[0] === pinCoordinates[0] &&
+              pin.coordinates[1] === pinCoordinates[1]
+          );
+
+          if (existingPin) {
+            setSelectedPin(existingPin);
+            clickedOnFeature = true;
+          }
         });
 
-        feature.setStyle(
-          new Style({
-            image: new Icon({
-              anchor: [0.5, 1],
-              src: 'https://openlayers.org/en/latest/examples/data/icon.png', 
-            }),
-          })
-        );
-
-        vectorSource.addFeature(feature); 
+        if (!clickedOnFeature) {
+          const coordinate = event.coordinate;
+          setSelectedPin({
+            coordinates: [coordinate[0], coordinate[1]],
+            petName: '',
+            species: '',
+            lastSeen: '',
+            address: '',
+            notes: '',
+          });
+        }
       });
 
       setMap(mapObject);
     }
-  }, [map]);
+  }, [map, pins, setSelectedPin, vectorSource]);
+
+  useEffect(() => {
+    vectorSource.clear(); 
+
+    pins.forEach((pin) => {
+      const feature = new Feature({
+        geometry: new Point(pin.coordinates),
+      });
+
+      feature.setStyle(
+        new Style({
+          image: new Icon({
+            anchor: [0.5, 1],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'fraction',
+            src: 'https://openlayers.org/en/latest/examples/data/icon.png',
+            scale: 1, 
+          }),
+        })
+      );
+
+      vectorSource.addFeature(feature);
+    });
+  }, [pins, vectorSource]);
 
   return <div ref={mapRef} className="map-container" />;
 };

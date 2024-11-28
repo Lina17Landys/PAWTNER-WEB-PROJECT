@@ -5,7 +5,7 @@ import './pets.css'
 function PetsAdoption() {
     return (
      <>
-     <BarDash/>
+     <div className="NavBar-pets"><BarDash/></div>
      <AnimalList/>
      </>
     );
