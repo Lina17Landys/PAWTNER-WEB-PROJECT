@@ -53,38 +53,43 @@ const MapComponent: React.FC<MapComponentProps> = ({ selectedPin, setSelectedPin
         let clickedOnFeature = false;
 
         mapObject.forEachFeatureAtPixel(event.pixel, (feature) => {
-          const pinCoordinates = feature.getGeometry()?.getCoordinates();
-          const existingPin = pins.find(
-            (pin) =>
-              pin.coordinates[0] === pinCoordinates[0] &&
-              pin.coordinates[1] === pinCoordinates[1]
-          );
+          const geometry = feature.getGeometry();
+          if (geometry instanceof Point) {
+            const pinCoordinates = geometry.getCoordinates();
+            const existingPin = pins.find(
+              (pin) =>
+                pin.coordinates[0] === pinCoordinates[0] &&
+                pin.coordinates[1] === pinCoordinates[1]
+            );
 
-          if (existingPin) {
-            setSelectedPin(existingPin);
-            clickedOnFeature = true;
+            if (existingPin) {
+              setSelectedPin(existingPin);  
+              clickedOnFeature = true;
+            }
           }
         });
 
         if (!clickedOnFeature) {
           const coordinate = event.coordinate;
-          setSelectedPin({
+          const newPin: PinData = {
             coordinates: [coordinate[0], coordinate[1]],
             petName: '',
             species: '',
             lastSeen: '',
             address: '',
             notes: '',
-          });
+          };
+          setSelectedPin(newPin);
+          setPins([...pins, newPin]);
         }
       });
 
       setMap(mapObject);
     }
-  }, [map, pins, setSelectedPin, vectorSource]);
+  }, [map, pins, setSelectedPin, vectorSource, setPins]);
 
   useEffect(() => {
-    vectorSource.clear(); 
+    vectorSource.clear();
 
     pins.forEach((pin) => {
       const feature = new Feature({
@@ -98,14 +103,37 @@ const MapComponent: React.FC<MapComponentProps> = ({ selectedPin, setSelectedPin
             anchorXUnits: 'fraction',
             anchorYUnits: 'fraction',
             src: 'https://openlayers.org/en/latest/examples/data/icon.png',
-            scale: 1, 
+            scale: 1,
           }),
         })
       );
 
-      vectorSource.addFeature(feature);
+      vectorSource.addFeature(feature);  
     });
-  }, [pins, vectorSource]);
+  }, [pins, vectorSource]); 
+
+  useEffect(() => {
+    if (selectedPin && map) {
+      const selectedFeature = new Feature({
+        geometry: new Point(selectedPin.coordinates),
+      });
+
+      selectedFeature.setStyle(
+        new Style({
+          image: new Icon({
+            anchor: [0.5, 1],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'fraction',
+            src: 'https://openlayers.org/en/latest/examples/data/icon.png',
+            scale: 2,  
+            color: 'red',  
+          }),
+        })
+      );
+
+      vectorSource.addFeature(selectedFeature);
+    }
+  }, [selectedPin, map, vectorSource]);  
 
   return <div ref={mapRef} className="map-container" />;
 };

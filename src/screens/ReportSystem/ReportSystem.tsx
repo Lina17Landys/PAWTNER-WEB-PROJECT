@@ -28,14 +28,15 @@ function ReportSystem() {
       );
 
       if (pinIndex !== -1) {
-        const updatedPins = [...pins];
-        updatedPins[pinIndex] = selectedPin;
+        const updatedPins = pins.map((pin, index) =>
+          index === pinIndex ? selectedPin : pin
+        );
         setPins(updatedPins);
       } else {
         setPins([...pins, selectedPin]);
       }
 
-      setSelectedPin(null);
+      setSelectedPin(null); 
     }
   };
 
