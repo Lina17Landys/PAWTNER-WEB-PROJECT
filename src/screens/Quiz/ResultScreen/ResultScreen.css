@@ -105,3 +105,50 @@
     font-weight: 400;
     text-align: center;
 }
+
+.divider {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    border: none;
+    border-top: 2px solid #ccc; /* Línea gris */
+    margin: 2rem 0; /* Separación vertical */
+  }
+  
+  /* Contenedor de animales aleatorios */
+  .random-animals-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten al ancho disponible */
+    gap: 1rem; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 2rem; /* Espacio adicional desde la línea divisoria */
+  }
+  
+  /* Tarjetas de animales */
+  .animal-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 1rem); /* Tres tarjetas por fila */
+    max-width: 300px; /* Tamaño máximo de cada tarjeta */
+  }
+  
+  .animal-image {
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+  
+  .animal-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #3CA380;
+  }
+  
+  .animal-age,
+  .animal-personality {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+  }

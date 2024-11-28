@@ -5,6 +5,8 @@ import Button from '../../../components/Shared/Button/Button';
 import './ResultScreen.css';
 import ResultCatImage from '../../../assets/images/Quiz-illustration/Result-Cat-Img.png';
 import ResultDogImage from '../../../assets/images/Quiz-illustration/Result-Dog-Img.png';
+import { dogs } from '../../../services/pets'; 
+import { cats } from '../../../services/pets';
 
 const ResultScreen: React.FC = () => {
   const { getResult } = useQuiz();
@@ -16,15 +18,24 @@ const ResultScreen: React.FC = () => {
       title: "You’ve Been Matched with a Feline Friend!",
       description: "Based on your answers, a cat is the perfect companion for you. Cats are known for their independence, but they also love to cuddle and play. Whether you’re looking for a low-maintenance pet that enjoys relaxing at home or a playful cat that brings joy into your life, you’ll find your ideal feline friend here.",
       image: ResultCatImage,
+      animals: cats,
     },
     dog: {
       title: "You’ve Been Matched with a Canine Companion!",
       description: "Great news! Based on your quiz results, a dog is your ideal match. Dogs are loyal, loving, and always ready for an adventure. Whether you want a playful pup that keeps you active or a gentle dog that enjoys relaxing by your side, we have the perfect canine companion waiting for you.",
       image: ResultDogImage,
+      animals: dogs,
     },
   };
 
-  const { description, image, title } = resultData[result];
+  const { description, image, title, animals } = resultData[result];
+
+  const getRandomAnimals = (animalList: typeof dogs | typeof cats, count: number) => {
+    const shuffled = animalList.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  const randomAnimals = getRandomAnimals(animals, 3);
 
   const handleRestart = () => {
     navigate('/Quiz');
@@ -32,21 +43,32 @@ const ResultScreen: React.FC = () => {
 
   return (
     <div className="result-screen">
-      <h4 className='quiz-header'>Pawtner Quiz</h4>
-      <img src={image} alt={result === 'cat' ? 'Cat' : 'Dog'} className="result-image" />
-      <h1 className="result-title">{title}</h1>
-      <p className="animal-text">{result === 'cat' ? "A Cat" : "A Dog"}</p>
-      <div className="result-box">
-        <div className="result-content">
-          <p className="result-text">{description}</p>
-          <div className="result-buttons">
-            <Button onClick={() => navigate('/PetsAdoption')} label="See more Pets" className="button" />
-            <Button onClick={handleRestart} label="Retake Quiz" className="button" />
-          </div>
+    <h4 className="quiz-header">Pawtner Quiz</h4>
+    <img src={image} alt={result === 'cat' ? 'Cat' : 'Dog'} className="result-image" />
+    <h1 className="result-title">{title}</h1>
+    <p className="animal-text">{result === 'cat' ? 'A Cat' : 'A Dog'}</p>
+    <div className="result-box">
+      <div className="result-content">
+        <p className="result-text">{description}</p>
+
+        <div className="result-buttons">
+          <Button onClick={() => navigate('/PetsAdoption')} label="See more Pets" className="button" />
+          <Button onClick={handleRestart} label="Retake Quiz" className="button" />
         </div>
       </div>
-      <p className="result-subtext">Explore our available pets and find the one that’s ready to bring warmth and companionship to your home.</p>
     </div>
+    <p className="result-subtext">Explore our available pets and find the one that’s ready to bring warmth and companionship to your home.</p>
+    <div className="random-animals-container">
+      {randomAnimals.map((animal, index) => (
+        <div key={index} className="animal-card">
+          <img src={animal.image} alt={animal.name} className="animal-image" />
+          <h3 className="animal-name">{animal.name}</h3>
+          <p className="animal-age">{animal.age}</p>
+          <p className="animal-personality">{animal.personality}</p>
+        </div>
+      ))}
+    </div>
+  </div>
   );
 };
 

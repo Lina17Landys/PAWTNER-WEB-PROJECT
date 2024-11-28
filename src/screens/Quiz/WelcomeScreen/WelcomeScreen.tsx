@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import './WelcomeScreen.css';
 import DestellosImage from '../../../assets/images/Quiz-illustration/Destellos-Ilustracion.png';
@@ -17,7 +18,13 @@ const WelcomeScreen: React.FC = () => {
 
   return (
     <div className="welcome-screen">
-      <h4 className='quiz-header-welcome'>Pawtner Quiz</h4>
+      <div className='welcome-screen-header'>
+        <button onClick={handleGoToDashboard} className='back-small-quiz'>⬅ Back</button>
+        <h4 className='quiz-header-welcome'>Pawtner Quiz</h4>
+        <Link to="/profile">
+          <img className="profile-img" src={"./src/img/profile.png"} alt="Profile" />
+        </Link>
+      </div>
       <div className="welcome-image">
         <img className='pets-image' src="src/assets/images/Quiz-illustration/dog-and-cat.png" alt="dog and cat image" />
       </div>
@@ -31,7 +38,6 @@ const WelcomeScreen: React.FC = () => {
         <p className='welcome-description'>This quiz will help you decide if a cat or a dog is the best pet for you.</p>
         <h3 className='welcome-subtitle'>Let’s get started!</h3>
        
-        <button onClick={handleGoToDashboard} className='back-small'>⬅</button>
         <button onClick={handleStartQuiz} className='start-button'>Start Quiz</button>
         
       </div>
